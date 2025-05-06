@@ -1,7 +1,6 @@
-import { CheckoutGradients } from '@/components/gradients/checkout-gradients';
-import '../../../styles/checkout.css';
-import { CheckoutHeader } from '@/components/checkout/checkout-header';
 import { CheckoutContents } from '@/components/checkout/checkout-contents';
+import { CheckoutHeader } from '@/components/checkout/checkout-header';
+import { CheckoutGradients } from '@/components/gradients/checkout-gradients';
 import { createClient } from '@/utils/supabase/server';
 
 export default async function CheckoutPage() {

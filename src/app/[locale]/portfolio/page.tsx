@@ -115,7 +115,7 @@ function PortfolioPage() {
                         onMouseLeave={() => setHoveredIdx(null)}
                       >
                         <Image
-                          src={'/assets/billboards/1.png' || card.images?.image}
+                          src={card.images?.image || '/assets/billboards/1.png'}
                           alt={card.title}
                           width={500}
                           height={500}
