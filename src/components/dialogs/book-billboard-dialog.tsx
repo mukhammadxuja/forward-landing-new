@@ -4,7 +4,6 @@ import { Dialog, DialogClose, DialogContent, DialogFooter, DialogTitle } from '@
 
 import { BillboardType } from '../../../public/assets/data';
 
-import { DatePicker } from '@/components/ui/date-picker';
 import { useState } from 'react';
 import { Label } from '../ui/label';
 
@@ -52,7 +51,7 @@ function BookBillboardDialog({
             <Label htmlFor="date" className="text-sm">
               Дата конца
             </Label>
-            <DatePicker className="w-full" mode="single" selected={selectedDate} onSelect={setSelectedDate} />
+            {/* <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} /> */}
           </div>
         </div>
         <DialogFooter className="sm:justify-start">
