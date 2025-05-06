@@ -1,24 +1,15 @@
 'use client';
 
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { useState } from 'react';
 import { AuthenticationForm } from '@/components/authentication/authentication-form';
-import { signup } from '@/app/[locale]/signup/actions';
+import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import Image from 'next/image';
+import { useState } from 'react';
 
 export function SignupForm() {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  function handleSignup() {
-    signup({ email, password }).then((data) => {
-      if (data?.error) {
-        toast({ description: 'Something went wrong. Please try again', variant: 'destructive' });
-      }
-    });
-  }
 
   return (
     <form action={'#'} className={'px-6 md:px-16 pb-6 py-8 gap-6 flex flex-col items-center justify-center'}>
@@ -30,7 +21,7 @@ export function SignupForm() {
         password={password}
         onPasswordChange={(password) => setPassword(password)}
       />
-      <Button formAction={() => handleSignup()} type={'submit'} variant={'secondary'} className={'w-full'}>
+      <Button type={'submit'} variant={'secondary'} className={'w-full'}>
         Sign up
       </Button>
     </form>
