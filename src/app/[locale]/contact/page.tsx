@@ -1,0 +1,191 @@
+'use client';
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+const ContactMap = dynamic(() => import('./contact-map'), {
+  ssr: false,
+});
+
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Instagram, Mail, Send } from 'lucide-react';
+import { useState } from 'react';
+
+function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    organization: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const { name, value } = e.target;
+    setFormData((prev: FormData) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  interface FormData {
+    name: string;
+    email: string;
+    phone: string;
+    organization: string;
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    console.log('Yuborilgan maʼlumot:', formData);
+  };
+
+  return (
+    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 spacey-y-4 lg:space-y-6 py-4 lg:py-10">
+      <Breadcrumb className="px-4 lg:px-0">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/">Home</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Contact</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <div className="space-y-6 lg:space-y-10 px-4 lg:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-10">
+          <div className="order-2 md:order-1 w-full h-72 md:h-full rounded-xl overflow-hidden">
+            <ContactMap />
+          </div>
+          <div className="order-1 md:order-2 w-full h-auto">
+            <h4 className="block md:hidden mb-4 text-2xl font-semibold">Biz bilan bogʻlaning</h4>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <Label htmlFor="name" className="block mb-2 text-sm font-medium text-primary">
+                  Ismingiz
+                </Label>
+                <Input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full bg-card py-4"
+                  placeholder="Ismingizni kiriting"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="email" className="block mb-2 text-sm font-medium text-primary">
+                  Email
+                </Label>
+                <Input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full bg-card py-4"
+                  placeholder="Email manzilingiz"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="phone" className="block mb-2 text-sm font-medium text-primary">
+                  Telefon raqam
+                </Label>
+                <Input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full bg-card py-4"
+                  placeholder="+998 90 123 45 67"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="organization" className="block mb-2 text-sm font-medium text-primary">
+                  Tashkilot
+                </Label>
+                <Input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  value={formData.organization}
+                  onChange={handleChange}
+                  className="w-full bg-card py-4"
+                  placeholder="Tashkilot nomi (ixtiyoriy)"
+                />
+              </div>
+
+              <Button type="submit" className="w-full">
+                Yuborish
+              </Button>
+            </form>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
+            <div className="space-y-2">
+              <h6 className="paragraph-sm !text-foreground font-medium">Служба доверия</h6>
+              <p className="link-sm max-w-xs">В рамках улучшения работы группы «Самолет» действует телефон доверия</p>
+            </div>
+            <a
+              href="tel:+998995571010"
+              className="text-[20px] lg:text-[24px] tracking-[-.015em] font-semibold text-foreground"
+            >
+              +998 99 557-10-10
+            </a>
+          </div>
+          <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
+            <div className="space-y-2">
+              <h6 className="paragraph-sm !text-foreground font-medium">Служба доверия</h6>
+              <p className="link-sm max-w-xs">В рамках улучшения работы группы «Самолет» действует телефон доверия</p>
+            </div>
+            <a
+              href="mailto:forward@gmail.com"
+              className="text-[20px] lg:text-[24px] tracking-[-.015em] font-semibold text-foreground"
+            >
+              forward@gmail.com
+            </a>
+          </div>
+          <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
+            <div className="space-y-2">
+              <h6 className="paragraph-sm !text-foreground font-medium">Служба доверия</h6>
+              <p className="link-sm max-w-xs">В рамках улучшения работы группы «Самолет» действует телефон доверия</p>
+            </div>
+            <div className="flex gap-2 lg:gap-4">
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <Send size={24} />
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <Instagram size={24} />
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <Mail size={24} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Contact;

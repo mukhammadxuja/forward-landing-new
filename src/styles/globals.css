@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 5% 96%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222.2 84% 4.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222.2 84% 4.9%);
+  --primary: hsl(222.2 47.4% 11.2%);
+  --primary-foreground: hsl(240 5% 96%);
+  --secondary: hsl(210 40% 96.1%);
+  --secondary-foreground: hsl(222.2 47.4% 11.2%);
+  --muted: hsl(210 40% 96.1%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+  --accent: hsl(210 40% 96.1%);
+  --accent-foreground: hsl(222.2 47.4% 11.2%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(194 9% 28%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(222.2 84% 4.9%);
+  --radius: 16px;
+  --chart-1: hsl(12 76% 61%);
+  --chart-2: hsl(173 58% 39%);
+  --chart-3: hsl(197 37% 24%);
+  --chart-4: hsl(43 74% 66%);
+  --chart-5: hsl(27 87% 67%);
+}
+
+.dark {
+  --background: hsl(180 18% 7%);
+  --foreground: hsl(180 8% 95%);
+
+  --card: hsl(180, 45%, 9%);
+  --card-foreground: hsl(180 10% 95%);
+
+  --popover: hsl(180 18% 9%);
+  --popover-foreground: hsl(180 10% 95%);
+
+  --primary: hsl(180 60% 40%);
+  --primary-foreground: hsl(180 10% 96%);
+
+  --secondary: hsl(180 10% 25%);
+  --secondary-foreground: hsl(180 10% 96%);
+
+  --muted: hsl(180 10% 15%);
+  --muted-foreground: hsl(180 2% 50%);
+
+  --accent: hsl(180 25% 18%);
+  --accent-foreground: hsl(180 10% 96%);
+
+  --destructive: hsl(0 70% 35%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  --border: hsl(180 10% 20%);
+  --input: hsl(180 10% 20%);
+  --ring: hsl(58 100% 70%);
+
+  /* Diagram ranglari (charts) */
+  --chart-1: hsl(180 80% 45%);
+  --chart-2: hsl(160 60% 45%);
+  --chart-3: hsl(40 80% 55%);
+  --chart-4: hsl(300 50% 60%);
+  --chart-5: hsl(350 70% 50%);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-xs: calc(var(--radius) - 8px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  --container-2xs: 16rem;
+  --container-4xs: 8rem;
+  --container-16xs: 4rem;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .link {
+    @apply text-[#282d3c] leading-[-.01em] text-[14px] gap-[8px] font-medium hover:text-primary opacity-90 duration-300;
+  }
+  .link-sm {
+    @apply text-foreground text-xs hover:text-[#0F1342] duration-300 font-normal;
+  }
+
+  .link-sm-active {
+    @apply text-xs text-[#282d3c] hover:opacity-70 duration-300;
+  }
+
+  .link-mobile {
+    @apply block text-[25px] leading-[-.4px] font-normal text-foreground hover:opacity-70 duration-300;
+  }
+
+  .link-footer {
+    @apply text-foreground leading-[-.01em] text-[16px] font-medium hover:text-primary opacity-90 duration-300;
+  }
+
+  /* Section */
+  .section {
+    @apply py-8 lg:py-12;
+  }
+
+  /* Typography */
+  .heading {
+    @apply text-white text-[28px] md:text-[40px] tracking-[0px] md:tracking-[-0.5px] leading-[32px] md:leading-none font-semibold;
+  }
+
+  .section-title {
+    @apply text-[28px] lg:text-[32px] tracking-[-.015em] leading-[36px] font-semibold text-white;
+  }
+
+  .paragraph-sm {
+    @apply text-foreground/70 text-[14px] tracking-[-.01em] leading-5;
+  }
+
+  .paragraph {
+    @apply text-foreground/70 text-[16px] md:text-[18px];
+  }
+}
