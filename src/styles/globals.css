@@ -33,7 +33,7 @@
 }
 
 .dark {
-  --background: hsl(180 18% 7%);
+  --background: hsl(180, 17%, 7%);
   --foreground: hsl(180 8% 95%);
 
   --card: hsl(180, 45%, 9%);
@@ -42,7 +42,7 @@
   --popover: hsl(180 18% 9%);
   --popover-foreground: hsl(180 10% 95%);
 
-  --primary: hsl(180 60% 40%);
+  --primary: hsl(180, 60%, 40%);
   --primary-foreground: hsl(180 10% 96%);
 
   --secondary: hsl(180 10% 25%);
@@ -51,7 +51,7 @@
   --muted: hsl(180 10% 15%);
   --muted-foreground: hsl(180 2% 50%);
 
-  --accent: hsl(180 25% 18%);
+  --accent: #223939;
   --accent-foreground: hsl(180 10% 96%);
 
   --destructive: hsl(0 70% 35%);
