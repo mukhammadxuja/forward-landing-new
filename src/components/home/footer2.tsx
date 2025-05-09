@@ -1,8 +1,8 @@
 // components/Footer.tsx
 import { Brain, Instagram, Mail, SendIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
 
@@ -97,47 +97,120 @@ const services = [
   },
 ];
 
-const navLinks = [
-  { label: 'Главная', href: '/' },
-  { label: 'О нас', href: '/about' },
-  { label: 'Портфолио', href: '/portfolio' },
-  { label: 'Блог', href: '/blog' },
-  { label: 'Цены', href: '/price' },
-  { label: 'Контакты', href: '/contact' },
-];
-
 export default function Footer2() {
+  const t = useTranslations('footer');
+  const tIntro = useTranslations('navbar.introItems');
+
+  const navLinks = [
+    { label: t('navLinks.home'), href: '/' },
+    { label: t('navLinks.about'), href: '/about' },
+    { label: t('navLinks.portfolio'), href: '/portfolio' },
+    { label: t('navLinks.blog'), href: '/blog' },
+    { label: t('navLinks.pricing'), href: '/price' },
+    { label: t('navLinks.contact'), href: '/contact' },
+  ];
+
+  const introItems = [
+    {
+      title: tIntro('adsTitle'),
+      description: tIntro('adsDescription'),
+      href: '#',
+      subItems: [
+        {
+          title: tIntro('ads.brendmourlar.title'),
+          description: tIntro('ads.brendmourlar.description'),
+          href: '/services/brendmourlar',
+        },
+        {
+          title: tIntro('ads.kattaHarflar.title'),
+          description: tIntro('ads.kattaHarflar.description'),
+          href: '/services/katta-harflar',
+        },
+        {
+          title: tIntro('ads.cityBox.title'),
+          description: tIntro('ads.cityBox.description'),
+          href: '/services/city-box',
+        },
+        {
+          title: tIntro('ads.avtobus.title'),
+          description: tIntro('ads.avtobus.description'),
+          href: '/services/avtobus',
+        },
+        {
+          title: tIntro('ads.billboardlar.title'),
+          description: tIntro('ads.billboardlar.description'),
+          href: '/services/billboardlar',
+        },
+        {
+          title: tIntro('ads.ledMonitorlar.title'),
+          description: tIntro('ads.ledMonitorlar.description'),
+          href: '/services/led-monitorlar',
+        },
+      ],
+    },
+    {
+      title: tIntro('productionTitle'),
+      description: tIntro('productionDescription'),
+      href: '#',
+      subItems: [
+        {
+          title: tIntro('production.bortmaHarflar.title'),
+          description: tIntro('production.bortmaHarflar.description'),
+          href: '/services/bortma-harflar',
+        },
+        {
+          title: tIntro('production.stella.title'),
+          description: tIntro('production.stella.description'),
+          href: '/services/stella',
+        },
+        {
+          title: tIntro('production.bannerChop.title'),
+          description: tIntro('production.bannerChop.description'),
+          href: '/services/banner-chop-etish',
+        },
+      ],
+    },
+    {
+      title: tIntro('service3Title'),
+      description: tIntro('service3Description'),
+      href: '#',
+      subItems: [
+        { title: tIntro('service3_1Title'), description: '', href: '/services/web-sayt' },
+        { title: '', description: '', href: '#' },
+        { title: '', description: '', href: '#' },
+        { title: '', description: '', href: '#' },
+      ],
+    },
+  ];
+
   return (
     <>
       <Separator className={'footer-border'} />
       <footer className="bg-card text-sm text-neutral-800 border-t">
         <div className="mx-auto max-w-7xl px-[32px] lg:px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Left column */}
-          <div className="space-y-4 lg:space-y-8 mr-10 lg:mr-0">
+          <div className="space-y-6 lg:space-y-8 mr-10 lg:mr-0">
             <div>
-              <p className="mb-2 lg:mb-3 font-medium text-foreground">Наши партнеры</p>
+              <p className="mb-2 lg:mb-3 font-medium text-foreground">{t('ourPartners')}</p>
               <Image src="/dotsoft.webp" alt="Самолет" width={70} height={70} />
             </div>
             <div className="py-2 border-t border-border">
-              <p className="mb-2 lg:mb-3 font-medium text-foreground">Есть вопросы или предложения?</p>
+              <p className="mb-2 lg:mb-3 font-medium text-foreground">{t('questions')}</p>
               <Link href="/contact">
                 <Button
                   size="sm"
                   variant="secondary"
                   className="bg-accent hover:bg-accent/80 text-primary min-w-44 rounded-full text-xs"
                 >
-                  Напишите нам
+                  {t('contactUs')}
                 </Button>
               </Link>
             </div>
-            <p className="text-neutral-500 text-xs">
-              В группу «Самолет» входит ряд ведущих российских девелоперских компаний полного цикла, реализующих
-              масштабные объекты недвижимости.
-            </p>
+            <p className="text-neutral-500 text-xs">{t('about')}</p>
 
             {/* Social icons */}
             <div>
-              <p className="mb-2 lg:mb-3 text-foreground font-medium">Соцсети</p>
+              <p className="mb-2 lg:mb-3 text-foreground font-medium">{t('socials')}</p>
               <div className="flex gap-2">
                 <Link
                   href="#"
@@ -163,16 +236,18 @@ export default function Footer2() {
 
           {/* Middle columns */}
           <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((service) => (
-              <div key={service.id}>
-                <h4 className="font-semibold mb-3 text-foreground">{service.title}</h4>
+            {introItems.map((item, index) => (
+              <div key={index}>
+                <h4 className="font-semibold mb-3 text-foreground">{item.title}</h4>
                 <ul className="space-y-1 lg:space-y-2">
-                  {service.cards.map((item, index) => (
-                    <li key={index} className="">
-                      <Link href={item.href} className="text-neutral-500 hover:text-foreground/80 duration-300 text-sm">
-                        {item.title}
+                  {item.subItems.map((subItem, subIndex) => (
+                    <li key={subIndex} className="">
+                      <Link
+                        href={subItem.href}
+                        className="text-neutral-500 hover:text-foreground/80 duration-300 text-sm"
+                      >
+                        {subItem.title}
                       </Link>
-                      {item?.new && <Badge className="ml-1.5 py-0.5 px-1.5 !text-xs">Новое</Badge>}
                     </li>
                   ))}
                 </ul>
@@ -182,7 +257,7 @@ export default function Footer2() {
 
           {/* Right column */}
           <div>
-            <h4 className="font-semibold mb-3 text-foreground">О компании</h4>
+            <h4 className="font-semibold mb-3 text-foreground">{t('linksTitle')}</h4>
             <ul className="space-y-1">
               {navLinks.map((link, index) => (
                 <li key={index}>
@@ -196,12 +271,12 @@ export default function Footer2() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mx-auto max-w-7xl px-[32px] lg:px-4 border-t py-4 flex items-center justify-between">
-          <div>
+        <div className="mx-auto max-w-7xl px-[32px] lg:px-4 border-t py-4 flex items-center justify-center lg:justify-between">
+          <div className='hidden lg:block'>
             <Image src="/next.svg" alt="Dotsoft" width={40} height={40} />
           </div>
           <div className="text-xs text-center text-neutral-400">
-            © {new Date().getFullYear()} Forward. Все права защищены.
+            © {new Date().getFullYear()} {t('copyright')}
           </div>
         </div>
       </footer>

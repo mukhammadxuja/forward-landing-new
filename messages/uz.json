@@ -1,6 +1,263 @@
 {
+  "navbar": {
+    "service": "Xizmatlar",
+    "company": "Kompaniya",
+    "portfolio": "Portfolio",
+    "price": "Narxlar",
+    "contact": "Aloqa",
+    "address": "Sharof Rashidov Shox Ko'chasi",
+    "introItems": {
+      "adsTitle": "Tashqi reklama",
+      "adsDescription": "Ilovangizning tuzilmasi va kerakli bogʻliqliklarni oʻrnatish bo‘yicha yo‘riqnoma.",
+      "ads": {
+        "brendmourlar": {
+          "title": "Brendmourlar",
+          "description": "Jizzax shahrining ko'ringan bino-devorlari va tomlarida joylashgan brendmourlar"
+        },
+        "kattaHarflar": {
+          "title": "Katta harflar",
+          "description": "Jizzax shahrining ko'ringan bino-devorlari va tomlari ustida katta hajmdagi harflar"
+        },
+        "cityBox": {
+          "title": "City Box",
+          "description": "Jizzax shahrining asosiy ko'chalarida 50 dan ortiq city boxlar"
+        },
+        "avtobus": {
+          "title": "Avtovbus",
+          "description": "Jizzax shahar va shaharlararo avtobus yo'nalishlarida reklama o'rnatish"
+        },
+        "billboardlar": {
+          "title": "Billboardlar",
+          "description": "Jizzax shahar va tuman markazlarida 100 dan ortiq billboardlar"
+        },
+        "ledMonitorlar": {
+          "title": "LED monitorlar",
+          "description": "Jizzax shahar va tuman markazlarida 100 dan ortiq LED monitorlar"
+        }
+      },
+
+      "productionTitle": "Tayyorlash & Ishlab chiqarish",
+      "productionDescription": "UI komponentlar va ularning variantlari",
+      "production": {
+        "bortmaHarflar": {
+          "title": "Bo'rtma harflar",
+          "description": "Yonadigan, bo'rtma harflar tayyorlash va o'rnatib berish"
+        },
+        "stella": {
+          "title": "Stella",
+          "description": "Yo'l chetida va ofislar yonida turadigan stellalarni tayyorlash va o'rnatish hizmati"
+        },
+        "bannerChop": {
+          "title": "Banner chop etish",
+          "description": "Bannerlar va orakallarni chop etish va uni o'rnatib berish xizmati"
+        }
+      },
+
+      "service3Title": "Xizmat 3",
+      "service3Description": "Asosiy uslublar va joylashuv",
+      "service3_1Title": "Web sayt yaratish"
+    }
+  },
+  "footer": {
+    "ourPartners": "Hamkorlarimiz",
+    "questions": "Savollaringiz yoki takliflaringiz bormi?",
+    "contactUs": "Biz bilan bog‘laning",
+    "about": "Bu yerda reklama kompaniyasi haqida ma'lumot bo‘lishi kerak",
+    "socials": "Ijtimoiy tarmoqlar",
+    "copyright": "Forward. Barcha huquqlar himoyalangan.",
+    "linksTitle": "Kompaniya haqida",
+    "new": "Yangi",
+    "navLinks": {
+      "home": "Bosh sahifa",
+      "about": "Biz haqimizda",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "pricing": "Narxlar",
+      "contact": "Aloqa"
+    }
+  },
+  "services": {
+    "title1": "Tashqi reklama",
+    "service1Title": "Brendmourlar",
+    "service1Description": "Jizzax shahrining ko'ringan bino-devorlari va tomlarida joylashgan brendmourlar",
+    "service1FullDescription": "Brendmourlar — bu binolar devorlari yoki tomlarida joylashgan, keng ko‘lamli reklama maydonchalari bo‘lib, ular yuqori ko‘rinuvchanlikni ta’minlaydi. Brendmourlar orqali brendingizni shahar markazida, ko‘p odamlar harakatlanadigan joylarda namoyish etishingiz mumkin. Ular dizayn va joylashuvi bo‘yicha juda jozibali bo‘lib, uzoq masofadan ham e’tiborni tortadi.",
+    "service1SeoTitle": "Brendmourlar – Jizzaxda binolar ustidagi reklama | Reklama Xizmati",
+    "service1SeoDescription": "Jizzax markazida ko‘rinadigan joylarda joylashgan brendmourlar. Narxlar, joylashuv va galereya bilan tanishing.",
+
+    "service2Title": "Katta harflar",
+    "service2Description": "Jizzax shahrining ko'ringan bino-devorlari va tomlari ustida katta hajmdagi harflar",
+    "service2FullDescription": "Katta harflar reklama — bu binolar tomlarida yoki baland nuqtalarda joylashgan, katta o‘lchamli harf shaklidagi yorqin reklama vositasi. Ular asosan tunda yoritiladi va uzoq masofadan ham ko‘rinadi. Brendingiz nomini ko‘pchilik eslab qolishini istasangiz, bu juda samarali vosita hisoblanadi.",
+    "service2SeoTitle": "Katta Harflar – Jizzaxda yoritilgan reklama harflari | Reklama Xizmati",
+    "service2SeoDescription": "Jizzaxdagi yirik reklama harflari – bino tomida joylashgan, ko‘rinuvchan va yorqin. Joylashuv va narxlar bilan tanishing.",
+
+    "service3Title": "City Box",
+    "service3Description": "Jizzax shahrining asosiy ko'chalarida 50 dan ortiq city boxlar",
+    "service3FullDescription": "City Box — bu piyodalar yo‘laklarida joylashgan, shahar hayotining ajralmas qismi bo‘lgan reklama konstruksiyalari. Ular odatda ko‘z darajasida joylashgan bo‘lib, piyodalar tomonidan yaxshi ko‘rinadi. Tez-tez yangilanadigan afishalar, e’lonlar yoki mahsulot reklamalari uchun ayni muddao.",
+    "service3SeoTitle": "City Box – Jizzaxdagi piyodalar reklama vositasi | Reklama Xizmati",
+    "service3SeoDescription": "Jizzax shahridagi 50+ city boxlar orqali mahsulotingiz reklamasini joylashtiring. Narxlar va galereya mavjud.",
+
+    "service4Title": "Avtobus",
+    "service4Description": "Jizzax shahar va shaharlararo avtobus yo'nalishlarida reklama o'rnaish",
+    "service4FullDescription": "Avtobus reklamalari — bu shahar va shaharlararo qatnovda faol harakat qiluvchi transport vositalarida joylashtiriladigan reklama turi. Bu usul sizning brendingizni har kuni minglab insonlarga yetkazadi. Avtobusning harakatlanadigan xarakteri sababli reklamangiz turli joylarda ko‘rinadi va keng auditoriyani qamrab oladi.",
+    "service4SeoTitle": "Avtobus reklamalari – Jizzax va viloyatlararo tashqi reklama | Reklama Xizmati",
+    "service4SeoDescription": "Avtobuslar ustidagi reklama joylari bilan harakatdagi auditoriyani qamrab oling. Narxlar va misollar bilan tanishing.",
+
+    "service5Title": "Billboardlar",
+    "service5Description": "Jizzax shahar va tuman markazlarida 100 dan ortiq billboardlar",
+    "service5FullDescription": "Billboardlar — bu eng ommabop va samarali tashqi reklama vositalaridan biri bo‘lib, ular katta o‘lchamdagi bannerlar orqali mahsulot yoki xizmatni ko‘pchilik e'tiboriga havola etadi. Bizning billboardlarimiz Jizzax shahar markazi va barcha tumanlarning asosiy ko‘chalarida joylashgan bo‘lib, kuniga minglab avtomobil va piyodalar harakatlanadigan hududlarda o‘rnatilgan. Billboard reklamalari nafaqat katta ko‘lamli ko‘rinuvchanlikni ta'minlaydi, balki brend imidjini oshiradi va hududiy mijozlar bilan kuchli aloqa o‘rnatishga yordam beradi. Har bir reklama joyi strategik tarzda tanlangan bo‘lib, ularning yoritilishi, xavfsizligi va texnik holati muntazam nazorat ostida.",
+    "service5SeoTitle": "Billboardlar – Jizzaxda tashqi reklama joylari | Reklama Xizmati",
+    "service5SeoDescription": "Jizzax viloyatining strategik nuqtalarida 100+ billboard joylari. Mavjud joylar, narxlar va galereya bilan tanishing.",
+
+    "service6Title": "LED monitorlar",
+    "service6Description": "Jizzax shahar va tuman markazlarida 100 dan ortiq LED monitorlar",
+    "service6FullDescription": "LED monitorlar — bu raqamli texnologiyalar asosida ishlovchi yirik ekranlar bo‘lib, ularning yorqinligi va dinamizmi e’tiborni darhol tortadi. Videoroliklar, animatsiyalar yoki maxsus aktsiyalarni namoyish qilish uchun ideal. Ular ko‘p hollarda markaziy yo‘llar, chorrahalar yoki ko‘ngilochar markazlar yaqinida joylashgan.",
+    "service6SeoTitle": "LED Monitorlar – Jizzaxda zamonaviy raqamli reklama | Reklama Xizmati",
+    "service6SeoDescription": "LED monitorlar orqali e’tiborni tortadigan video va animatsiyalaringizni namoyish eting. Galereya va narxlar bilan tanishing.",
+
+    "title2": "Tayyorlash & Ishlab chiqarish",
+    "title3": "Boshqa Xizmatlar",
+    "service3_1Title": "Web sayt yaratish",
+    "service3_1Description": "Jizzaxda professional web saytlar yaratish xizmatlari.",
+    "service3_1FullDescription": "Web sayt yaratish — bu faqat bir nechta sahifalarni tashkil etish emas, balki sizning brendingiz va biznesingiz uchun moslashgan va marketing maqsadlarini qo‘llab-quvvatlaydigan to‘liq web yechimlarni yaratishdir. Biz foydalanuvchi tajribasini yaxshilash uchun eng so‘nggi texnologiyalardan foydalanamiz va saytlarni SEO va mobil uchun optimallashtiramiz.",
+    "service3_1SeoTitle": "Web sayt yaratish – Jizzaxda professional web dizayn xizmati | Reklama Xizmati",
+    "service3_1SeoDescription": "Bizning web sayt yaratish xizmati bilan Jizzaxda zamonaviy va foydalanuvchi do‘stona saytlarni yarating. Narxlar va misollar bilan tanishing."
+  },
+  "breadcrumb": {
+    "home": "Bosh sahifa",
+    "company": "Kompaniya",
+    "services": "Xizmatlar",
+    "portfolio": "Portfolio",
+    "price": "Narxlar",
+    "contact": "Aloqa"
+  },
   "IndexPage": {
-    "heading": "Forward - UZ",
-    "title": "next-intl Beispiel"
+    "header": {
+      "cto": "O‘zingizga mos billboardni tanlang!",
+      "heading": "Shaharning eng ko‘rinadigan joylarida reklama qiling.",
+      "paragraph": "Joylashuv, dizayn va monitoring — barchasini biz bajaramiz!"
+    },
+    "stats": {
+      "card1Title": "Yuqori ko‘rinuvchanlik",
+      "card1Paragraph": "Eng gavjum nuqtalarda joylashgan.",
+      "card2Title": "Moslashtirilgan dizayn",
+      "card2Paragraph": "Brendingizga mos jozibali dizayn.",
+      "card3Title": "24/7 reklama",
+      "card3Paragraph": "Kun-u tun reklamangiz ko‘rinadi.",
+      "card4Title": "Natijani kuzatish",
+      "card4Paragraph": "Reklama samaradorligi nazoratda."
+    },
+    "services": {
+      "title": "Bizning Xizmatlar",
+      "service1Title": "Banner chop etish",
+      "service1Description": "Reklama bannerlarini bosib chiqarish",
+
+      "service2Title": "Brendmourlar",
+      "service2Description": "Binolar devoridagi katta reklama",
+
+      "service3Title": "LED Monitorlar",
+      "service3Description": "Yorqin elektron reklamalar monitori",
+
+      "service4Title": "City Box",
+      "service4Description": "Ko‘cha burchaklaridagi reklama qutisi",
+
+      "service5Title": "Bo'rtma harflar",
+      "service5Description": "Hajmli va chiroqli yozuvlar",
+      "more": "Batafsil",
+      "button": "Barcha xizmatlar"
+    },
+    "howWeWork": {
+      "title": "Qanday ishlaymiz",
+      "button": "Biz bilan bog'laning",
+      "more": "Batafsil",
+      "step1Title": "Joy tanlash",
+      "step1Description": "Eng yaxshi joylarni tanlaymiz.",
+
+      "step2Title": "Dizayn",
+      "step2Description": "Reklama dizaynini tayyorlaymiz.",
+
+      "step3Title": "Monitoring",
+      "step3Description": "Reklama samaradorligini kuzatamiz."
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "more": "Learn more",
+      "firstClientName": "Aziza Jumaeva",
+      "firstClientProfession": "Marketing Menejeri",
+      "firstClientReview": "Bizning kompaniya uchun LED monitorlar xizmatidan foydalandik. Ular reklama joylashuvi va dizaynni juda yaxshi bajarishdi. Natijalar juda tez ko'rinib turdi!",
+
+      "secondClientName": "Bahodir Tursunov",
+      "secondClientProfession": "Biznes Rivojlantirish Mutaxassisi",
+      "secondClientReview": "Jizzax shahrida brendmourlar joylashuvi bizning brendimizni keng tarqatish imkonini berdi. Yaxshi natijalarga erishdik.",
+
+      "thirdClientName": "Nodira To'raqulova",
+      "thirdClientProfession": "Dizayner",
+      "thirdClientReview": "Men banner chop etish xizmati orqali reklama bannerlari tayyorlattim. Ularning sifati a'lo darajada va joylashtirish juda oson edi!",
+
+      "fourthClientName": "Shavkat Karimov",
+      "fourthClientProfession": "Savdo Direktori",
+      "fourthClientReview": "Bizning kompaniya city box xizmatidan foydalandi. Asosiy ko'chalarda joylashgan city boxlar reklama uchun juda samarali bo'ldi.",
+
+      "fifthClientName": "Madina Xolmatova",
+      "fifthClientProfession": "Internet Marketing Mutaxassisi",
+      "fifthClientReview": "Reklama kompaniyamiz uchun yuqori sifatli LED monitorlar yordamida amalga oshirildi. Xizmatdan juda mamnun bo'ldik.",
+
+      "sixthClientName": "Rustam Yuldashev",
+      "sixthClientProfession": "Sotuv Menejeri",
+      "sixthClientReview": "Brendmourlar orqali bizning kompaniya reklamasini tarqatish juda samarali bo'ldi. Yaxshi natijalarga erishdik!"
+    },
+    "FAQ": {
+      "title": "Tez-tez so'raladigan savollar",
+      "more": "Learn more",
+      "button": "Contact Us",
+      "question1": "Reklama xizmatlaringizni qanday boshlashim mumkin?",
+      "answer1": "Bizga murojaat qilganingizdan so'ng, sizga kerakli reklama xizmatini tanlashda yordam beramiz.",
+
+      "question2": "Billboard joylashuvi uchun qanday joylar mavjud?",
+      "answer2": "Jizzax shahrining eng ko‘rinadigan joylarida reklama joylashuvlari mavjud.",
+
+      "question3": "Reklama dizaynini qanday tayyorlaysiz?",
+      "answer3": "Bizning jamoamiz sizning talablaringizga mos ravishda dizaynni yaratadi va tasdiqlash uchun yuboradi.",
+
+      "question4": "Reklama narxlari qanday belgilanadi?",
+      "answer4": "Narxlar joylashuv va xizmat turiga qarab farq qiladi. Biz sizga moslashtirilgan narx taklifini taqdim etamiz.",
+
+      "question5": "LED monitorlarda reklama qanday ko'rinadi?",
+      "answer5": "LED monitorlarimizda yuqori sifatli va dinamik reklama ko'rsatamiz, kunduzgi va tungi vaqtda yaxshi ko'rinadi.",
+
+      "question6": "Reklama kampaniyamni qanday kuzatib borishim mumkin?",
+      "answer6": "Biz sizga reklama kampaniyasining natijalarini doimiy ravishda kuzatish va tahlil qilish imkonini beramiz."
+    },
+    "contact": {
+      "title": "Biz bilan bog'laning",
+      "description": "Reklama ehtiyojlaringiz bo'yicha yordam berish uchun shu yerdamiz. Bugun biz bilan bog'laning!",
+      "button": "Aloqa qilish"
+    }
+  },
+  "PricePage": {
+    "cto": "Biznesingizni yangi bosqichga olib chiqing",
+    "title": "Narxlar sizga moslab tuzilgan",
+    "paragraph": "Billboard marketingi uchun moslashgan reja. Sizga kerakli xizmatlarni qulay narxlarda taklif qilamiz. Endi tashqi reklama qilish yanada oson va samarali bo'ladi.",
+    "usedBy": "8.3 ming+ foydalanuvchi tomonidan sinovdan o'tgan"
+  },
+  "PortfolioPage": {
+    "title": "Biz bajargan loyihalar",
+    "paragraph": "Mijozlarimiz uchun amalga oshirilgan billboard va tashqi reklama loyihalaridan namunalar. Har bir loyiha — sifat va samaradorlik natijasi."
+  },
+  "ContactPage": {
+    "name": "Ismingiz",
+    "namePlaceholder": "Ismingizni kiriting",
+    "email": "Email",
+    "emailPlaceholder": "Email manzilingiz",
+    "phone": "Telefon raqam",
+    "phonePlaceholder": "+998 90 123 45 67",
+    "organization": "Tashkilot",
+    "organizationPlaceholder": "Tashkilot nomi (ixtiyoriy)",
+    "submit": "Yuborish",
+    "phoneTitle": "Bizga qo'ng'iroq qiling",
+    "phoneDesc": "Har kuni soat 9:00 dan 18:00 gacha murojaat qiling",
+    "emailTitle": "Email yuboring",
+    "emailDesc": "Har qanday savolingizni elektron pochta orqali yuboring",
+    "socialTitle": "Ijtimoiy tarmoqlar",
+    "socialDesc": "Bizni ijtimoiy tarmoqlarda ham kuzatishingiz mumkin"
   }
 }

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
 import LaunchUI from '../logos/launch-ui';
 import {
@@ -45,36 +46,6 @@ interface NavigationProps {
 }
 
 export default function Navigation({
-  menuItems = [
-    {
-      title: 'Services',
-      content: 'default',
-    },
-    // {
-    //   title: 'Services',
-    //   content: 'components',
-    // },
-    {
-      title: 'Company',
-      isLink: true,
-      href: '/about',
-    },
-    {
-      title: 'Portfolio',
-      isLink: true,
-      href: '/portfolio',
-    },
-    {
-      title: 'Price',
-      isLink: true,
-      href: '/price',
-    },
-    {
-      title: 'Contact',
-      isLink: true,
-      href: '/contact',
-    },
-  ],
   components = [
     {
       title: 'Alert Dialog',
@@ -113,69 +84,100 @@ export default function Navigation({
   logoTitle = 'Launch UI',
   logoDescription = 'Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.',
   logoHref = 'https://www.launchuicomponents.com/',
-  introItems = [
+}: NavigationProps) {
+  const t = useTranslations('navbar');
+  const tIntro = useTranslations('navbar.introItems');
+
+  const menuItems = [
     {
-      title: 'Tashqi reklama',
-      description: 'How to install dependencies and structure your app.',
+      title: t('service'),
+      content: 'default',
+    },
+    {
+      title: t('company'),
+      isLink: true,
+      href: '/about',
+    },
+    {
+      title: t('portfolio'),
+      isLink: true,
+      href: '/portfolio',
+    },
+    {
+      title: t('price'),
+      isLink: true,
+      href: '/price',
+    },
+    {
+      title: t('contact'),
+      isLink: true,
+      href: '/contact',
+    },
+  ];
+
+  const introItems = [
+    {
+      title: tIntro('adsTitle'),
+      description: tIntro('adsDescription'),
       href: '#',
       subItems: [
         {
-          title: 'Brendmourlar',
-          description: "Jizzax shahrining ko'ringan bino-devorlari va tomlarida joylashgan brendmourlar",
+          title: tIntro('ads.brendmourlar.title'),
+          description: tIntro('ads.brendmourlar.description'),
           href: '/services/brendmourlar',
         },
         {
-          title: 'Katta harflar',
-          description: "Jizzax shahrining ko'ringan bino-devorlari va tomlari ustida katta hajmdagi harflar",
+          title: tIntro('ads.kattaHarflar.title'),
+          description: tIntro('ads.kattaHarflar.description'),
           href: '/services/katta-harflar',
         },
         {
-          title: 'City Box',
-          description: "Jizzax shahrining asosiy ko'chalarida 50 dan ortiq city boxlar",
+          title: tIntro('ads.cityBox.title'),
+          description: tIntro('ads.cityBox.description'),
           href: '/services/city-box',
         },
         {
-          title: 'Avtovbus',
-          description: "Jzzax shahar va shaharlararo avtobus yo'nalishlarida reklama o'rnaish",
+          title: tIntro('ads.avtobus.title'),
+          description: tIntro('ads.avtobus.description'),
           href: '/services/avtobus',
         },
         {
-          title: 'Billboardlar',
-          description: 'Jizzax shahar va tuman markazlarida 100 dan ortiq billboardlar',
+          title: tIntro('ads.billboardlar.title'),
+          description: tIntro('ads.billboardlar.description'),
           href: '/services/billboardlar',
         },
         {
-          title: 'LED monitorlar',
-          description: 'Jizzax shahar va tuman markazlarida 100 dan ortiq LED monitorlar',
+          title: tIntro('ads.ledMonitorlar.title'),
+          description: tIntro('ads.ledMonitorlar.description'),
           href: '/services/led-monitorlar',
         },
       ],
     },
     {
-      title: 'Tayyorlash & Ishlab chiqarish',
-      description: 'UI components and variants',
+      title: tIntro('productionTitle'),
+      description: tIntro('productionDescription'),
       href: '#',
       subItems: [
         {
-          title: "Bo'rtma harflar",
-          description: "Yonadigan, bo'rtma harflar tayyorlash va o'rnatib berish",
+          title: tIntro('production.bortmaHarflar.title'),
+          description: tIntro('production.bortmaHarflar.description'),
           href: '/services/bortma-harflar',
         },
         {
-          title: 'Stella',
-          description: "Yo'l chetida va ofislar yonida turadigan stellalarni tayyorlash va o'rnatish hizmati",
+          title: tIntro('production.stella.title'),
+          description: tIntro('production.stella.description'),
           href: '/services/stella',
         },
         {
-          title: 'Banner chop etish',
-          description: "Bannerlar va orakallarni chop etish va uni o'rnatib berish xizmati",
+          title: tIntro('production.bannerChop.title'),
+          description: tIntro('production.bannerChop.description'),
           href: '/services/banner-chop-etish',
         },
       ],
     },
     {
-      title: 'Service 3',
-      description: 'Styling basics and layout',
+      title: tIntro('service3Title'),
+      description: tIntro('service3Description'),
       href: '#',
       subItems: [
         { title: '', description: '', href: '#' },
@@ -184,8 +186,7 @@ export default function Navigation({
         { title: '', description: '', href: '#' },
       ],
     },
-  ],
-}: NavigationProps) {
+  ];
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>

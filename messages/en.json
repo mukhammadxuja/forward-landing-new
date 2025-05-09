@@ -1,6 +1,262 @@
 {
+  "navbar": {
+    "service": "Services",
+    "company": "Company",
+    "portfolio": "Portfolio",
+    "price": "Pricing",
+    "contact": "Contact",
+    "address": "Sharof Rashidov Avenue",
+    "introItems": {
+      "adsTitle": "Outdoor Advertising",
+      "adsDescription": "Guide to setting up your app structure and installing required dependencies.",
+      "ads": {
+        "brendmourlar": {
+          "title": "Brand Murals",
+          "description": "Murals placed on visible building walls and rooftops across Jizzakh city"
+        },
+        "kattaHarflar": {
+          "title": "Large Letters",
+          "description": "Oversized letters placed on rooftops and walls of buildings in Jizzakh"
+        },
+        "cityBox": {
+          "title": "City Box",
+          "description": "Over 50 city box installations across main streets of Jizzakh"
+        },
+        "avtobus": {
+          "title": "Bus Advertising",
+          "description": "Advertising on city and intercity bus routes in Jizzakh"
+        },
+        "billboardlar": {
+          "title": "Billboards",
+          "description": "More than 100 billboards in Jizzakh city and district centers"
+        },
+        "ledMonitorlar": {
+          "title": "LED Screens",
+          "description": "More than 100 LED displays across Jizzakh city and surrounding areas"
+        }
+      },
+      "productionTitle": "Production & Manufacturing",
+      "productionDescription": "UI components and their variations",
+      "production": {
+        "bortmaHarflar": {
+          "title": "3D Letters",
+          "description": "Design and installation of illuminated, raised letters"
+        },
+        "stella": {
+          "title": "Stela Signs",
+          "description": "Manufacturing and installation of freestanding signs near roads or office areas"
+        },
+        "bannerChop": {
+          "title": "Banner Printing",
+          "description": "Banner and oracal printing and professional installation"
+        }
+      },
+      "service3Title": "Service 3",
+      "service3Description": "Basic styles and layout",
+      "service3_1Title": "Web Development"
+    }
+  },
+  "footer": {
+    "ourPartners": "Our Partners",
+    "questions": "Do you have any questions or suggestions?",
+    "contactUs": "Contact us",
+    "about": "Here should be some information about the billboard business company",
+    "socials": "Social media",
+    "copyright": "Forward. All rights reserved.",
+    "linksTitle": "About the company",
+    "new": "New",
+    "navLinks": {
+      "home": "Home",
+      "about": "About Us",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "pricing": "Pricing",
+      "contact": "Contact"
+    }
+  },
+  "services": {
+    "title1": "Outdoor Advertising",
+    "service1Title": "Brand Mourns",
+    "service1Description": "Brand mourns located on the visible walls and rooftops of buildings in Jizzakh city",
+    "service1FullDescription": "Brand Mourns are large-scale advertising spaces located on building walls or rooftops, ensuring high visibility. Through brand mourns, you can showcase your brand in the city center, where many people pass by. Their design and placement are highly attractive, capturing attention even from a distance.",
+    "service1SeoTitle": "Brand Mourns – Building Roof Advertising in Jizzakh | Advertising Service",
+    "service1SeoDescription": "Brand mourns located in visible areas in Jizzakh city center. Discover pricing, locations, and gallery.",
+
+    "service2Title": "Large Letters",
+    "service2Description": "Large-scale letters on the visible walls and rooftops of buildings in Jizzakh city",
+    "service2FullDescription": "Large letter advertising is a form of bright advertisement placed on building rooftops or elevated points. These letters are typically illuminated at night and visible from a long distance. If you want your brand name to be remembered by the masses, this is a highly effective tool.",
+    "service2SeoTitle": "Large Letters – Illuminated Advertisement in Jizzakh | Advertising Service",
+    "service2SeoDescription": "Large advertising letters on building rooftops in Jizzakh, bright and eye-catching. Explore locations and pricing.",
+
+    "service3Title": "City Box",
+    "service3Description": "More than 50 city boxes on the main streets of Jizzakh city",
+    "service3FullDescription": "City Boxes are advertising structures located on pedestrian walkways, an integral part of city life. Positioned at eye level, they are easily visible to pedestrians. Perfect for frequently updated posters, announcements, or product advertisements.",
+    "service3SeoTitle": "City Box – Pedestrian Advertising in Jizzakh | Advertising Service",
+    "service3SeoDescription": "Place your product advertisement through over 50 city boxes in Jizzakh. Prices and gallery available.",
+
+    "service4Title": "Bus",
+    "service4Description": "Bus advertisements on urban and intercity routes in Jizzakh",
+    "service4FullDescription": "Bus advertisements are placed on active transportation vehicles operating on urban and intercity routes. This method ensures your brand reaches thousands of people every day. Due to the moving nature of buses, your advertisement will appear in various locations, reaching a wide audience.",
+    "service4SeoTitle": "Bus Advertisements – Outdoor Advertising in Jizzakh and Intercity | Advertising Service",
+    "service4SeoDescription": "Capture a moving audience with advertisements on buses. Explore prices and examples.",
+
+    "service5Title": "Billboards",
+    "service5Description": "Over 100 billboards in Jizzakh city and district centers",
+    "service5FullDescription": "Billboards are one of the most popular and effective forms of outdoor advertising. These large banners bring your product or service to the attention of the public. Our billboards are located in the main streets of Jizzakh city center and all districts, where thousands of cars and pedestrians pass daily. Billboard advertising not only ensures large-scale visibility but also boosts brand image and helps establish strong connections with local customers. Each ad location is strategically chosen and regularly monitored for lighting, safety, and technical condition.",
+    "service5SeoTitle": "Billboards – Outdoor Advertising Locations in Jizzakh | Advertising Service",
+    "service5SeoDescription": "100+ billboard locations in strategic points across Jizzakh province. Discover available locations, pricing, and gallery.",
+
+    "service6Title": "LED Monitors",
+    "service6Description": "Over 100 LED monitors in Jizzakh city and district centers",
+    "service6FullDescription": "LED Monitors are large digital screens that immediately capture attention due to their brightness and dynamism. Ideal for displaying video clips, animations, or special promotions. These monitors are often located near central roads, intersections, or entertainment centers.",
+    "service6SeoTitle": "LED Monitors – Modern Digital Advertising in Jizzakh | Advertising Service",
+    "service6SeoDescription": "Showcase your captivating videos and animations through LED monitors. Explore the gallery and pricing.",
+
+    "title2": "Design & Production",
+
+    "title3": "Other Services",
+    "service3_1Title": "Web Development",
+    "service3_1Description": "Professional web development services in Jizzakh.",
+    "service3_1FullDescription": "Web development is not just about creating a few pages but crafting complete web solutions that support your brand and business marketing goals. We use the latest technologies to enhance user experience and optimize websites for SEO and mobile.",
+    "service3_1SeoTitle": "Web Development – Professional Web Design Services in Jizzakh | Advertising Service",
+    "service3_1SeoDescription": "Create modern and user-friendly websites with our web development service in Jizzakh. Explore pricing and examples."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "company": "Company",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "price": "Pricing",
+    "contact": "Contact"
+  },
   "IndexPage": {
-    "heading": "Forward - EN",
-    "title": "next-intl Beispiel"
+    "header": {
+      "cto": "Choose your own billboard!",
+      "heading": "Advertise in the city’s most visible locations.",
+      "paragraph": "We handle placement, design, and monitoring — all in one place!"
+    },
+    "stats": {
+      "card1Title": "High Visibility",
+      "card1Paragraph": "Placed in high-traffic areas.",
+      "card2Title": "Custom Design",
+      "card2Paragraph": "Attractive design for your brand.",
+      "card3Title": "24/7 Exposure",
+      "card3Paragraph": "Visible day and night nonstop.",
+      "card4Title": "Performance Tracking",
+      "card4Paragraph": "Monitor results with ease."
+    },
+    "services": {
+      "title": "Our Services",
+      "service1Title": "Banner Printing",
+      "service1Description": "Printed banners for promotion",
+
+      "service2Title": "Brandmurals",
+      "service2Description": "Large ads on building walls",
+
+      "service3Title": "LED Monitors",
+      "service3Description": "Bright digital ad displays",
+
+      "service4Title": "City Box",
+      "service4Description": "Street corner ad boxes",
+
+      "service5Title": "3D Letters",
+      "service5Description": "Bold and illuminated signage",
+      "more": "Learn more",
+      "button": "All Services"
+    },
+    "howWeWork": {
+      "title": "How We Work",
+      "more": "Learn more",
+      "button": "Contact Us",
+      "step1Title": "Choose location",
+      "step1Description": "Select the best advertising spots.",
+
+      "step2Title": "Design",
+      "step2Description": "Prepare the advertisement design.",
+
+      "step3Title": "Monitoring",
+      "step3Description": "Track the ad’s performance."
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "more": "Learn more",
+      "firstClientName": "Aziza Jumaeva",
+      "firstClientProfession": "Marketing Manager",
+      "firstClientReview": "We used the LED monitor service. Their placement and design were top-notch. Results were visible quickly!",
+
+      "secondClientName": "Bahodir Tursunov",
+      "secondClientProfession": "Business Development Specialist",
+      "secondClientReview": "The placement of brandmours in Jizzakh helped us expand our brand. We achieved excellent results.",
+
+      "thirdClientName": "Nodira To'raqulova",
+      "thirdClientProfession": "Designer",
+      "thirdClientReview": "I ordered banner printing. The quality was excellent, and the placement was very easy!",
+
+      "fourthClientName": "Shavkat Karimov",
+      "fourthClientProfession": "Sales Director",
+      "fourthClientReview": "Our company used the City Box service. These advertising spaces on the main streets turned out to be very effective.",
+
+      "fifthClientName": "Madina Xolmatova",
+      "fifthClientProfession": "Internet Marketing Specialist",
+      "fifthClientReview": "The advertising campaign was carried out using high-quality LED monitors. We were very satisfied with the results.",
+
+      "sixthClientName": "Rustam Yuldashev",
+      "sixthClientProfession": "Sales Manager",
+      "sixthClientReview": "With the help of brandmours, our company was able to effectively distribute its advertisement. We achieved great results!"
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "more": "Learn more",
+      "button": "Contact Us",
+      "question1": "How can I start using your advertising services?",
+      "answer1": "After you contact us, we'll assist you in selecting the right advertising service for your needs.",
+
+      "question2": "What locations are available for billboard placements?",
+      "answer2": "We have billboard placements in the most visible areas of Jizzakh city.",
+
+      "question3": "How do you create the advertisement design?",
+      "answer3": "Our team creates a design based on your requirements and sends it for approval.",
+
+      "question4": "How are advertising prices determined?",
+      "answer4": "Prices vary based on location and service type. We'll provide you with a customized quote.",
+
+      "question5": "How does advertising look on LED monitors?",
+      "answer5": "We offer high-quality dynamic advertising on LED monitors that is visible both during the day and at night.",
+
+      "question6": "How can I track the results of my advertising campaign?",
+      "answer6": "We provide you with the ability to track and analyze the results of your advertising campaign in real-time."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "We are here to assist you with all your advertising needs. Reach out to us today!",
+      "button": "Get in Touch"
+    }
+  },
+  "PricePage": {
+    "cto": "Take your business to the next level",
+    "title": "Pricing tailored to you",
+    "paragraph": "A plan designed for billboard marketing. Get the services you need at a fair price. Outdoor advertising has never been easier and more effective.",
+    "usedBy": "Used by 8.3k+ users"
+  },
+  "PortfolioPage": {
+    "title": "Our Completed Projects",
+    "paragraph": "Examples of billboard and outdoor advertising projects we have completed for our clients. Each one reflects quality and impact."
+  },
+  "ContactPage": {
+    "name": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Email",
+    "emailPlaceholder": "Your email address",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+998 90 123 45 67",
+    "organization": "Organization",
+    "organizationPlaceholder": "Organization name (optional)",
+    "submit": "Submit",
+    "phoneTitle": "Call us",
+    "phoneDesc": "Available every day from 9:00 AM to 6:00 PM",
+    "emailTitle": "Send an email",
+    "emailDesc": "Feel free to send your questions via email",
+    "socialTitle": "Social media",
+    "socialDesc": "Follow us on our social platforms"
   }
 }

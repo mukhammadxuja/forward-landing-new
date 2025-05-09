@@ -1,40 +1,40 @@
+import { useTranslations } from 'next-intl';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 
-const faq: { question: string; answer: string }[] = [
-  {
-    question: 'What is your return policy?',
-    answer:
-      'You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.',
-  },
-  {
-    question: 'How do I track my order?',
-    answer:
-      'Track your order using the link provided in your confirmation email, or log into your account to view tracking details.',
-  },
-  {
-    question: 'Do you ship internationally?',
-    answer:
-      'Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.',
-  },
-  {
-    question: 'What payment methods do you accept?',
-    answer:
-      'We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.',
-  },
-  {
-    question: 'What if I receive a damaged item?',
-    answer:
-      'Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.',
-  },
-];
-
 function FAQ() {
+  const t = useTranslations('IndexPage.FAQ');
+
+  const faq: { question: string; answer: string }[] = [
+    {
+      question: t('question1'),
+      answer: t('answer1'),
+    },
+    {
+      question: t('question2'),
+      answer: t('answer2'),
+    },
+    {
+      question: t('question3'),
+      answer: t('answer3'),
+    },
+    {
+      question: t('question4'),
+      answer: t('answer4'),
+    },
+    {
+      question: t('question5'),
+      answer: t('answer5'),
+    },
+    {
+      question: t('question6'),
+      answer: t('answer6'),
+    },
+  ];
+
   return (
     <div>
       <div className="flex flex-col md:flex-row items-start justify-between">
-        <h4 className="section-title">
-          Frequently Asked <br /> Questions
-        </h4>
+        <h4 className="section-title max-w-[20rem]">{t('title')}</h4>
         <Accordion type="single" defaultValue="question-0" className="max-w-xl">
           {faq.map(({ question, answer }, index) => (
             <AccordionItem key={question} value={`question-${index}`}>

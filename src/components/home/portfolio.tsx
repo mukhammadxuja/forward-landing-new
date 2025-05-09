@@ -40,8 +40,8 @@ const portfolioItems = [
 export default function PortfolioSection({ className }: { className?: string }) {
   return (
     <section className={`py-16 bg-card mb-10 ${className}`}>
-      <div className="mx-auto max-w-7xl px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Portfolio</h2>
+      <div className="relative mx-auto max-w-7xl px-4">
+        <h2 className="section-title mb-8 lg:mb-12">Portfolio</h2>
 
         <Carousel
           opts={{
@@ -72,7 +72,7 @@ export default function PortfolioSection({ className }: { className?: string }) 
             ))}
           </CarouselContent>
 
-          <div className="hidden lg:block">
+          <div className="hidden md-block">
             <CarouselPrevious />
             <CarouselNext />
           </div>

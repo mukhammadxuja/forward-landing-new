@@ -26,7 +26,7 @@ function Favorites() {
   const [selectedBillboard, setSelectedBillboard] = useState<BillboardType | null>(null);
 
   return (
-    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 spacey-y-4 lg:space-y-6 py-4 lg:py-10">
+    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 spacey-y-4 lg:space-y-6 py-6 lg:py-10">
       <div className="px-4 lg:p-0 spacey-y-4 lg:space-y-6">
         <Breadcrumb className="mb-4">
           <BreadcrumbList>

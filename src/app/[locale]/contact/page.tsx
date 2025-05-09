@@ -18,9 +18,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Instagram, Mail, Send } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 function Contact() {
+  const t = useTranslations('ContactPage');
+  const breadcrumbT = useTranslations('breadcrumb');
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -49,21 +53,21 @@ function Contact() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 spacey-y-4 lg:space-y-6 py-4 lg:py-10">
-      <Breadcrumb className="px-4 lg:px-0">
+    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 spacey-y-4 lg:space-y-6 py-6 lg:py-10">
+      <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
+              <Link href="/">{breadcrumbT('home')}</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Contact</BreadcrumbPage>
+            <BreadcrumbPage>{breadcrumbT('contact')}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <div className="space-y-6 lg:space-y-10 px-4 lg:px-0">
+      <div className="space-y-6 lg:space-y-10 mt-4 lg:mt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-10">
           <div className="order-2 md:order-1 w-full h-72 md:h-full rounded-xl overflow-hidden">
             <ContactMap />
@@ -73,7 +77,7 @@ function Contact() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Label htmlFor="name" className="block mb-2 text-sm font-medium text-primary">
-                  Ismingiz
+                  {t('name')}
                 </Label>
                 <Input
                   type="text"
@@ -83,13 +87,13 @@ function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full bg-card py-4"
-                  placeholder="Ismingizni kiriting"
+                  placeholder={t('namePlaceholder')}
                 />
               </div>
 
               <div>
                 <Label htmlFor="email" className="block mb-2 text-sm font-medium text-primary">
-                  Email
+                  {t('email')}
                 </Label>
                 <Input
                   type="email"
@@ -99,13 +103,13 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full bg-card py-4"
-                  placeholder="Email manzilingiz"
+                  placeholder={t('emailPlaceholder')}
                 />
               </div>
 
               <div>
                 <Label htmlFor="phone" className="block mb-2 text-sm font-medium text-primary">
-                  Telefon raqam
+                  {t('phone')}
                 </Label>
                 <Input
                   type="tel"
@@ -115,13 +119,13 @@ function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full bg-card py-4"
-                  placeholder="+998 90 123 45 67"
+                  placeholder={t('phonePlaceholder')}
                 />
               </div>
 
               <div>
                 <Label htmlFor="organization" className="block mb-2 text-sm font-medium text-primary">
-                  Tashkilot
+                  {t('organization')}
                 </Label>
                 <Input
                   type="text"
@@ -130,12 +134,12 @@ function Contact() {
                   value={formData.organization}
                   onChange={handleChange}
                   className="w-full bg-card py-4"
-                  placeholder="Tashkilot nomi (ixtiyoriy)"
+                  placeholder={t('organizationPlaceholder')}
                 />
               </div>
 
               <Button type="submit" className="w-full">
-                Yuborish
+                {t('submit')}
               </Button>
             </form>
           </div>
@@ -143,8 +147,8 @@ function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
             <div className="space-y-2">
-              <h6 className="paragraph-sm !text-foreground font-medium">Служба доверия</h6>
-              <p className="link-sm max-w-xs">В рамках улучшения работы группы «Самолет» действует телефон доверия</p>
+              <h6 className="paragraph-sm !text-foreground font-medium">{t('phoneTitle')}</h6>
+              <p className="link-sm max-w-xs">{t('phoneDesc')}</p>
             </div>
             <a
               href="tel:+998995571010"
@@ -155,8 +159,8 @@ function Contact() {
           </div>
           <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
             <div className="space-y-2">
-              <h6 className="paragraph-sm !text-foreground font-medium">Служба доверия</h6>
-              <p className="link-sm max-w-xs">В рамках улучшения работы группы «Самолет» действует телефон доверия</p>
+              <h6 className="paragraph-sm !text-foreground font-medium">{t('emailTitle')}</h6>
+              <p className="link-sm max-w-xs">{t('emailDesc')}</p>
             </div>
             <a
               href="mailto:forward@gmail.com"
@@ -167,8 +171,8 @@ function Contact() {
           </div>
           <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
             <div className="space-y-2">
-              <h6 className="paragraph-sm !text-foreground font-medium">Служба доверия</h6>
-              <p className="link-sm max-w-xs">В рамках улучшения работы группы «Самолет» действует телефон доверия</p>
+              <h6 className="paragraph-sm !text-foreground font-medium">{t('socialTitle')}</h6>
+              <p className="link-sm max-w-xs">{t('socialDesc')}</p>
             </div>
             <div className="flex gap-2 lg:gap-4">
               <a href="http://" target="_blank" rel="noopener noreferrer">

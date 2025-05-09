@@ -30,7 +30,7 @@ export function HomePage({ params }: Props) {
       <div>
         <HomePageBackground />
 
-        <HeroSection heading={t('heading')} />
+        <HeroSection />
         {/* <Map billboardData={billboardData.map((billboard) => ({ ...billboard, id: billboard.id.toString() }))} /> */}
         <div className="space-y-12 lg:space-y-20 mb-10 mx-auto max-w-7xl px-[32px] lg:px-4">
           <Stats />

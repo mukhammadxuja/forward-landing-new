@@ -13,10 +13,10 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { Brain, Instagram, Mail, Menu, SendIcon } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { ReactNode, startTransition } from 'react';
 import { Badge } from '../ui/badge';
 
@@ -164,16 +164,9 @@ export default function Navbar({
   customNavigation,
   className,
 }: NavbarProps) {
-  const t = useTranslations();
-
-  const pathname = usePathname();
-  const pathSegments = pathname.split('/').filter(Boolean);
-
-  const firstPathSegment = pathSegments.length > 0 ? `/${pathSegments[0]}` : '/';
+  const t = useTranslations('navbar');
 
   const router = useRouter();
-
-  const localActive = useLocale();
 
   const onSelectChange = (value: string) => {
     const nextLocale = value;
@@ -197,14 +190,6 @@ export default function Navbar({
             </NavbarLeft>
             <NavbarRight>
               <div className="flex items-center">
-                {/* <Button className="hidden relative p-2 rounded-full w-[40px] h-[40px] flex items-center justify-center text-white">
-                  <Link href="/favorites">
-                    <Heart size={18} className="text-white" />
-                    <span className="absolute top-0 right-0 bg-white text-primary w-4 h-4 rounded-full flex items-center justify-center text-xs">
-                      2
-                    </span>
-                  </Link>
-                </Button> */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Image
@@ -225,7 +210,7 @@ export default function Navbar({
                       <span className="text-sm font-medium">Русский</span>
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => onSelectChange('en')} className="flex items-center gap-2">
-                      <Image alt="logo" src="/assets/flags/russia.svg" width={14} height={14} />
+                      <Image alt="logo" src="/assets/flags/england.png" width={14} height={14} />
                       <span className="text-sm font-medium">English</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -238,7 +223,7 @@ export default function Navbar({
                     <span className="sr-only">Toggle navigation menu</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="overflow-y-auto w-full">
+                <SheetContent side="right" className="overflow-y-auto">
                   <nav className="grid gap-6 text-lg font-medium">
                     <a href={homeUrl} className="flex items-center gap-2 text-xl font-bold">
                       <span>{name}</span>

@@ -194,7 +194,7 @@ export default function Map({
         </div>
       </div>
 
-      <div className={`relative w-full h-[35rem] bg-gray-200 rounded-2xl overflow-hidden ${className}`}>
+      <div className={`relative w-full h-[24rem] lg:h-[35rem] bg-gray-200 rounded-2xl overflow-hidden ${className}`}>
         {activeBillboard && (
           <MapCard
             activeBillboard={activeBillboard}
