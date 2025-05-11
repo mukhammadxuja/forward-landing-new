@@ -99,7 +99,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Load more tugmasi faqat mobilda va qisqartirilgan holatda */}
         {!showAll && isMobile && (
           <div className="flex items-center justify-center w-full mt-4 md:mt-8">
             <Button variant="secondary" onClick={() => setShowAll(true)}>

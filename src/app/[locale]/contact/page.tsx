@@ -17,6 +17,7 @@ const ContactMap = dynamic(() => import('./contact-map'), {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useToast } from '@/components/ui/use-toast';
 import { Instagram, Mail, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
@@ -24,6 +25,7 @@ import { useState } from 'react';
 function Contact() {
   const t = useTranslations('ContactPage');
   const breadcrumbT = useTranslations('breadcrumb');
+  const { toast } = useToast();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -47,9 +49,26 @@ function Contact() {
     organization: string;
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Yuborilgan maʼlumot:', formData);
+
+    const res = await fetch('/api/sendMessage', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      toast({
+        title: 'Maʼlumotlar yuborildi!',
+      });
+      setFormData({ name: '', email: '', phone: '', organization: '' });
+    } else {
+      toast({
+        title: 'Xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.',
+        variant: 'destructive',
+      });
+    }
   };
 
   return (

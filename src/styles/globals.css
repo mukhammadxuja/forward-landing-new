@@ -59,7 +59,7 @@
 
   --border: hsl(180 10% 20%);
   --input: hsl(180 10% 20%);
-  --ring: hsl(58 100% 70%);
+  --ring: hsl(180, 60%, 40%);
 
   /* Diagram ranglari (charts) */
   --chart-1: hsl(180 80% 45%);
