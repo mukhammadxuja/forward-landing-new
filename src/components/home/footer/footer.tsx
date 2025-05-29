@@ -28,7 +28,7 @@ export const Footer = () => {
         <div className="mx-auto max-w-7xl px-[32px] flex flex-col md:flex-row items-start md:items-center justify-between pb-5 md:pb-10">
           <Link href="/" className="block lg:hidden">
             <div className="cursor-pointer my-3">
-              <Image alt="logo" src="/next.svg" width={80} height={80} className="" />
+              <Image alt="logo" src="/assets/logos/logo.svg" width={80} height={80} className="" />
             </div>
           </Link>
 

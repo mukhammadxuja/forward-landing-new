@@ -168,17 +168,48 @@ export default function Footer2() {
           description: tIntro('production.bannerChop.description'),
           href: '/services/banner-chop-etish',
         },
+        {
+          title: tIntro('production.tablichki.title'),
+          description: tIntro('production.tablichki.description'),
+          href: '/services/tablichkalar',
+        },
+        {
+          title: tIntro('production.mantaj.title'),
+          description: tIntro('production.mantaj.description'),
+          href: '/services/montaj-xizmati',
+        },
       ],
     },
     {
-      title: tIntro('service3Title'),
-      description: tIntro('service3Description'),
+      title: tIntro('designTitle'),
+      description: tIntro('designDescription'),
       href: '#',
       subItems: [
-        { title: tIntro('service3_1Title'), description: '', href: '/services/web-sayt' },
-        { title: '', description: '', href: '#' },
-        { title: '', description: '', href: '#' },
-        { title: '', description: '', href: '#' },
+        {
+          title: tIntro('design.naming.title'),
+          description: tIntro('design.naming.description'),
+          href: '/services/naming',
+        },
+        {
+          title: tIntro('design.branding.title'),
+          description: tIntro('design.branding.description'),
+          href: '/services/branding',
+        },
+        {
+          title: tIntro('design.packaging.title'),
+          description: tIntro('design.packaging.description'),
+          href: '/services/packaging',
+        },
+        {
+          title: tIntro('design.smd.title'),
+          description: tIntro('design.smd.description'),
+          href: '/services/smd',
+        },
+        {
+          title: tIntro('design.web-sayt.title'),
+          description: tIntro('design.web-sayt.description'),
+          href: '/services/web-sayt',
+        },
       ],
     },
   ];
@@ -272,8 +303,8 @@ export default function Footer2() {
 
         {/* Bottom bar */}
         <div className="mx-auto max-w-7xl px-[32px] lg:px-4 border-t py-4 flex items-center justify-center lg:justify-between">
-          <div className='hidden lg:block'>
-            <Image src="/next.svg" alt="Dotsoft" width={40} height={40} />
+          <div className="hidden lg:block">
+            <Image src="/assets/logos/logo-desc.svg" alt="Forward logo" width={150} height={80} />
           </div>
           <div className="text-xs text-center text-neutral-400">
             © {new Date().getFullYear()} {t('copyright')}

@@ -60,11 +60,7 @@ const services = [
         description: "Jizzax shahrining ko'ringan bino-devorlari va tomlari ustida katta hajmdagi harflar",
         href: '/services/katta-harflar',
       },
-      {
-        title: 'City Box',
-        description: "Jizzax shahrining asosiy ko'chalarida 50 dan ortiq city boxlar",
-        href: '/services/city-box',
-      },
+
       {
         title: 'Avtovbus',
         description: "Jzzax shahar va shaharlararo avtobus yo'nalishlarida reklama o'rnaish",
@@ -80,6 +76,7 @@ const services = [
         description: 'Jizzax shahar va tuman markazlarida 100 dan ortiq LED monitorlar',
         href: '/services/led-monitorlar',
       },
+      
     ],
   },
   {
@@ -182,10 +179,9 @@ export default function Navbar({
         <div className="max-w-container relative mx-auto">
           <NavbarComponent>
             <NavbarLeft>
-              <a href={homeUrl} className="flex items-center gap-2 text-xl font-bold">
-                {/* {logo} */}
-                {name}
-              </a>
+              <Link href={homeUrl} className="flex items-center gap-2 text-xl font-bold">
+                <Image src={'/assets/logos/logo.svg'} alt={'logo'} width={120} height={80} />
+              </Link>
               {showNavigation && (customNavigation || <Navigation />)}
             </NavbarLeft>
             <NavbarRight>

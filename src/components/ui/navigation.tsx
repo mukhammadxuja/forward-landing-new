@@ -122,6 +122,11 @@ export default function Navigation({
       href: '#',
       subItems: [
         {
+          title: tIntro('ads.ledMonitorlar.title'),
+          description: tIntro('ads.ledMonitorlar.description'),
+          href: '/services/led-monitorlar',
+        },
+        {
           title: tIntro('ads.brendmourlar.title'),
           description: tIntro('ads.brendmourlar.description'),
           href: '/services/brendmourlar',
@@ -132,6 +137,11 @@ export default function Navigation({
           href: '/services/katta-harflar',
         },
         {
+          title: tIntro('ads.billboardlar.title'),
+          description: tIntro('ads.billboardlar.description'),
+          href: '/services/billboardlar',
+        },
+        {
           title: tIntro('ads.cityBox.title'),
           description: tIntro('ads.cityBox.description'),
           href: '/services/city-box',
@@ -140,16 +150,6 @@ export default function Navigation({
           title: tIntro('ads.avtobus.title'),
           description: tIntro('ads.avtobus.description'),
           href: '/services/avtobus',
-        },
-        {
-          title: tIntro('ads.billboardlar.title'),
-          description: tIntro('ads.billboardlar.description'),
-          href: '/services/billboardlar',
-        },
-        {
-          title: tIntro('ads.ledMonitorlar.title'),
-          description: tIntro('ads.ledMonitorlar.description'),
-          href: '/services/led-monitorlar',
         },
       ],
     },
@@ -173,17 +173,48 @@ export default function Navigation({
           description: tIntro('production.bannerChop.description'),
           href: '/services/banner-chop-etish',
         },
+        {
+          title: tIntro('production.tablichki.title'),
+          description: tIntro('production.tablichki.description'),
+          href: '/services/tablichkalar',
+        },
+        {
+          title: tIntro('production.mantaj.title'),
+          description: tIntro('production.mantaj.description'),
+          href: '/services/montaj-xizmati',
+        },
       ],
     },
     {
-      title: tIntro('service3Title'),
-      description: tIntro('service3Description'),
+      title: tIntro('designTitle'),
+      description: tIntro('designDescription'),
       href: '#',
       subItems: [
-        { title: '', description: '', href: '#' },
-        { title: '', description: '', href: '#' },
-        { title: '', description: '', href: '#' },
-        { title: '', description: '', href: '#' },
+        {
+          title: tIntro('design.naming.title'),
+          description: tIntro('design.naming.description'),
+          href: '/services/naming',
+        },
+        {
+          title: tIntro('design.branding.title'),
+          description: tIntro('design.branding.description'),
+          href: '/services/branding',
+        },
+        {
+          title: tIntro('design.packaging.title'),
+          description: tIntro('design.packaging.description'),
+          href: '/services/packaging',
+        },
+        {
+          title: tIntro('design.smd.title'),
+          description: tIntro('design.smd.description'),
+          href: '/services/smd',
+        },
+        {
+          title: tIntro('design.web-sayt.title'),
+          description: tIntro('design.web-sayt.description'),
+          href: '/services/web-sayt',
+        },
       ],
     },
   ];

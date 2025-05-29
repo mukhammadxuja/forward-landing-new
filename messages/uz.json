@@ -23,7 +23,7 @@
           "description": "Jizzax shahrining asosiy ko'chalarida 50 dan ortiq city boxlar"
         },
         "avtobus": {
-          "title": "Avtovbus",
+          "title": "Transportda reklama",
           "description": "Jizzax shahar va shaharlararo avtobus yo'nalishlarida reklama o'rnatish"
         },
         "billboardlar": {
@@ -48,21 +48,50 @@
           "description": "Yo'l chetida va ofislar yonida turadigan stellalarni tayyorlash va o'rnatish hizmati"
         },
         "bannerChop": {
-          "title": "Banner chop etish",
+          "title": "Banner / Orakal chop etish",
           "description": "Bannerlar va orakallarni chop etish va uni o'rnatib berish xizmati"
+        },
+        "tablichki": {
+          "title": "Tablichkalar",
+          "description": "Ichki va tashqi belgi yozuvlari tayyorlash"
+        },
+        "mantaj": {
+          "title": "Montaj xizmatlari",
+          "description": "Reklama obyektlarini o‘rnatish va yig‘ish xizmati"
         }
       },
 
-      "service3Title": "Xizmat 3",
-      "service3Description": "Asosiy uslublar va joylashuv",
-      "service3_1Title": "Web sayt yaratish"
+      "designTitle": "Grafik dizayn hizmatlari",
+      "designDescription": "Grafik dizayn xizmatlari va ularning variantlari",
+      "design": {
+        "naming": {
+          "title": "Naming",
+          "description": "Brend nomini yaratish xizmati"
+        },
+        "branding": {
+          "title": "Branding",
+          "description": "Brend konsepsiyasi va uslubini yaratish"
+        },
+        "packaging": {
+          "title": "Packaging",
+          "description": "Mahsulot uchun qadoqlash dizayni"
+        },
+        "smd": {
+          "title": "SMD (LED displey tizimlari)",
+          "description": "LED displeylarni ishlab chiqish va montaj"
+        },
+        "web-sayt": {
+          "title": "Web sayt yaratish",
+          "description": "Professional web saytlar yaratish xizmatlari"
+        }
+      }
     }
   },
   "footer": {
     "ourPartners": "Hamkorlarimiz",
     "questions": "Savollaringiz yoki takliflaringiz bormi?",
     "contactUs": "Biz bilan bog‘laning",
-    "about": "Bu yerda reklama kompaniyasi haqida ma'lumot bo‘lishi kerak",
+    "about": "“Forward Advertise” — Jizzax viloyatidagi birinchi va eng yirik tashqi reklama operatoridir.",
     "socials": "Ijtimoiy tarmoqlar",
     "copyright": "Forward. Barcha huquqlar himoyalangan.",
     "linksTitle": "Kompaniya haqida",
@@ -96,7 +125,7 @@
     "service3SeoTitle": "City Box – Jizzaxdagi piyodalar reklama vositasi | Reklama Xizmati",
     "service3SeoDescription": "Jizzax shahridagi 50+ city boxlar orqali mahsulotingiz reklamasini joylashtiring. Narxlar va galereya mavjud.",
 
-    "service4Title": "Avtobus",
+    "service4Title": "Transportda reklama",
     "service4Description": "Jizzax shahar va shaharlararo avtobus yo'nalishlarida reklama o'rnaish",
     "service4FullDescription": "Avtobus reklamalari — bu shahar va shaharlararo qatnovda faol harakat qiluvchi transport vositalarida joylashtiriladigan reklama turi. Bu usul sizning brendingizni har kuni minglab insonlarga yetkazadi. Avtobusning harakatlanadigan xarakteri sababli reklamangiz turli joylarda ko‘rinadi va keng auditoriyani qamrab oladi.",
     "service4SeoTitle": "Avtobus reklamalari – Jizzax va viloyatlararo tashqi reklama | Reklama Xizmati",
@@ -115,12 +144,67 @@
     "service6SeoDescription": "LED monitorlar orqali e’tiborni tortadigan video va animatsiyalaringizni namoyish eting. Galereya va narxlar bilan tanishing.",
 
     "title2": "Tayyorlash & Ishlab chiqarish",
-    "title3": "Boshqa Xizmatlar",
-    "service3_1Title": "Web sayt yaratish",
-    "service3_1Description": "Jizzaxda professional web saytlar yaratish xizmatlari.",
-    "service3_1FullDescription": "Web sayt yaratish — bu faqat bir nechta sahifalarni tashkil etish emas, balki sizning brendingiz va biznesingiz uchun moslashgan va marketing maqsadlarini qo‘llab-quvvatlaydigan to‘liq web yechimlarni yaratishdir. Biz foydalanuvchi tajribasini yaxshilash uchun eng so‘nggi texnologiyalardan foydalanamiz va saytlarni SEO va mobil uchun optimallashtiramiz.",
-    "service3_1SeoTitle": "Web sayt yaratish – Jizzaxda professional web dizayn xizmati | Reklama Xizmati",
-    "service3_1SeoDescription": "Bizning web sayt yaratish xizmati bilan Jizzaxda zamonaviy va foydalanuvchi do‘stona saytlarni yarating. Narxlar va misollar bilan tanishing."
+    "service2_1Title": "Bo'rtma harflar",
+    "service2_1Description": "Yonadigan, bo‘rtma harflar tayyorlash va o‘rnatib berish",
+    "service2_1FullDescription": "Bo‘rtma harflar — bu hajmli reklama shakli bo‘lib, yoritilgan yoki yoritilmagan variantlarda bo‘lishi mumkin. Ko‘pincha fasadlarda, ofis binolarida va savdo markazlarida ishlatiladi. Ushbu harflar korxonaning brendini yorqin va chiroyli ifodalaydi.",
+    "service2_1SeoTitle": "Bo‘rtma harflar tayyorlash va o‘rnatish xizmati | Jizzax reklama",
+    "service2_1SeoDescription": "Yonuvchi va bo‘rtma harflar ishlab chiqarish va montaj xizmati. Dizayn, ishlab chiqarish va o‘rnatish bo‘yicha to‘liq yechim.",
+
+    "service2_2Title": "Stella",
+    "service2_2Description": "Yo‘l chetida va ofislar yonida turadigan stellalarni tayyorlash va o‘rnatish xizmati",
+    "service2_2FullDescription": "Stella — bu mustahkam va baland reklama konstruksiyasi bo‘lib, ko‘pincha ofis, savdo markazlari va yo‘l yoqalarida o‘rnatiladi. Ular kompaniya logotipi, xizmat yoki reklama xabarini aniq ko‘rsatadi va uzoq masofadan ham ko‘rinadi.",
+    "service2_2SeoTitle": "Reklama stellalari tayyorlash va o‘rnatish | Tashqi reklama Jizzax",
+    "service2_2SeoDescription": "Stellalar orqali kompaniyangizni uzoqdan taniting. Metall konstruksiya, brendlash va o‘rnatish xizmatlari bilan.",
+
+    "service2_3Title": "Banner / Orakal chop etish",
+    "service2_3Description": "Bannerlar va orakallarni chop etish va uni o‘rnatib berish xizmati",
+    "service2_3FullDescription": "Bannerlar va orakallar tashqi va ichki reklama uchun ishlatiladigan materiallardir. Ular tezda tayyorlanadi, narxi nisbatan arzon va montaj qilish oson. Reklama tadbirlari, chegirmalar yoki doimiy e’lonlar uchun ideal yechim hisoblanadi.",
+    "service2_3SeoTitle": "Banner va orakal chop etish xizmati | Sifatli reklama bosmasi",
+    "service2_3SeoDescription": "Tez va sifatli banner, orakal chop etish xizmati. O‘lcham, dizayn va montaj bo‘yicha to‘liq xizmatlar.",
+
+    "service2_4Title": "Tablichkalar",
+    "service2_4Description": "Ichki va tashqi belgi yozuvlari tayyorlash",
+    "service2_4FullDescription": "Tablichkalar – bu ofislar, do‘konlar, ishlab chiqarish obyektlari uchun yo‘naltiruvchi yoki identifikatsion yozuvlardir. Plastmassa, metall yoki akrildan tayyorlanib, devorga yoki eshik oldiga o‘rnatiladi.",
+    "service2_4SeoTitle": "Tablichkalar tayyorlash xizmati | Ofis va tashqi yozuvlar",
+    "service2_4SeoDescription": "Ichki va tashqi tablichkalar tayyorlash va dizayni. Turli materiallar, o‘lcham va uslublarda ishlab chiqaramiz.",
+
+    "service2_5Title": "Montaj xizmatlari",
+    "service2_5Description": "Reklama obyektlarini o‘rnatish va yig‘ish xizmati",
+    "service2_5FullDescription": "Montaj xizmatlari reklama obyektlarini joyiga xavfsiz va to‘g‘ri o‘rnatishni o‘z ichiga oladi. Mutaxassislar jamoasi tomonidan bannerlar, LED ekranlar, stendlar, harflar va boshqa obyektlar professional tarzda o‘rnatiladi.",
+    "service2_5SeoTitle": "Reklama montaj xizmatlari | O‘rnatish va texnik yordam",
+    "service2_5SeoDescription": "Banner, LED ekran va boshqa reklama obyektlarini montaj qilish xizmati. Sifatli va xavfsiz o‘rnatish yechimlari.",
+
+    "title3": "Grafik dizayn xizmatlari",
+
+    "service3_1Title": "Naming",
+    "service3_1Description": "Brendingiz uchun o‘ziga xos va esda qolarli nom yaratish xizmati",
+    "service3_1FullDescription": "Naming – bu mahsulot, xizmat yoki kompaniya uchun o‘ziga xos, esda qoladigan va bozorda ajralib turadigan nom tanlash jarayonidir. Biz sizning faoliyatingiz, maqsadli auditoriyangiz va brend qadriyatlaringiz asosida samarali nomlar ishlab chiqamiz.",
+    "service3_1SeoTitle": "Naming xizmati – brendingiz uchun mukammal nom toping",
+    "service3_1SeoDescription": "Biznesingiz uchun professional naming xizmati. Bozorda ajralib turuvchi, kuchli va esda qoluvchi brend nomlari.",
+
+    "service3_2Title": "Branding",
+    "service3_2Description": "Brend konsepsiyasi, identiteti va strategiyasini ishlab chiqish xizmati",
+    "service3_2FullDescription": "Branding – bu kompaniya yoki mahsulotga noyob identitet berish jarayoni bo‘lib, u nom, logotip, ranglar, vizual uslublar va brend ovozini o‘z ichiga oladi. Biz sizning brendingizni tanib olinadigan va ishonchli qilishga xizmat qiluvchi strategiyani yaratamiz.",
+    "service3_2SeoTitle": "Professional branding xizmati – kuchli brend yarating",
+    "service3_2SeoDescription": "Kompaniyangiz uchun to‘liq branding xizmati: strategiya, logotip, vizual identitet va boshqalar.",
+
+    "service3_3Title": "Packaging",
+    "service3_3Description": "Mahsulotlar uchun jozibali va funksional qadoqlash dizayn xizmati",
+    "service3_3FullDescription": "Qadoqlash (packaging) – bu mahsulotingizni nafaqat himoya qilish, balki uni xaridorlar e'tiboriga tushirish vositasi hamdir. Biz sizning brendingizga mos, zamonaviy va ergonomik dizaynlarni yaratamiz.",
+    "service3_3SeoTitle": "Packaging dizayni – brendingizga mos qadoqlash yechimlari",
+    "service3_3SeoDescription": "Mahsulotlaringiz uchun o‘ziga xos, vizual jihatdan jozibali va funksional qadoqlash dizayni xizmati.",
+
+    "service3_4Title": "SMD (LED displeylar)",
+    "service3_4Description": "LED ekranlar va displey tizimlarini yetkazib berish va o‘rnatish",
+    "service3_4FullDescription": "SMD – bu yuqori aniqlikdagi LED displeylar bo‘lib, ular reklama, axborot taqdimoti va tashqi ko‘rinish uchun ishlatiladi. Biz turli o‘lchamdagi SMD panellarni yetkazib beramiz, o‘rnatamiz va texnik xizmat ko‘rsatamiz.",
+    "service3_4SeoTitle": "SMD LED displeylar – reklamangiz uchun yorqin yechim",
+    "service3_4SeoDescription": "Jizzaxda SMD LED ekranlar savdosi va montaji. Reklama, ko‘rgazma va tadbirlar uchun ideal variant.",
+
+    "service3_5Title": "Web sayt yaratish",
+    "service3_5Description": "Mobil moslashuvchan, tezkor va zamonaviy web saytlar yaratish xizmati",
+    "service3_5FullDescription": "Biznesingiz yoki loyihangiz uchun funksional, foydalanuvchi uchun qulay va SEO-ga mos web saytlar yaratamiz. Dizayndan tortib dasturlash va domen/hostinggacha to‘liq xizmat ko‘rsatamiz.",
+    "service3_5SeoTitle": "Web sayt yaratish – onlayn ishtirokingizni boshlang",
+    "service3_5SeoDescription": "Professional web sayt yaratish xizmati. Dizayn, dasturlash, texnik qo‘llab-quvvatlash – barchasi bir joyda."
   },
   "breadcrumb": {
     "home": "Bosh sahifa",
@@ -230,8 +314,20 @@
     "contact": {
       "title": "Biz bilan bog'laning",
       "description": "Reklama ehtiyojlaringiz bo'yicha yordam berish uchun shu yerdamiz. Bugun biz bilan bog'laning!",
-      "button": "Aloqa qilish"
+      "button": "Aloqaga chiqish"
     }
+  },
+  "AboutPage": {
+    "title": "Biz haqimizda",
+    "paragraph": "“Forward Advertise” — Jizzax viloyatidagi birinchi va eng yirik tashqi reklama operatoridir. Kompaniyamiz o‘z faoliyatini 2011-yilda, bir nechta billboardlarni joylashtirish bilan boshlagan.",
+    "sectionTitle": "Kompaniya haqida",
+    "paragraph1": "“Forward Advertise” — Jizzax viloyatidagi birinchi va eng yirik tashqi reklama operatoridir. Kompaniyamiz o‘z faoliyatini 2011-yilda, bir nechta billboardlarni joylashtirish bilan boshlagan.",
+    "paragraph2": "Bugungi kunda esa biz 100 dan ortiq billboardlar, 20 dan ziyod brendmauerlar (katta hajmli konstruksiyalar), 10 dan ortiq zamonaviy LED ekranlar hamda boshqa ko‘plab tashqi reklama obyektlari – sitibokslar, bekat brendinglari, jamoat transportlarida reklama vositalarini boshqaruvchi yirik va malakali jamoaga aylanganmiz. Hududiy qamrovimiz esa Jizzax viloyati bilan cheklanmay, butun Respublikamiz bo‘ylab kengayib bormoqda.",
+    "paragraph3": "Shuningdek, kompaniyamizda turli xil reklama vositalari va materiallarini ishlab chiqarish ham yo‘lga qo‘yilgan. Katta hajmdagi bosma mahsulotlar (banner, orakal), bo‘rttirma harflar va boshqa reklama materiallari uchun alohida ishlab chiqarish tsexi hamda dizayn studiyasi faoliyat yuritadi.",
+    "paragraph4": "Zamonaviy biznes tendensiyalaridan kelib chiqib, biz onlayn reklama xizmatlarini ham taklif qilamiz. Ular qatoriga media joylashtirish, brendllashtirish, ijtimoiy tarmoqlar uchun kontent ishlab chiqish va uni yetakchi platformalarda samarali joylashtirish xizmatlari kiradi.",
+    "paragraph5": "Bugungi kunga qadar biz O‘zbekiston bo‘ylab turli sohalarda faoliyat yuritayotgan 500 dan ortiq biznes egalariga kreativ, natijaga yo‘naltirilgan reklama yechimlarini taqdim etdik. Har bir mijozga individual yondashuv asosida xizmat ko‘rsatib, ularning brendi, mahsuloti yoki xizmatini keng auditoriyaga yetkazishda ishonchli hamkor bo‘lib kelmoqdamiz.",
+    "missionTitle": "Missiyamiz",
+    "missionParagraph": "Bizning missiyamiz — mijozlarimizning brendi, mahsuloti yoki xizmatini zamonaviy va ta’sirchan tashqi reklama vositalari orqali keng auditoriyaga yetkazishdir. Har bir loyihada innovatsion yondashuv, sifatli ishlab chiqish va natijaga yo‘naltirilgan servis tamoyillarini ustuvor deb bilamiz. O‘zbekiston bo‘ylab bizneslar uchun ishonchli, samarali va kreativ reklama hamkori bo‘lishga intilamiz."
   },
   "PricePage": {
     "cto": "Biznesingizni yangi bosqichga olib chiqing",
@@ -249,7 +345,7 @@
     "email": "Email",
     "emailPlaceholder": "Email manzilingiz",
     "phone": "Telefon raqam",
-    "phonePlaceholder": "+998 90 123 45 67",
+    "phonePlaceholder": "+99891 209 33 33",
     "organization": "Tashkilot",
     "organizationPlaceholder": "Tashkilot nomi (ixtiyoriy)",
     "submit": "Yuborish",

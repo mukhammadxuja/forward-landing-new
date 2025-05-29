@@ -170,10 +170,10 @@ function Contact() {
               <p className="link-sm max-w-xs">{t('phoneDesc')}</p>
             </div>
             <a
-              href="tel:+998995571010"
+              href="tel:+99891209333"
               className="text-[20px] lg:text-[24px] tracking-[-.015em] font-semibold text-foreground"
             >
-              +998 99 557-10-10
+              +99891 209 33 33
             </a>
           </div>
           <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">

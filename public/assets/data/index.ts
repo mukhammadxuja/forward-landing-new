@@ -127,6 +127,7 @@ export type ServiceCard = {
     gallery: string[];
   };
   locations?: never[];
+  thereMap?: boolean;
   priceRange?: string;
   seo?: {
     title: string;

@@ -14,9 +14,12 @@ import {
 } from '@/components/ui/breadcrumb';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 function About() {
+  const t = useTranslations('AboutPage');
+  const breadcrumbT = useTranslations('breadcrumb');
   return (
     <div className="spacey-y-4 lg:space-y-6">
       <div className="bg-card">
@@ -25,22 +28,18 @@ function About() {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/">Home</Link>
+                  <Link href="/">{breadcrumbT('home')}</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>About</BreadcrumbPage>
+                <BreadcrumbPage>{breadcrumbT('company')}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
           <div className="space-y-[24px] mt-3 lg:mt-0">
-            <h4 className="section-title">О компании</h4>
-            <p className="paragraph max-w-[580px]">
-              "Bizning Billboard kompaniyamiz" — tashqi reklama sohasida faoliyat yurituvchi va zamonaviy yechimlarni
-              taklif etuvchi kompaniya. Bizning asosiy maqsadimiz — mijozlarimiz uchun samarali va kreativ reklama
-              maydonlarini yaratish, ularning brendlarini yanada ko‘proq auditoriyaga yetkazishdir.
-            </p>
+            <h4 className="section-title">{t('title')}</h4>
+            <p className="paragraph max-w-[580px]">{t('paragraph')}</p>
             <Button className="hidden bg-primary text-white hover:bg-primary/80 rounded-full px-6 py-2">
               Batafsil <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
@@ -48,41 +47,22 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl px-[32px] lg:px-4 space-y-4 lg:space-y-0 py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 items-start border-b border-border">
-        <h4 className="section-title">О компании</h4>
-        <div className="space-y-4 lg:space-y-6">
-          <p className="paragraph">
-            Мы охватываем весь процесс создания недвижимости: от проектирования и строительства до ввода объектов в
-            эксплуатацию и обслуживания. Путь наших клиентов максимально удобный и бесшовный на всех этапах жизни в
-            проектах. Мы строим сегодня, чтобы завтра ваше будущее было комфортным, современным и надежным. Самолет —
-            это:
-          </p>
-          <p className="paragraph">
-            • Крупнейший девелопер по объему текущего строительства* • Самый большой земельный банк в России — 46,5 млн
-            кв. м <br /> • 127+ проектов в 17 городах присутствия от Калининграда до Сахалина <br /> • 400+ построенных
-            домов • 4600+ тысяч счастливых семей <br /> • 130 запланированных детских садов и школ <br /> • Более 35
-            сервисов**, которые делают жизнь людей лучше
-          </p>
-          <p className="paragraph">
-            Мы применяем инновационные решения и лучшие мировые практики при строительстве жилых комплексов и загородных
-            проектов. Создаем районы с полной инфраструктурой: школами, детскими садами, поликлиниками, спортивными и
-            развивающими центрами, кафе и магазинами. Запускаем передовые инвестиционные проекты, которые улучшают
-            качество жизни.
-          </p>
-          <p className="paragraph">
-            * По данным Единого ресурса застройщиков на 01.01.2025, размещенным на erzrf.ru, по объему текущего
-            строительства и объему ввода жилья за 2024 год (регион Московская область). <br />
-            ** Cервисы группы «Самолет» — это услуги по обмену и покупке квартир, их комплектации всем необходимым.
-          </p>
+      <div className="relative mx-auto max-w-7xl px-[32px] lg:px-4 space-y-4 lg:space-y-0 py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 items-start border-b border-border">
+        <div className="lg:sticky lg:top-24">
+          <h4 className="section-title">{t('sectionTitle')}</h4>
+        </div>
+        <div className="space-y-4">
+          <p className="paragraph">{t('paragraph1')}</p>
+          <p className="paragraph">{t('paragraph2')}</p>
+          <p className="paragraph">{t('paragraph3')}</p>
+          <p className="paragraph">{t('paragraph4')}</p>
+          <p className="paragraph">{t('paragraph5')}</p>
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-[32px] lg:px-4 space-y-4 lg:space-y-0 py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 items-start border-b border-border">
-        <h4 className="section-title">Наша миссия</h4>
+        <h4 className="section-title">{t('missionTitle')}</h4>
         <div className="space-y-4 lg:space-y-6">
-          <p className="paragraph">
-            Создавать дома, инфраструктуру и сервисы, которые экономят людям время, чтобы они потратили его на то, что
-            действительно важно.
-          </p>
+          <p className="paragraph">{t('missionParagraph')}</p>
         </div>
       </div>
 

@@ -23,7 +23,7 @@
           "description": "Over 50 city box installations across main streets of Jizzakh"
         },
         "avtobus": {
-          "title": "Bus Advertising",
+          "title": "Advertising on transport",
           "description": "Advertising on city and intercity bus routes in Jizzakh"
         },
         "billboardlar": {
@@ -47,20 +47,49 @@
           "description": "Manufacturing and installation of freestanding signs near roads or office areas"
         },
         "bannerChop": {
-          "title": "Banner Printing",
+          "title": "Banner / Oracal printing",
           "description": "Banner and oracal printing and professional installation"
+        },
+        "tablichki": {
+          "title": "Nameplates / signboards",
+          "description": "Production of indoor and outdoor signs"
+        },
+        "mantaj": {
+          "title": "Installation services",
+          "description": "Assembly and installation of advertising items"
         }
       },
-      "service3Title": "Service 3",
-      "service3Description": "Basic styles and layout",
-      "service3_1Title": "Web Development"
+      "designTitle": "Graphic design services",
+      "designDescription": "Graphic design services and their variations",
+      "design": {
+        "naming": {
+          "title": "Naming",
+          "description": "Service for creating brand names"
+        },
+        "branding": {
+          "title": "Branding",
+          "description": "Creating brand concepts and styles"
+        },
+        "packaging": {
+          "title": "Packaging",
+          "description": "Designing product packaging solutions"
+        },
+        "smd": {
+          "title": "SMD (LED display systems)",
+          "description": "LED display development and installation"
+        },
+        "web-sayt": {
+          "title": "Website development",
+          "description": "Professional website creation services"
+        }
+      }
     }
   },
   "footer": {
     "ourPartners": "Our Partners",
     "questions": "Do you have any questions or suggestions?",
     "contactUs": "Contact us",
-    "about": "Here should be some information about the billboard business company",
+    "about": "“Forward Advertise” is the first and largest outdoor advertising operator in the Jizzakh region",
     "socials": "Social media",
     "copyright": "Forward. All rights reserved.",
     "linksTitle": "About the company",
@@ -94,7 +123,7 @@
     "service3SeoTitle": "City Box – Pedestrian Advertising in Jizzakh | Advertising Service",
     "service3SeoDescription": "Place your product advertisement through over 50 city boxes in Jizzakh. Prices and gallery available.",
 
-    "service4Title": "Bus",
+    "service4Title": "Advertising on transport",
     "service4Description": "Bus advertisements on urban and intercity routes in Jizzakh",
     "service4FullDescription": "Bus advertisements are placed on active transportation vehicles operating on urban and intercity routes. This method ensures your brand reaches thousands of people every day. Due to the moving nature of buses, your advertisement will appear in various locations, reaching a wide audience.",
     "service4SeoTitle": "Bus Advertisements – Outdoor Advertising in Jizzakh and Intercity | Advertising Service",
@@ -114,12 +143,66 @@
 
     "title2": "Design & Production",
 
-    "title3": "Other Services",
-    "service3_1Title": "Web Development",
-    "service3_1Description": "Professional web development services in Jizzakh.",
-    "service3_1FullDescription": "Web development is not just about creating a few pages but crafting complete web solutions that support your brand and business marketing goals. We use the latest technologies to enhance user experience and optimize websites for SEO and mobile.",
-    "service3_1SeoTitle": "Web Development – Professional Web Design Services in Jizzakh | Advertising Service",
-    "service3_1SeoDescription": "Create modern and user-friendly websites with our web development service in Jizzakh. Explore pricing and examples."
+    "service2_1Title": "3D Letters",
+    "service2_1Description": "Manufacturing and installation of illuminated 3D letters",
+    "service2_1FullDescription": "3D letters are a volumetric advertising form that can be either illuminated or non-illuminated. They are commonly used on facades, office buildings, and shopping centers. These letters vividly and attractively represent a company's brand.",
+    "service2_1SeoTitle": "3D Letters Manufacturing and Installation Service | Jizzakh Advertising",
+    "service2_1SeoDescription": "Production and installation services for illuminated and volumetric letters. Complete solutions including design, manufacturing, and installation.",
+
+    "service2_2Title": "Stella",
+    "service2_2Description": "Manufacturing and installation of stella signs near roads and offices",
+    "service2_2FullDescription": "A stella is a sturdy and tall advertising structure often installed near offices, shopping centers, and roadsides. They clearly display the company logo, service, or advertisement message and are visible from a long distance.",
+    "service2_2SeoTitle": "Stella Sign Manufacturing and Installation | Outdoor Advertising Jizzakh",
+    "service2_2SeoDescription": "Promote your company from afar with stella signs. Services include metal construction, branding, and installation.",
+
+    "service2_3Title": "Banner / Oracal Printing",
+    "service2_3Description": "Printing and installation services for banners and Oracal films",
+    "service2_3FullDescription": "Banners and Oracal films are materials used for both outdoor and indoor advertising. They are quickly produced, cost-effective, and easy to install. Ideal solutions for advertising campaigns, discounts, or permanent announcements.",
+    "service2_3SeoTitle": "Banner and Oracal Printing Service | Quality Advertising Prints",
+    "service2_3SeoDescription": "Fast and high-quality banner and Oracal printing service. Complete services for sizing, design, and installation.",
+
+    "service2_4Title": "Signboards",
+    "service2_4Description": "Production of indoor and outdoor signage",
+    "service2_4FullDescription": "Signboards are directional or identification signs for offices, shops, and industrial facilities. Made from plastic, metal, or acrylic, they are mounted on walls or doors.",
+    "service2_4SeoTitle": "Signboard Production Service | Office and Outdoor Signage",
+    "service2_4SeoDescription": "Production and design of indoor and outdoor signboards. Manufactured in various materials, sizes, and styles.",
+
+    "service2_5Title": "Installation Services",
+    "service2_5Description": "Installation and assembly of advertising objects",
+    "service2_5FullDescription": "Installation services include safe and accurate placement of advertising objects. A team of specialists professionally installs banners, LED screens, stands, letters, and other items.",
+    "service2_5SeoTitle": "Advertising Installation Services | Setup and Technical Support",
+    "service2_5SeoDescription": "Installation services for banners, LED screens, and other advertising objects. Quality and safe installation solutions.",
+
+    "title3": "Graphic design services",
+    "service3_1Title": "Naming",
+    "service3_1Description": "Creating a unique and memorable name for your brand",
+    "service3_1FullDescription": "Naming is the process of selecting a unique, catchy, and market-relevant name for a product, service, or company. We craft impactful names that align with your business area, target audience, and brand values.",
+    "service3_1SeoTitle": "Naming service – Find the perfect name for your brand",
+    "service3_1SeoDescription": "Professional naming services for businesses. Memorable and market-ready brand names that stand out.",
+
+    "service3_2Title": "Branding",
+    "service3_2Description": "Creating brand identity, concept, and strategy",
+    "service3_2FullDescription": "Branding is the development of a unique identity for your company or product, including name, logo, color scheme, visual style, and brand voice. We build strategies that boost recognition and trust in your brand.",
+    "service3_2SeoTitle": "Professional branding – Build a powerful brand identity",
+    "service3_2SeoDescription": "Comprehensive branding services: strategy, logo, brand visuals, and more to elevate your business image.",
+
+    "service3_3Title": "Packaging",
+    "service3_3Description": "Designing attractive and functional product packaging",
+    "service3_3FullDescription": "Packaging is not only about protecting your product but also a vital marketing tool. We design modern, ergonomic, and branded packaging that enhances product visibility and brand recognition.",
+    "service3_3SeoTitle": "Packaging design – Smart branding for your products",
+    "service3_3SeoDescription": "Unique and practical packaging solutions. Combine aesthetics, usability, and brand identity in one.",
+
+    "service3_4Title": "SMD (LED Displays)",
+    "service3_4Description": "Installation and supply of LED display systems",
+    "service3_4FullDescription": "SMD displays are high-resolution LED systems used for advertising, information display, and facade design. We provide supply, installation, and maintenance services for various screen formats.",
+    "service3_4SeoTitle": "SMD LED displays – Bright solutions for your business",
+    "service3_4SeoDescription": "LED display solutions for advertising and public use. High-quality screens with professional installation.",
+
+    "service3_5Title": "Website Development",
+    "service3_5Description": "Designing responsive, fast, and modern websites",
+    "service3_5FullDescription": "We develop functional, user-friendly, and SEO-optimized websites tailored to your business or project. Our full-cycle service includes design, development, domain setup, and hosting.",
+    "service3_5SeoTitle": "Website development – Build your digital presence",
+    "service3_5SeoDescription": "Professional web design and development. From idea to launch – all in one place."
   },
   "breadcrumb": {
     "home": "Home",
@@ -232,6 +315,18 @@
       "button": "Get in Touch"
     }
   },
+  "AboutPage": {
+    "title": "About Us",
+    "paragraph": "“Forward Advertise” is the first and largest outdoor advertising operator in the Jizzakh region. Our company began operations in 2011 by placing a few billboards.",
+    "sectionTitle": "About Company",
+    "paragraph1": "“Forward Advertise” is the first and largest outdoor advertising operator in the Jizzakh region. Our company began operations in 2011 by placing a few billboards.",
+    "paragraph2": "Today, we manage more than 100 billboards, over 20 brandmauer (large-format constructions), and more than 10 modern LED displays, along with many other outdoor advertising media — city boxes, bus stop branding, and advertising on public transport — supported by a large and skilled team. Our geographic coverage has expanded beyond the Jizzakh region to the entire Republic of Uzbekistan",
+    "paragraph3": "We have also established in-house production for various advertising tools and materials. A dedicated production workshop and design studio operates for large-format prints (banners, oracal), embossed letters, and other marketing materials.",
+    "paragraph4": "In response to modern business trends, we offer digital advertising services as well, including media placements, branding, social media content creation, and effective distribution on leading platforms.",
+    "paragraph5": "To date, we have provided creative, result-oriented advertising solutions to over 500 business owners across various sectors throughout Uzbekistan. We offer personalized services to each client, acting as a reliable partner in promoting their brand, product, or service to a wider audience.",
+    "missionTitle": "Our Mission",
+    "missionParagraph": "Our mission is to deliver our clients’ brand, product, or service to a wide audience through modern and impactful outdoor advertising solutions. We prioritize innovation, high-quality execution, and result-oriented service in every project. We strive to be a reliable, effective, and creative advertising partner for businesses across Uzbekistan."
+  },
   "PricePage": {
     "cto": "Take your business to the next level",
     "title": "Pricing tailored to you",
@@ -248,7 +343,7 @@
     "email": "Email",
     "emailPlaceholder": "Your email address",
     "phone": "Phone Number",
-    "phonePlaceholder": "+998 90 123 45 67",
+    "phonePlaceholder": "+99891 209 33 33",
     "organization": "Organization",
     "organizationPlaceholder": "Organization name (optional)",
     "submit": "Submit",

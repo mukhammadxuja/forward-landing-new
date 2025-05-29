@@ -15,9 +15,25 @@ export function LocalizationBanner() {
         <div className="hidden md:block w-full border-b border-border/50 bg-background">
           <div className="mx-auto flex max-w-7xl px-[32px] py-2 lg:px-4 items-center justify-between py-2">
             <div className="flex gap-4">
-              <span className="text-sm text-muted-foreground">{t('address')}</span>
+              {/* <span className="text-sm text-muted-foreground">{t('address')}</span> */}
+              <a
+                href="https://t.me/forward_advertise"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-muted-foreground hover:underline"
+              >
+                Telegram
+              </a>
+              <a
+                href="https://instagram.com/forward_ads_"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-muted-foreground hover:underline"
+              >
+                Instagram
+              </a>
               <a href="tel:+998901234567" className="text-sm text-muted-foreground hover:underline">
-                +998 90 123 45 67
+                +99891 209 33 33
               </a>
             </div>
             <X
