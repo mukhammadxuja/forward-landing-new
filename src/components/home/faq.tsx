@@ -9,10 +9,10 @@ function FAQ() {
       question: t('question1'),
       answer: t('answer1'),
     },
-    {
-      question: t('question2'),
-      answer: t('answer2'),
-    },
+    // {
+    //   question: t('question2'),
+    //   answer: t('answer2'),
+    // },
     {
       question: t('question3'),
       answer: t('answer3'),

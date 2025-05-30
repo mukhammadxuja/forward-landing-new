@@ -106,7 +106,7 @@ function PortfolioPage() {
           <p className="paragraph max-w-[580px]">{portfolioT('paragraph')}</p>
         </div>
         <div>
-          {services.map((service, idx) => (
+          {services.slice(0, 1).map((service, idx) => (
             <div key={idx}>
               <div>
                 <h5 className="section-title !text-[28px] my-8">{service.title}</h5>
@@ -114,7 +114,7 @@ function PortfolioPage() {
                   {service.cards.map((card, idx) => (
                     <div key={idx} className={idx < 2 ? 'lg:col-span-2' : ''}>
                       <div
-                        className="cursor-pointer"
+                        className="cursor-pointer h-72 lg:h-80"
                         onClick={() => openModal(card.images?.gallery || [], 0)}
                         onMouseEnter={() => setHoveredIdx(idx)}
                         onMouseLeave={() => setHoveredIdx(null)}
@@ -124,10 +124,10 @@ function PortfolioPage() {
                           alt={card.title}
                           width={500}
                           height={500}
-                          className="w-full h-72 object-cover rounded-xl"
+                          className="w-full h-full object-cover rounded-xl"
                         />
                       </div>
-                      <div className=" mt-2">
+                      <div className="mt-2">
                         <h2 className="text-base font-semibold">{card.title}</h2>
                         <p className="paragraph-sm mt-2">{card.description}</p>
                       </div>

@@ -47,17 +47,19 @@ function Services() {
           </div>
         </div>
 
-        <div className="relative col-span-1 lg:col-span-2 row-span-2 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full h-[25rem] md:h-[30rem] rounded-2xl">
-          <span className="absolute top-5 lg:top-8 left-1/2 -translate-x-1/2 text-center text-lg md:text-xl font-semibold leading-6">
+        <div className="relative col-span-1 lg:col-span-2 row-span-2 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full h-[25rem] md:h-[30rem] rounded-2xl overflow-hidden">
+          <span className="absolute top-8 lg:top-16 left-1/2 -translate-x-1/2 text-center text-lg md:text-xl font-semibold leading-6">
             {t('service3Description')}
           </span>
-          <Image
-            width={200}
-            height={400}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[17rem] md:w-[22rem] h-auto"
-            src="/assets/service/services1.gif"
-            alt="service gif"
-          />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[30rem] lg:w-[38rem]">
+            <Image
+              width={200}
+              height={400}
+              className="w-full !pr-20"
+              src="/assets/portfolio/led/led.webp"
+              alt="service gif"
+            />
+          </div>
         </div>
 
         <div className="relative min-h-44 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full h-full rounded-2xl p-6 lg:p-7 group cursor-pointer">
