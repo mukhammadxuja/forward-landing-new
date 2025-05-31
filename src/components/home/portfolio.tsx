@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 
 const portfolioItems = [
@@ -44,10 +45,11 @@ export default function PortfolioSection({ className }: { className?: string }) 
         <h2 className="section-title mb-8 lg:mb-12">Portfolio</h2>
 
         <Carousel
-          opts={{
-            align: 'start',
-            loop: true,
-          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
           className="w-full"
         >
           <CarouselContent className="-ml-1">
@@ -72,7 +74,7 @@ export default function PortfolioSection({ className }: { className?: string }) 
             ))}
           </CarouselContent>
 
-          <div className="hidden md-block">
+          <div className="hidden md:block">
             <CarouselPrevious />
             <CarouselNext />
           </div>

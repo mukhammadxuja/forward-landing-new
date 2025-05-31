@@ -13,12 +13,12 @@ import { ReactNode } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://paddle-billing.vercel.app'),
-  title: 'AeroEdit',
-  description:
-    'AeroEdit is a powerful team design collaboration app and image editor. With plans for businesses of all sizes, streamline your workflow with real-time collaboration, advanced editing tools, and seamless project management.',
-};
+// export const metadata: Metadata = {
+//   metadataBase: new URL('https://paddle-billing.vercel.app'),
+//   title: 'Forward',
+//   description:
+//     '“Forward Advertise” — Jizzax viloyatidagi birinchi va eng yirik tashqi reklama operatoridir. Kompaniyamiz o‘z faoliyatini 2011-yilda, bir nechta billboardlarni joylashtirish bilan boshlagan.',
+// };
 
 export default async function RootLayout({
   children,

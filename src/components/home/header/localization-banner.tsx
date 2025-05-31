@@ -38,7 +38,7 @@ export function LocalizationBanner() {
             </div>
             <X
               size={16}
-              className="cursor-pointer text-muted-foreground hover:text-foreground"
+              className="hidden cursor-pointer text-muted-foreground hover:text-foreground"
               onClick={() => setShowBanner(false)}
             />
           </div>

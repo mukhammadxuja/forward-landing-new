@@ -276,7 +276,7 @@ function ListItem({ className, title, children, ...props }: React.ComponentProps
         <a
           data-slot="list-item"
           className={cn(
-            'hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md px-3 py-2 leading-none no-underline outline-hidden transition-colors select-none',
+            'hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-sm px-3 py-2 leading-none no-underline outline-hidden transition-colors select-none',
             className,
           )}
           {...props}

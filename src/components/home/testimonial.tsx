@@ -70,7 +70,7 @@ const Testimonials = () => {
     <div className="flex justify-center items-center">
       <div>
         <h2 className="section-title mb-8 lg:mb-12">Testimonials</h2>
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 lg:gap-8">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 lg:gap-6">
           {displayed.map((testimonial) => (
             <div
               key={testimonial.id}
@@ -88,7 +88,7 @@ const Testimonials = () => {
                     <p className="text-sm text-gray-500">{testimonial.designation}</p>
                   </div>
                 </div>
-                <Button className="hidden md:block" variant="ghost" size="icon" asChild>
+                <Button className="hidden" variant="ghost" size="icon" asChild>
                   <Link href="#" target="_blank">
                     <TwitterLogo className="w-4 h-4" />
                   </Link>

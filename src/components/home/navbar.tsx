@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { Brain, Instagram, Mail, Menu, SendIcon } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -76,7 +76,6 @@ const services = [
         description: 'Jizzax shahar va tuman markazlarida 100 dan ortiq LED monitorlar',
         href: '/services/led-monitorlar',
       },
-      
     ],
   },
   {
@@ -162,14 +161,27 @@ export default function Navbar({
   className,
 }: NavbarProps) {
   const t = useTranslations('navbar');
-
   const router = useRouter();
+  const locale = useLocale();
 
   const onSelectChange = (value: string) => {
     const nextLocale = value;
     startTransition(() => {
       router.replace(`/${nextLocale}`);
     });
+  };
+
+  const getFlagIcon = (locale: string) => {
+    switch (locale) {
+      case 'uz':
+        return '/assets/flags/uzb.png';
+      case 'ru':
+        return '/assets/flags/russia.svg';
+      case 'en':
+        return '/assets/flags/england.png';
+      default:
+        return '/assets/icons/localization-icon.svg';
+    }
   };
 
   return (
@@ -185,16 +197,21 @@ export default function Navbar({
               {showNavigation && (customNavigation || <Navigation />)}
             </NavbarLeft>
             <NavbarRight>
-              <div className="flex items-center">
+              <div className="flex items-center gap-4 md:gap-6">
+                <a href="tel:+998901234567" className="text-lg font-semibold">
+                  +99891 209 33 33
+                </a>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Image
-                      className="cursor-pointer"
-                      src={'/assets/icons/localization-icon.svg'}
-                      alt={'Localization Icon'}
-                      width={50}
-                      height={50}
-                    />
+                    <Button variant="outline" size="icon" className="shrink-0 rounded-full">
+                      <Image
+                        className="cursor-pointer"
+                        src={getFlagIcon(locale)}
+                        alt={'Localization Icon'}
+                        width={30}
+                        height={30}
+                      />
+                    </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => onSelectChange('uz')} className="flex items-center gap-2">

@@ -14,8 +14,6 @@ import Link from 'next/link';
 import Contact from '@/components/home/contact';
 import FAQ from '@/components/home/faq';
 import { BuiltUsingTools } from '@/components/home/footer/built-using-tools';
-import PortfolioSection from '@/components/home/portfolio';
-import Testimonials from '@/components/home/testimonial';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import useServices from '@/hooks/useServices';
@@ -148,10 +146,7 @@ function Service() {
             />
           </div>
 
-          <PortfolioSection className="bg-transparent !py-0 mt-10" />
-
           <div className="mx-auto max-w-7xl px-[32px] lg:px-4 space-y-[24px]">
-            <Testimonials />
             <BuiltUsingTools />
             <FAQ />
             <Contact />
