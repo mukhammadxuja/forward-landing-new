@@ -1,8 +1,12 @@
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Review from './review';
+
+const heroImage = ['/mockup.jpg', '/mockup.jpg', '/mockup.jpg'];
 
 const headerVariants = {
   hidden: {},
@@ -22,7 +26,6 @@ const itemVariants = {
   },
 };
 
-// 👇 Review animatsiyasi
 const reviewVariants = {
   hidden: { opacity: 0 },
   show: {
@@ -31,7 +34,6 @@ const reviewVariants = {
   },
 };
 
-// 👇 Rasm animatsiyasi
 const imageVariants = {
   hidden: { opacity: 0, x: 50 },
   show: {
@@ -84,14 +86,36 @@ export function HeroSection() {
         </div>
       </motion.section>
 
-      {/* ✨ Animated Image */}
       <motion.div
         initial="hidden"
         animate="show"
         variants={imageVariants}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2"
+        className="absolute top-1/2 right-0 z-50 transform -translate-y-1/2 w-[600px] h-[400px]"
       >
-        <Image src="/mockup.jpg" alt="Hero Image" width={650} height={650} className="rounded-l-xl" />
+        <Carousel
+          plugins={[
+            Autoplay({
+              delay: 5000,
+            }),
+          ]}
+          className="h-full"
+        >
+          <CarouselContent className="-ml-1 h-full">
+            {heroImage.map((item, idx) => (
+              <CarouselItem key={idx} className="pl-1">
+                <div className="p-1">
+                  <Image
+                    src={item}
+                    alt={`Hero Image ${idx + 1}`}
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover rounded-l-lg"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </motion.div>
     </div>
   );

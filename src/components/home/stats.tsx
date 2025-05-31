@@ -11,7 +11,7 @@ function Stats({ aboutPage = false }) {
         <Eye className="text-primary hidden md:block text-3xl lg:text-4xl" />
         <div>
           <p className="font-semibold text-sm lg:text-base">{t('card1Title')}</p>
-          <p className="text-gray-500 text-xs lg:text-sm">{t('card1Paragraph')}</p>
+          <p className="text-accent-foreground text-xs lg:text-sm">{t('card1Paragraph')}</p>
         </div>
       </div>
 
@@ -19,7 +19,7 @@ function Stats({ aboutPage = false }) {
         <Palette className="text-primary hidden md:block text-3xl lg:text-4xl" />
         <div>
           <p className="font-semibold text-sm lg:text-base">{t('card2Title')}</p>
-          <p className="text-gray-500 text-xs lg:text-sm">{t('card2Paragraph')}</p>
+          <p className="text-accent-foreground text-xs lg:text-sm">{t('card2Paragraph')}</p>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ function Stats({ aboutPage = false }) {
         <Clock className="text-primary hidden md:block text-3xl lg:text-4xl" />
         <div>
           <p className="font-semibold text-sm lg:text-base">{t('card3Title')}</p>
-          <p className="text-gray-500 text-xs lg:text-sm">{t('card3Paragraph')}</p>
+          <p className="text-accent-foreground text-xs lg:text-sm">{t('card3Paragraph')}</p>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ function Stats({ aboutPage = false }) {
         <ChartPie className="text-primary hidden md:block text-3xl lg:text-4xl" />
         <div>
           <p className="font-semibold text-sm lg:text-base">{t('card4Title')}</p>
-          <p className="text-gray-500 text-xs lg:text-sm">{t('card4Paragraph')}</p>
+          <p className="text-accent-foreground text-xs lg:text-sm">{t('card4Paragraph')}</p>
         </div>
       </div>
     </div>

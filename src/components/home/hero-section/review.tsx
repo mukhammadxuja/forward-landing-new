@@ -10,37 +10,111 @@ const reviewVariants = {
   },
 };
 
+export const reviews = [
+  {
+    companyName: 'Zamon Print',
+    companyLogo: 'https://via.placeholder.com/40x40?text=ZP',
+    reviewer: 'Azizbek Mamatov',
+    review:
+      'Forward Advertise bilan hamkorlikdan juda mamnunmiz. Billboardlar joylashuvi strategik jihatdan juda qulay va sifatli bajarilgan.',
+  },
+  {
+    companyName: 'Ideal Avto',
+    companyLogo: 'https://via.placeholder.com/40x40?text=IA',
+    reviewer: 'Sardor Qodirov',
+    review:
+      'LED ekranlar orqali reklama qilish natijasida mijozlar soni ancha ortdi. Tashqi reklama bo‘yicha ishonchli hamkor!',
+  },
+  {
+    companyName: 'Fresh Market Jizzax',
+    companyLogo: 'https://via.placeholder.com/40x40?text=FM',
+    reviewer: 'Nilufar Karimova',
+    review:
+      'Dizayn va joylashtirish bir joyda — Forward jamoasi ishni boshidan oxirigacha professional tarzda bajaradi.',
+  },
+  {
+    companyName: 'Oqtepa Lavash',
+    companyLogo: 'https://via.placeholder.com/40x40?text=OL',
+    reviewer: 'Sanjar Eshonov',
+    review: 'Bekatlar va avtobuslardagi reklama xizmatlari mijozlarimiz orasida brendimizni ancha tanitdi.',
+  },
+  {
+    companyName: 'Jizzax City Clinic',
+    companyLogo: 'https://via.placeholder.com/40x40?text=CC',
+    reviewer: 'Dilfuza Rasulova',
+    review:
+      'Reklama materiallari sifati yuqori darajada. Bannerni bir necha oy o‘rnatilgan holatda saqlab turish mumkin.',
+  },
+  {
+    companyName: 'Smart Technologies',
+    companyLogo: 'https://via.placeholder.com/40x40?text=ST',
+    reviewer: 'Bekzod Tursunov',
+    review: 'Brendmauer orqali reklama joylashtirganimizdan keyin onlayn buyurtmalar soni sezilarli darajada oshdi.',
+  },
+  {
+    companyName: 'EcoFood Agro',
+    companyLogo: 'https://via.placeholder.com/40x40?text=EA',
+    reviewer: 'Sherzod O‘ktamov',
+    review: 'Kontent ishlab chiqish va ijtimoiy tarmoqlar uchun reklama kampaniyalari juda samarali bo‘ldi.',
+  },
+  {
+    companyName: 'Gold Fitness',
+    companyLogo: 'https://via.placeholder.com/40x40?text=GF',
+    reviewer: 'Malika Rajabova',
+    review: 'Forward dizaynerlari bilan ishlash juda qulay. Fikrimni aniq tushunib, kreativ yechim taklif qilishdi.',
+  },
+  {
+    companyName: 'Baraka Group',
+    companyLogo: 'https://via.placeholder.com/40x40?text=BG',
+    reviewer: 'Anvar Abdullayev',
+    review:
+      'Katta hajmli bannerlarimiz qisqa muddatda tayyorlandi. Joylashtirish ishlari ham aniq belgilangan vaqtda bajarildi.',
+  },
+  {
+    companyName: 'Jizzax Book Café',
+    companyLogo: 'https://via.placeholder.com/40x40?text=BC',
+    reviewer: 'Zilola Ergasheva',
+    review:
+      'Reklama joylashganidan keyin yangi mijozlar oqimi sezilarli darajada oshdi. Raqobatchilar orasida ko‘zga tashlandik!',
+  },
+];
+
 function Review() {
+  const stars = Math.random() < 0.8 ? 5 : 4;
   return (
     <motion.div
       variants={reviewVariants}
       initial="hidden"
       animate="show"
-      className="text-center mt-8 max-w-5xl overflow-hidden"
+      className="relative text-center mt-8 max-w-5xl mx-auto overflow-hidden"
     >
-      <Marquee className="items-center gap-2 !pb-0" direction="left">
-        <div className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-2 space-y-1.5">
-          <div className="flex items-center space-x-3">
-            <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              alt="Theresa Webb"
-              className="w-7 h-7 rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold text-white text-xs">Theresa Webb</p>
+      {/* Gradient edges */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-background to-transparent z-10" />
+
+      <Marquee className="items-center" direction="left">
+        {reviews.map((item, index) => (
+          <div
+            key={index}
+            className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-3 mx-2 space-y-2"
+          >
+            <div className="flex items-center space-x-3">
+              <img src="https://github.com/shadcn.png" alt={item.companyName} className="w-7 h-7 rounded-full object-cover" />
+              <div className="text-left">
+                <p className="font-semibold text-white text-xs">{item.companyName}</p>
+                {/* <p className="text-muted-foreground text-xs">{item.reviewer}</p> */}
+              </div>
+            </div>
+            <p className="text-accent-foreground text-left text-xs line-clamp-2">{item.review}</p>
+            <div className="flex space-x-1 text-yellow-500">
+              {[...Array(stars)].map((_, i) => (
+                <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.946h4.15c.969 0 1.371 1.24.588 1.81l-3.36 2.44 1.286 3.946c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.44c-.785.57-1.84-.197-1.54-1.118l1.286-3.946-3.36-2.44c-.783-.57-.38-1.81.588-1.81h4.15l1.286-3.946z" />
+                </svg>
+              ))}
             </div>
           </div>
-          <p className="text-accent-foreground text-left text-xs max-w-[300px]">
-            Great app. The intuitive interface makes it easy to use, even for beginners like me.
-          </p>
-          <div className="flex space-x-1 text-yellow-500">
-            {[...Array(5)].map((_, i) => (
-              <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.946h4.15c.969 0 1.371 1.24.588 1.81l-3.36 2.44 1.286 3.946c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.44c-.785.57-1.84-.197-1.54-1.118l1.286-3.946-3.36-2.44c-.783-.57-.38-1.81.588-1.81h4.15l1.286-3.946z" />
-              </svg>
-            ))}
-          </div>
-        </div>
+        ))}
       </Marquee>
     </motion.div>
   );
