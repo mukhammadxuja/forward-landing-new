@@ -42,17 +42,17 @@
   --popover: hsl(180 18% 9%);
   --popover-foreground: hsl(180 10% 95%);
 
-  --primary: hsl(138, 46%, 41%);
-  --primary-foreground: hsl(180 10% 96%);
+  --primary: #14ff5a;
+  --primary-foreground: #000000;
 
   --secondary: hsl(180 10% 25%);
   --secondary-foreground: hsl(180 10% 96%);
 
   --muted: hsl(180 10% 15%);
-  --muted-foreground: hsl(180 2% 50%);
+  --muted-foreground: #c0c0c0;
 
   --accent: #223939;
-  --accent-foreground: hsl(180 10% 96%);
+  --accent-foreground: #14ff5a;
 
   --destructive: hsl(0 70% 35%);
   --destructive-foreground: hsl(0 0% 100%);
@@ -174,3 +174,5 @@
     @apply text-foreground/70 text-[16px] md:text-[18px];
   }
 }
+
+

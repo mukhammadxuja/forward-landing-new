@@ -217,7 +217,7 @@ export default function Footer2() {
   return (
     <>
       <Separator className={'footer-border'} />
-      <footer className="bg-card text-sm text-neutral-800 border-t">
+      <footer className="bg-neutral-950 text-sm text-neutral-800 border-t">
         <div className="mx-auto max-w-7xl px-[32px] lg:px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Left column */}
           <div className="space-y-6 lg:space-y-8 mr-10 lg:mr-0">
@@ -275,7 +275,7 @@ export default function Footer2() {
                     <li key={subIndex} className="">
                       <Link
                         href={subItem.href}
-                        className="text-neutral-500 hover:text-foreground/80 duration-300 text-sm"
+                        className="text-neutral-300 hover:text-foreground/80 duration-300 text-sm"
                       >
                         {subItem.title}
                       </Link>
@@ -292,7 +292,7 @@ export default function Footer2() {
             <ul className="space-y-1">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.href} className="text-neutral-500 hover:text-foreground/80 duration-300 text-sm">
+                  <Link href={link.href} className="text-neutral-300 hover:text-foreground/80 duration-300 text-sm">
                     {link.label}
                   </Link>
                 </li>
