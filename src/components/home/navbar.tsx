@@ -197,9 +197,9 @@ export default function Navbar({
               {showNavigation && (customNavigation || <Navigation />)}
             </NavbarLeft>
             <NavbarRight>
-              <div className="flex items-center gap-4">
-                <Button variant="outline" className="rounded-full">
-                  <a href="tel:+998901234567" className="text-lg font-semibold">
+              <div className="flex items-center gap-2 lg:gap-4">
+                <Button variant="outline" className="rounded-full hidden lg:block">
+                  <a href="tel:+998901234567" className="text-sm font-medium lg:text-lg lg:font-semibold">
                     +99891 209 33 33
                   </a>
                 </Button>

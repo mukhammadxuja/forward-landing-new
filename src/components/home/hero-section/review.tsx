@@ -86,7 +86,7 @@ function Review() {
       variants={reviewVariants}
       initial="hidden"
       animate="show"
-      className="relative text-center mt-8 max-w-5xl mx-auto overflow-hidden"
+      className="relative text-center mt-5 lg:mt-8 max-w-5xl mx-auto overflow-hidden"
     >
       {/* Gradient edges */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent z-10" />
@@ -99,7 +99,11 @@ function Review() {
             className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-3 mx-2 space-y-2"
           >
             <div className="flex items-center space-x-3">
-              <img src="https://github.com/shadcn.png" alt={item.companyName} className="w-7 h-7 rounded-full object-cover" />
+              <img
+                src="https://github.com/shadcn.png"
+                alt={item.companyName}
+                className="w-7 h-7 rounded-full object-cover"
+              />
               <div className="text-left">
                 <p className="font-semibold text-white text-xs">{item.companyName}</p>
                 {/* <p className="text-muted-foreground text-xs">{item.reviewer}</p> */}

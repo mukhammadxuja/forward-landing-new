@@ -53,10 +53,10 @@ export function HeroSection() {
         initial="hidden"
         animate="show"
         variants={headerVariants}
-        className="mx-auto max-w-7xl px-[32px] relative flex items-center justify-between h-[80vh] lg:h-[calc(100vh-80px)]"
+        className="mx-auto max-w-7xl px-[32px] relative flex items-center justify-between pt-16 pb-5 h-fit lg:h-[calc(100vh-80px)]"
       >
         <div>
-          <div className="w-full space-y-4 max-w-[600px]">
+          <div className="w-full space-y-2 lg:space-y-4 max-w-[600px]">
             <Link href="/services">
               <motion.span
                 variants={itemVariants}
@@ -69,7 +69,7 @@ export function HeroSection() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-[32px] tracking-[-.015em] leading-[36px] md:leading-[55px] lg:text-[45px] md:tracking-[-1.6px] font-medium"
+              className="whitespace-wrap text-[28px] md:text-[32px] tracking-[-.015em] leading-[36px] md:leading-[55px] lg:text-[45px] md:tracking-[-1.6px] font-medium"
             >
               {t('heading')}
             </motion.h1>
@@ -82,10 +82,27 @@ export function HeroSection() {
             </motion.p>
           </div>
 
-          {/* ✨ Animated Review */}
-          <motion.div variants={reviewVariants}>
+          <motion.div variants={reviewVariants} className="hidden lg:block">
             <Review />
           </motion.div>
+
+          <Carousel plugins={[Autoplay({ delay: 5000 })]} className="h-72 block lg:hidden mt-5 overflow-hidden">
+            <CarouselContent className="-ml-1 h-full">
+              {heroImage.map((item, idx) => (
+                <CarouselItem key={idx} className="pl-1">
+                  <div className="p-1">
+                    <Image
+                      src={item}
+                      alt={`Hero Image ${idx + 1}`}
+                      width={350}
+                      height={250}
+                      className="h-72 object-cover rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </motion.section>
 
@@ -95,14 +112,7 @@ export function HeroSection() {
         variants={imageVariants}
         className="hidden lg:block absolute top-1/2 right-0 z-50 transform -translate-y-1/2 w-[600px] h-[400px] 2xl:w-[650px] 2xl:h-[450px] rounded-l-lg overflow-hidden shadow-lg"
       >
-        <Carousel
-          plugins={[
-            Autoplay({
-              delay: 5000,
-            }),
-          ]}
-          className="h-full"
-        >
+        <Carousel plugins={[Autoplay({ delay: 5000 })]} className="h-full">
           <CarouselContent className="-ml-1 h-full">
             {heroImage.map((item, idx) => (
               <CarouselItem key={idx} className="pl-1">

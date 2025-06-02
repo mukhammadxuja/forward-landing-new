@@ -231,7 +231,7 @@ export default function Footer2() {
                 <Button
                   size="sm"
                   variant="secondary"
-                  className="bg-accent hover:bg-accent/80 text-primary min-w-44 rounded-full text-xs"
+                  className="bg-accent font-normal hover:bg-accent/80 text-primary min-w-44 rounded-full !text-xs"
                 >
                   {t('contactUs')}
                 </Button>

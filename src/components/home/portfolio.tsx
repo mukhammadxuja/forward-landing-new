@@ -46,7 +46,7 @@ export default function PortfolioSection({ className }: { className?: string }) 
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.3 }}
-      className={`py-16 bg-accent/50 backdrop-blur-lg shadow-sm mb-10 ${className}`}
+      className={`py-10 lg:py-16 bg-accent/50 backdrop-blur-lg shadow-sm mb-10 ${className}`}
     >
       <div className="relative mx-auto max-w-7xl px-4">
         <motion.h2

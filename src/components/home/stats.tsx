@@ -26,7 +26,7 @@ function Stats({ aboutPage = false }) {
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
       className={`grid gap-3 lg:gap-4 mt-4 ${
-        aboutPage ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' : 'grid-cols-2 lg:grid-cols-4'
+        aboutPage ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' : 'grid-cols-1 lg:grid-cols-4'
       }`}
     >
       {[1, 2, 3, 4].map((_, index) => {
@@ -38,11 +38,11 @@ function Stats({ aboutPage = false }) {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="flex items-start gap-4 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7"
+            className="flex items-start gap-4 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-4 lg:p-7"
           >
             <div className="text-primary hidden md:block text-3xl lg:text-4xl">{icons[index]}</div>
-            <div>
-              <p className="font-semibold text-sm lg:text-base">{t(titleKey)}</p>
+            <div className="space-y-1">
+              <p className="font-semibold text-sm lg:text-base leading-4">{t(titleKey)}</p>
               <p className="text-accent-foreground text-xs lg:text-sm">{t(paragraphKey)}</p>
             </div>
           </motion.div>

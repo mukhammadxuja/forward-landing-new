@@ -33,7 +33,7 @@ function FAQ() {
 
   return (
     <div className="flex flex-col md:flex-row items-start justify-between">
-      <h4 className="section-title max-w-[20rem]">{t('title')}</h4>
+      <h4 className="section-title max-w-[20rem] mb-12 lg:mb-0">{t('title')}</h4>
       <Accordion type="single" defaultValue="question-0" className="max-w-xl">
         {faq.map(({ question, answer }, index) => (
           <AccordionItem key={question} value={`question-${index}`}>
