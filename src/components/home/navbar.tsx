@@ -129,15 +129,6 @@ const services = [
   },
 ];
 
-const navLinks = [
-  { label: 'Главная', href: '/' },
-  { label: 'О нас', href: '/about' },
-  { label: 'Портфолио', href: '/portfolio' },
-  { label: 'Блог', href: '/blog' },
-  { label: 'Цены', href: '/price' },
-  { label: 'Контакты', href: '/contact' },
-];
-
 export default function Navbar({
   //   logo = 'Launch UI',
   name = 'Launch UI',
@@ -163,6 +154,139 @@ export default function Navbar({
   const t = useTranslations('navbar');
   const router = useRouter();
   const locale = useLocale();
+  const tFooter = useTranslations('footer');
+  const tIntro = useTranslations('navbar.introItems');
+
+  const navLinks = [
+    { label: tFooter('navLinks.home'), href: '/' },
+    { label: tFooter('navLinks.about'), href: '/about' },
+    { label: tFooter('navLinks.portfolio'), href: '/portfolio' },
+    { label: tFooter('navLinks.blog'), href: '/blog' },
+    { label: tFooter('navLinks.pricing'), href: '/price' },
+    { label: tFooter('navLinks.contact'), href: '/contact' },
+  ];
+
+  const introItems = [
+    {
+      title: tIntro('adsTitle'),
+      description: tIntro('adsDescription'),
+      href: '#',
+      subItems: [
+        {
+          title: tIntro('ads.brendmourlar.title'),
+          description: tIntro('ads.brendmourlar.description'),
+          href: '/services/brendmourlar',
+          new: false,
+        },
+        {
+          title: tIntro('ads.kattaHarflar.title'),
+          description: tIntro('ads.kattaHarflar.description'),
+          href: '/services/katta-harflar',
+          new: false,
+        },
+        {
+          title: tIntro('ads.cityBox.title'),
+          description: tIntro('ads.cityBox.description'),
+          href: '/services/city-box',
+          new: true,
+        },
+        {
+          title: tIntro('ads.avtobus.title'),
+          description: tIntro('ads.avtobus.description'),
+          href: '/services/avtobus',
+          new: false,
+        },
+        {
+          title: tIntro('ads.billboardlar.title'),
+          description: tIntro('ads.billboardlar.description'),
+          href: '/services/billboardlar',
+          new: false,
+        },
+        {
+          title: tIntro('ads.ledMonitorlar.title'),
+          description: tIntro('ads.ledMonitorlar.description'),
+          href: '/services/led-monitorlar',
+          new: false,
+        },
+      ],
+    },
+    {
+      title: tIntro('productionTitle'),
+      description: tIntro('productionDescription'),
+      href: '#',
+      new: false,
+      subItems: [
+        {
+          title: tIntro('production.bortmaHarflar.title'),
+          description: tIntro('production.bortmaHarflar.description'),
+          href: '/services/bortma-harflar',
+          new: false,
+        },
+        {
+          title: tIntro('production.stella.title'),
+          description: tIntro('production.stella.description'),
+          href: '/services/stella',
+          new: false,
+        },
+        {
+          title: tIntro('production.bannerChop.title'),
+          description: tIntro('production.bannerChop.description'),
+          href: '/services/banner-chop-etish',
+          new: false,
+        },
+        {
+          title: tIntro('production.tablichki.title'),
+          description: tIntro('production.tablichki.description'),
+          href: '/services/tablichkalar',
+          new: false,
+        },
+        {
+          title: tIntro('production.mantaj.title'),
+          description: tIntro('production.mantaj.description'),
+          href: '/services/montaj-xizmati',
+          new: true,
+        },
+      ],
+    },
+    {
+      title: tIntro('designTitle'),
+      description: tIntro('designDescription'),
+      href: '#',
+      new: false,
+      subItems: [
+        {
+          title: tIntro('design.naming.title'),
+          description: tIntro('design.naming.description'),
+          href: '/services/naming',
+          new: false,
+        },
+        {
+          title: tIntro('design.branding.title'),
+          description: tIntro('design.branding.description'),
+          href: '/services/branding',
+          new: false,
+        },
+        {
+          title: tIntro('design.packaging.title'),
+          description: tIntro('design.packaging.description'),
+          href: '/services/packaging',
+          new: false,
+        },
+        {
+          title: tIntro('design.smd.title'),
+          description: tIntro('design.smd.description'),
+          href: '/services/smd',
+          new: false,
+        },
+        {
+          title: tIntro('design.web-sayt.title'),
+          description: tIntro('design.web-sayt.description'),
+          href: '/services/web-sayt',
+          new: false,
+        },
+      ],
+    },
+  ];
 
   const onSelectChange = (value: string) => {
     const nextLocale = value;
@@ -205,13 +329,13 @@ export default function Navbar({
                 </Button>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="secondary" size="icon" className="shrink-0 rounded-full">
+                    <Button variant="secondary" size="icon" className="w-fit h-fit p-1 rounded-full">
                       <Image
-                        className="cursor-pointer"
+                        className="cursor-pointer h-[30px] w-[30px] lg:h-[35px] lg:w-[35px]"
                         src={getFlagIcon(locale)}
                         alt={'Localization Icon'}
-                        width={30}
-                        height={30}
+                        width={35}
+                        height={35}
                       />
                     </Button>
                   </DropdownMenuTrigger>
@@ -233,24 +357,24 @@ export default function Navbar({
               </div>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="shrink-0 md:hidden">
-                    <Menu className="size-5" />
+                  <Button variant="ghost" size="icon" className="-ml-2 lg:ml-0 shrink-0 md:hidden">
+                    <Menu className="size-6" />
                     <span className="sr-only">Toggle navigation menu</span>
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="overflow-y-auto">
                   <nav className="grid gap-6 text-lg font-medium">
-                    <a href={homeUrl} className="flex items-center gap-2 text-xl font-bold">
-                      <span>{name}</span>
-                    </a>
+                    <Link href={homeUrl}>
+                      <Image src={'/assets/logos/logo.svg'} alt={'logo'} width={120} height={80} />
+                    </Link>
                     <div>
-                      <h4 className="text-sm font-medium mb-3 text-foreground">О компании</h4>
+                      <h4 className="text-sm font-medium mb-3 text-foreground">{tFooter('linksTitle')}</h4>
                       <ul className="space-y-1">
                         {navLinks.map((link) => (
                           <li key={link.label}>
                             <Link
                               href={link.href}
-                              className="text-neutral-500 hover:text-foreground/80 duration-300 text-sm"
+                              className="text-neutral-300 hover:text-foreground/80 duration-300 text-sm"
                             >
                               {link.label}
                             </Link>
@@ -259,15 +383,15 @@ export default function Navbar({
                       </ul>
                     </div>
                     <div className="space-y-4">
-                      {services.map((service) => (
-                        <div>
+                      {introItems.map((service, idx) => (
+                        <div key={idx}>
                           <h4 className="text-sm font-medium mb-3 text-foreground">{service.title}</h4>
                           <ul className="space-y-1">
-                            {service.cards.map((item) => (
-                              <li className="">
+                            {service.subItems.map((item, subIdx) => (
+                              <li key={subIdx}>
                                 <Link
                                   href={item.href}
-                                  className="text-neutral-500 hover:text-foreground/80 duration-300 text-sm"
+                                  className="text-neutral-300 hover:text-foreground/80 duration-300 text-sm"
                                 >
                                   {item.title}
                                 </Link>
@@ -278,8 +402,9 @@ export default function Navbar({
                         </div>
                       ))}
                     </div>
+
                     <div>
-                      <p className="text-sm font-medium mb-3 text-foreground">Соцсети</p>
+                      <p className="text-sm font-medium mb-3 text-foreground">{tFooter('socials')}</p>
                       <div className="flex gap-2">
                         <Link
                           href="#"

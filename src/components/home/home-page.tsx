@@ -18,6 +18,7 @@ import Testimonials from './testimonial';
 const Map = dynamic(() => import('../sections/map'), { ssr: false });
 
 import { Locale, useTranslations } from 'next-intl';
+import Price from './pricing/price';
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -44,6 +45,8 @@ export function HomePage({ params }: Props) {
         </div>
 
         <PortfolioSection />
+
+        <Price />
 
         <div className="space-y-12 lg:space-y-20 mb-10 mx-auto max-w-7xl px-[32px] lg:px-4">
           <Testimonials />

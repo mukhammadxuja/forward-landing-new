@@ -72,7 +72,7 @@ function Contact() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 spacey-y-4 lg:space-y-6 py-6 lg:py-10">
+    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 spacey-y-4 lg:space-y-6 py-8 lg:py-10">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>

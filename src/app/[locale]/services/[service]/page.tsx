@@ -79,7 +79,7 @@ function Service() {
 
   return (
     <div className="spacey-y-4 lg:space-y-6">
-      <div className="relative spacey-y-4 lg:space-y-6 py-6 lg:py-10">
+      <div className="relative spacey-y-4 lg:space-y-6 py-8 lg:py-10">
         <Breadcrumb className="mx-auto max-w-7xl px-[32px] lg:px-4">
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -112,11 +112,9 @@ function Service() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex gap-3"
             >
-              <Button variant="default">
-                Buyurtma berish
-              </Button>
+              <Button variant="default">Buyurtma berish</Button>
               <Link href="/contact">
-                <Button variant="secondary">
+                <Button className="hidden lg:block" variant="secondary">
                   Aloqaga chiqish
                 </Button>
               </Link>
@@ -133,7 +131,7 @@ function Service() {
             <Image
               width={200}
               height={400}
-              className="w-full h-[24rem] lg:h-[35rem] object-cover rounded-2xl"
+              className="w-full h-[22rem] lg:h-[35rem] object-cover rounded-2xl"
               src="/assets/service/billboard.avif"
               alt="service gif"
             />

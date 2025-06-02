@@ -43,7 +43,7 @@ function Services() {
       opacity: 1,
       y: 0,
       transition: {
-        staggerChildren: 0.15, 
+        staggerChildren: 0.15,
         when: 'beforeChildren',
       },
     },
@@ -55,7 +55,7 @@ function Services() {
   };
   return (
     <div className="spacey-y-4 lg:space-y-6 px-4 lg:px-0">
-      <div className="mx-auto max-w-7xl px-[32px] lg:px-4 relative spacey-y-4 lg:space-y-6 py-6 lg:py-10">
+      <div className="mx-auto max-w-7xl px-[32px] lg:px-4 relative spacey-y-4 lg:space-y-6 py-8 lg:py-10">
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>

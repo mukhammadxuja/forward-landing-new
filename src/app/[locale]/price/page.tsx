@@ -3,7 +3,7 @@
 import Contact from '@/components/home/contact';
 import FAQ from '@/components/home/faq';
 import { BuiltUsingTools } from '@/components/home/footer/built-using-tools';
-import { Pricing } from '@/components/home/pricing/pricing';
+import Price from '@/components/home/pricing/price';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -69,7 +69,7 @@ function Favorites() {
       </motion.div>
 
       <div className="space-y-[24px] mt-[24px]">
-        <Pricing country="US" />
+        <Price />
         <FAQ />
         <BuiltUsingTools />
         <Contact />
