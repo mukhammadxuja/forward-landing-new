@@ -32,18 +32,16 @@ function FAQ() {
   ];
 
   return (
-    <div>
-      <div className="flex flex-col md:flex-row items-start justify-between">
-        <h4 className="section-title max-w-[20rem]">{t('title')}</h4>
-        <Accordion type="single" defaultValue="question-0" className="max-w-xl">
-          {faq.map(({ question, answer }, index) => (
-            <AccordionItem key={question} value={`question-${index}`}>
-              <AccordionTrigger className="text-left text-lg">{question}</AccordionTrigger>
-              <AccordionContent>{answer}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
+    <div className="flex flex-col md:flex-row items-start justify-between">
+      <h4 className="section-title max-w-[20rem]">{t('title')}</h4>
+      <Accordion type="single" defaultValue="question-0" className="max-w-xl">
+        {faq.map(({ question, answer }, index) => (
+          <AccordionItem key={question} value={`question-${index}`}>
+            <AccordionTrigger className="text-left text-lg">{question}</AccordionTrigger>
+            <AccordionContent>{answer}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </div>
   );
 }

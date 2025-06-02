@@ -1,16 +1,51 @@
+import { motion } from 'framer-motion';
 import { Box, Wallpaper } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
 function Services() {
   const t = useTranslations('IndexPage.services');
+
   return (
-    <div className="">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+      className=""
+    >
       <h4 className="section-title mb-8 lg:mb-12">{t('title')}</h4>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        <div className="relative min-h-44 col-span-1 lg:col-span-2 row-span-1 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7">
+        {/* Card 1 */}
+        <motion.div
+          variants={cardVariants}
+          className="relative min-h-44 col-span-1 lg:col-span-2 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7"
+        >
           <Image
             width={200}
             height={400}
@@ -22,9 +57,13 @@ function Services() {
           <span className="absolute bottom-6 z-20 text-xl font-semibold leading-6 text-white">
             {t('service1Description')}
           </span>
-        </div>
+        </motion.div>
 
-        <div className="relative group cursor-pointer min-h-44 col-span-1 row-span-1 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full rounded-2xl p-6 lg:p-7">
+        {/* Card 2 */}
+        <motion.div
+          variants={cardVariants}
+          className="relative group cursor-pointer min-h-44 col-span-1 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl p-6 lg:p-7"
+        >
           <div className="absolute top-1/2 -translate-y-1/2 space-y-4 lg:space-y-6">
             <Wallpaper className="text-4xl text-primary" />
             <div className="space-y-2">
@@ -45,9 +84,13 @@ function Services() {
               </svg>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="relative col-span-1 lg:col-span-2 row-span-2 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full h-[25rem] md:h-[30rem] rounded-2xl overflow-hidden">
+        {/* Card 3 */}
+        <motion.div
+          variants={cardVariants}
+          className="relative col-span-1 lg:col-span-2 row-span-2 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-[25rem] md:h-[30rem] rounded-2xl overflow-hidden"
+        >
           <span className="absolute top-8 lg:top-16 left-1/2 -translate-x-1/2 text-center text-lg md:text-xl font-semibold leading-6">
             {t('service3Description')}
           </span>
@@ -60,9 +103,13 @@ function Services() {
               alt="service gif"
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="relative min-h-44 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full h-full rounded-2xl p-6 lg:p-7 group cursor-pointer">
+        {/* Card 4 */}
+        <motion.div
+          variants={cardVariants}
+          className="relative min-h-44 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-full rounded-2xl p-6 lg:p-7 group cursor-pointer"
+        >
           <div className="absolute top-1/2 -translate-y-1/2 space-y-4 lg:space-y-6">
             <Box className="text-4xl text-primary" />
             <div className="space-y-2">
@@ -83,9 +130,13 @@ function Services() {
               </svg>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="relative min-h-44 col-span-1 lg:col-span-2 row-span-1 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7">
+        {/* Card 5 */}
+        <motion.div
+          variants={cardVariants}
+          className="relative min-h-44 col-span-1 lg:col-span-2 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7"
+        >
           <Image
             width={200}
             height={400}
@@ -97,12 +148,13 @@ function Services() {
           <span className="absolute bottom-6 z-20 text-xl font-semibold leading-6 text-white">
             {t('service5Title')}
           </span>
-        </div>
+        </motion.div>
       </div>
-      <Link href={'/services'} className="flex items-center justify-center w-full mt-4 md:mt-8">
+
+      <Link href="/services" className="flex items-center justify-center w-full mt-4 md:mt-8">
         <Button variant="secondary">{t('button')}</Button>
       </Link>
-    </div>
+    </motion.div>
   );
 }
 

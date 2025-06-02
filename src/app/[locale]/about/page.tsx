@@ -13,6 +13,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -20,6 +21,21 @@ import Link from 'next/link';
 function About() {
   const t = useTranslations('AboutPage');
   const breadcrumbT = useTranslations('breadcrumb');
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { ease: 'easeOut', duration: 0.6 } },
+  };
+
   return (
     <div className="spacey-y-4 lg:space-y-6">
       <div className="bg-card">
@@ -37,14 +53,28 @@ function About() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="space-y-[24px] mt-3 lg:mt-0">
-            <h4 className="section-title">{t('title')}</h4>
-            <p className="paragraph max-w-[580px]">{t('paragraph')}</p>
-            <Button className="hidden bg-primary text-white hover:bg-primary/80 rounded-full px-6 py-2">
-              Batafsil <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+          <motion.div
+            className="space-y-[24px] mt-3 lg:mt-0"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            <motion.h4 className="section-title" variants={itemVariants}>
+              {t('title')}
+            </motion.h4>
+
+            <motion.p className="paragraph max-w-[580px]" variants={itemVariants}>
+              {t('paragraph')}
+            </motion.p>
+
+            <motion.div variants={itemVariants}>
+              <Button className="hidden bg-primary text-white hover:bg-primary/80 rounded-full px-6 py-2">
+                Batafsil <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </motion.div>
+
             <Stats aboutPage={true} />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="relative mx-auto max-w-7xl px-[32px] lg:px-4 space-y-4 lg:space-y-0 py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 items-start border-b border-border">

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 import Review from './review';
 
 const heroImage = ['/mockup.jpg', '/mockup.jpg', '/mockup.jpg'];
@@ -56,13 +57,15 @@ export function HeroSection() {
       >
         <div>
           <div className="w-full space-y-4 max-w-[600px]">
-            <motion.span
-              variants={itemVariants}
-              className="text-xs md:text-sm text-primary py-1 px-2 flex items-center gap-2 w-fit rounded-full border border-primary"
-            >
-              {t('cto')}
-              <ArrowRight className="h-4 w-4" />
-            </motion.span>
+            <Link href="/services">
+              <motion.span
+                variants={itemVariants}
+                className="group text-xs md:text-sm text-ring py-1 px-2 flex items-center gap-2 w-fit rounded-full border border-ring mb-4"
+              >
+                {t('cto')}
+                <ArrowRight className="h-4 w-4 group-hover:ml-1 duration-300" />
+              </motion.span>
+            </Link>
 
             <motion.h1
               variants={itemVariants}
@@ -90,7 +93,7 @@ export function HeroSection() {
         initial="hidden"
         animate="show"
         variants={imageVariants}
-        className="absolute top-1/2 right-0 z-50 transform -translate-y-1/2 w-[600px] h-[400px]"
+        className="hidden lg:block absolute top-1/2 right-0 z-50 transform -translate-y-1/2 w-[600px] h-[400px] 2xl:w-[650px] 2xl:h-[450px] rounded-l-lg overflow-hidden shadow-lg"
       >
         <Carousel
           plugins={[

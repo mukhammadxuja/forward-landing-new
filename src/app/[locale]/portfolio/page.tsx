@@ -21,28 +21,21 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const projects = [
-  {
-    id: 1,
-    title: 'Beeline Billboard',
-    location: 'Toshkent, Chilonzor',
-    size: '3x6m',
-    type: 'LED',
-    date: '2024-12-10',
-    client: 'Beeline Uzbekistan',
-    imageUrl: '/assets/billboards/1.png',
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
   },
-  {
-    id: 2,
-    title: 'Coca-Cola Banner',
-    location: 'Samarqand markazi',
-    size: '4x12m',
-    type: 'Statik',
-    date: '2025-02-15',
-    client: 'Coca-Cola',
-    imageUrl: '/assets/billboards/1.png',
-  },
-];
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { ease: 'easeOut', duration: 0.5 } },
+};
 
 function PortfolioPage() {
   const t = useTranslations('services');
@@ -101,43 +94,56 @@ function PortfolioPage() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <div className="space-y-[24px] mt-3 lg:mt-0">
-          <h4 className="section-title">{portfolioT('title')}</h4>
-          <p className="paragraph max-w-[580px]">{portfolioT('paragraph')}</p>
-        </div>
-        <div>
-          {services.slice(0, 1).map((service, idx) => (
-            <div key={idx}>
-              <div>
-                <h5 className="section-title !text-[28px] my-8">{service.title}</h5>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                  {service.cards.map((card, idx) => (
-                    <div key={idx} className={idx < 2 ? 'lg:col-span-2' : ''}>
-                      <div
-                        className="cursor-pointer h-72 lg:h-80"
-                        onClick={() => openModal(card.images?.gallery || [], 0)}
-                        onMouseEnter={() => setHoveredIdx(idx)}
-                        onMouseLeave={() => setHoveredIdx(null)}
-                      >
-                        <Image
-                          src={card.images?.image ?? '/assets/billboards/1.png'}
-                          alt={card.title}
-                          width={500}
-                          height={500}
-                          className="w-full h-full object-cover rounded-xl"
-                        />
-                      </div>
-                      <div className="mt-2">
-                        <h2 className="text-base font-semibold">{card.title}</h2>
-                        <p className="paragraph-sm mt-2">{card.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <motion.div
+          className="space-y-[24px] mt-3 lg:mt-0"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.h4 className="section-title" variants={itemVariants}>
+            {portfolioT('title')}
+          </motion.h4>
+          <motion.p className="paragraph max-w-[580px]" variants={itemVariants}>
+            {portfolioT('paragraph')}
+          </motion.p>
+        </motion.div>
+
+        {services.slice(0, 1).map((service, idx) => (
+          <motion.div key={idx} initial="hidden" animate="visible" variants={containerVariants} className="mt-8">
+            <motion.h5 className="section-title !text-[28px] my-8" variants={itemVariants}>
+              {service.title}
+            </motion.h5>
+
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"
+              variants={containerVariants}
+            >
+              {service.cards.map((card, idx) => (
+                <motion.div
+                  key={idx}
+                  className={idx < 2 ? 'lg:col-span-2' : ''}
+                  variants={itemVariants}
+                  onMouseEnter={() => setHoveredIdx(idx)}
+                  onMouseLeave={() => setHoveredIdx(null)}
+                >
+                  <div className="cursor-pointer h-72 lg:h-80" onClick={() => openModal(card.images?.gallery || [], 0)}>
+                    <Image
+                      src={card.images?.image ?? '/assets/billboards/1.png'}
+                      alt={card.title}
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                  <div className="mt-2">
+                    <h2 className="text-base font-semibold">{card.title}</h2>
+                    <p className="paragraph-sm mt-2">{card.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        ))}
 
         {modal.isOpen && (
           <div className="fixed inset-0 h-screen bg-gray-900/80 backdrop-blur-md flex items-center justify-center z-[10003]">

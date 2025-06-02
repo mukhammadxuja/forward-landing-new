@@ -51,7 +51,7 @@
   --muted: hsl(180 10% 15%);
   --muted-foreground: #c0c0c0;
 
-  --accent: #223939;
+  --accent: #223939; 
   --accent-foreground: #9e9e9e;
 
   --destructive: hsl(0 70% 35%);
@@ -59,7 +59,7 @@
 
   --border: hsl(180 10% 20%);
   --input: hsl(180 10% 20%);
-  --ring: hsl(180, 60%, 40%);
+  --ring: #19c64d;
 
   /* Diagram ranglari (charts) */
   --chart-1: hsl(180 80% 45%);
@@ -134,7 +134,7 @@
   }
 
   .link {
-    @apply text-[#282d3c] leading-[-.01em] text-[14px] gap-[8px] font-medium hover:text-primary opacity-90 duration-300;
+    @apply text-[#282d3c] leading-[-.01em] text-[16px] gap-[8px] font-medium hover:text-primary opacity-90 duration-300;
   }
   .link-sm {
     @apply text-foreground text-xs hover:text-[#0F1342] duration-300 font-normal;
@@ -171,8 +171,6 @@
   }
 
   .paragraph {
-    @apply text-foreground/70 text-[16px] md:text-[18px];
+    @apply text-foreground/70 text-[16px] md:text-[18px] lg:text-[20px];
   }
 }
-
-

@@ -8,6 +8,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { motion } from 'framer-motion';
 
 import Link from 'next/link';
 
@@ -97,46 +98,62 @@ function Service() {
           </BreadcrumbList>
         </Breadcrumb>
         <div className="space-y-[24px] mt-3 lg:mt-0">
-          <div className="mx-auto max-w-7xl px-[32px] lg:px-4 space-y-[24px]">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="mx-auto max-w-7xl px-[32px] lg:px-4 space-y-[24px] mt-3 lg:mt-0"
+          >
             <h4 className="section-title max-w-[35rem]">{service.description}</h4>
 
-            <div className="flex gap-3">
-              <Button size="sm" variant="default">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex gap-3"
+            >
+              <Button variant="default">
                 Buyurtma berish
               </Button>
               <Link href="/contact">
-                <Button size="sm" variant="secondary">
+                <Button variant="secondary">
                   Aloqaga chiqish
                 </Button>
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="mx-auto max-w-7xl px-[32px] lg:px-4 mt-10 lg:mt-20">
-            <div>
-              <Image
-                width={200}
-                height={400}
-                className="w-full h-[24rem] lg:h-[35rem] object-cover rounded-2xl"
-                src="/assets/service/billboard.avif"
-                alt="service gif"
-              />
-              <div className="grid grid-cols-1 md:grid-cols-3 py-10">
-                <h4 className="mb-3 lg:mb-0 text-foreground-secondary text-[18px] tracking-[-.01em] leading-[24px] font-medium">
-                  Xizmatning afzalliklari
-                </h4>
-                <div className="col-span-2">
-                  <p className="paragraph">{service?.fullDescription}</p>
-                  <div className="flex flex-wrap items-center gap-3 mt-4">
-                    <Badge variant="secondary" className="p-3 py-2 gap-2">
-                      <HandCoins className="h-4 w-4" />
-                      <span>{service?.priceRange} so'm/oy</span>
-                    </Badge>
-                    <Badge variant="secondary" className="p-3 py-2 gap-2">
-                      <MapPin className="h-4 w-4" />
-                      <span>{serviceBillboardData.length} ta mavjud</span>
-                    </Badge>
-                  </div>
+          {/* Animated Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="mx-auto max-w-7xl px-[32px] lg:px-4 mt-10 lg:mt-20"
+          >
+            <Image
+              width={200}
+              height={400}
+              className="w-full h-[24rem] lg:h-[35rem] object-cover rounded-2xl"
+              src="/assets/service/billboard.avif"
+              alt="service gif"
+            />
+
+            {/* Afzalliklar */}
+            <div className="grid grid-cols-1 md:grid-cols-3 py-10">
+              <h4 className="mb-3 lg:mb-0 text-foreground-secondary text-[18px] tracking-[-.01em] leading-[24px] font-medium">
+                Xizmatning afzalliklari
+              </h4>
+              <div className="col-span-2">
+                <p className="paragraph">{service?.fullDescription}</p>
+                <div className="flex flex-wrap items-center gap-3 mt-4">
+                  <Badge variant="secondary" className="p-3 py-2 gap-2">
+                    <HandCoins className="h-4 w-4 lg:h-5 lg:w-5" />
+                    <span>{service?.priceRange} so'm/oy</span>
+                  </Badge>
+                  <Badge variant="secondary" className="p-3 py-2 gap-2">
+                    <MapPin className="h-4 w-4 lg:h-5 lg:w-5" />
+                    <span>{serviceBillboardData.length} ta mavjud</span>
+                  </Badge>
                 </div>
               </div>
             </div>
@@ -144,7 +161,7 @@ function Service() {
               mapPage={true}
               billboardData={serviceBillboardData.map((item) => ({ ...item, id: item.id.toString() }))}
             />
-          </div>
+          </motion.div>
 
           <div className="mx-auto max-w-7xl px-[32px] lg:px-4 space-y-[24px]">
             <BuiltUsingTools />

@@ -39,7 +39,7 @@ export function HomePage({ params }: Props) {
 
         <HowWeWork />
 
-        <div className="space-y-12 lg:space-y-20 mb-10 mx-auto max-w-7xl px-[32px] lg:px-4">
+        <div className="hidden space-y-12 lg:space-y-20 mb-10 mx-auto max-w-7xl px-[32px] lg:px-4">
           <Pricing country="US" />
         </div>
 

@@ -187,7 +187,7 @@ export default function Navbar({
   return (
     <nav className={cn('sticky top-0 z-[10001] -mb-4', className)}>
       <div className="mx-auto max-w-7xl px-[32px] lg:px-4">
-        <div className="fade-bottom absolute left-0 h-20 w-full bg-background/40 backdrop-blur-lg"></div>
+        <div className="fade-bottom absolute left-0 h-20 w-full border-b border-border bg-background/40 backdrop-blur-lg"></div>
         <div className="max-w-container relative mx-auto">
           <NavbarComponent>
             <NavbarLeft>
@@ -197,13 +197,15 @@ export default function Navbar({
               {showNavigation && (customNavigation || <Navigation />)}
             </NavbarLeft>
             <NavbarRight>
-              <div className="flex items-center gap-4 md:gap-6">
-                <a href="tel:+998901234567" className="text-lg font-semibold">
-                  +99891 209 33 33
-                </a>
+              <div className="flex items-center gap-4">
+                <Button variant="outline" className="rounded-full">
+                  <a href="tel:+998901234567" className="text-lg font-semibold">
+                    +99891 209 33 33
+                  </a>
+                </Button>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="icon" className="shrink-0 rounded-full">
+                    <Button variant="secondary" size="icon" className="shrink-0 rounded-full">
                       <Image
                         className="cursor-pointer"
                         src={getFlagIcon(locale)}

@@ -12,7 +12,7 @@ export function LocalizationBanner() {
   return (
     <>
       {showBanner && (
-        <div className="hidden md:block w-full border-b border-border/50 bg-background">
+        <div className="hidden md:block w-full bg-background">
           <div className="mx-auto flex max-w-7xl px-[32px] py-2 lg:px-4 items-center justify-between py-2">
             <div className="flex gap-4">
               {/* <span className="text-sm text-muted-foreground">{t('address')}</span> */}
