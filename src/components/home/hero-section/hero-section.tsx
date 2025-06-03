@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Review from './review';
 
-const heroImage = ['/mockup.jpg', '/mockup.jpg', '/mockup.jpg'];
+const heroImage = ['/mockup.jpg', '/hero2.jpg', '/hero3.webp'];
 
 const headerVariants = {
   hidden: {},

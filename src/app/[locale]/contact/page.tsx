@@ -164,7 +164,7 @@ function Contact() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
+          <div className="w-full border border-accent bg-accent/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
             <div className="space-y-2">
               <h6 className="paragraph-sm !text-foreground font-medium">{t('phoneTitle')}</h6>
               <p className="link-sm max-w-xs">{t('phoneDesc')}</p>
@@ -176,7 +176,7 @@ function Contact() {
               +99891 209 33 33
             </a>
           </div>
-          <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
+          <div className="w-full border border-accent bg-accent/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
             <div className="space-y-2">
               <h6 className="paragraph-sm !text-foreground font-medium">{t('emailTitle')}</h6>
               <p className="link-sm max-w-xs">{t('emailDesc')}</p>
@@ -188,7 +188,7 @@ function Contact() {
               forward@gmail.com
             </a>
           </div>
-          <div className="w-full border border-accent bg-background/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
+          <div className="w-full border border-accent bg-accent/50 backdrop-blur-lg rounded-xl shadow-sm p-6 lg:p-8 space-y-4 lg:space-y-6">
             <div className="space-y-2">
               <h6 className="paragraph-sm !text-foreground font-medium">{t('socialTitle')}</h6>
               <p className="link-sm max-w-xs">{t('socialDesc')}</p>

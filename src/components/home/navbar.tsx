@@ -322,7 +322,7 @@ export default function Navbar({
             </NavbarLeft>
             <NavbarRight>
               <div className="flex items-center gap-2 lg:gap-4">
-                <Button variant="outline" className="rounded-full hidden lg:block">
+                <Button variant="secondary" className="rounded-full hidden lg:block">
                   <a href="tel:+998901234567" className="text-sm font-medium lg:text-lg lg:font-semibold">
                     +99891 209 33 33
                   </a>
@@ -372,10 +372,7 @@ export default function Navbar({
                       <ul className="space-y-1">
                         {navLinks.map((link) => (
                           <li key={link.label}>
-                            <Link
-                              href={link.href}
-                              className="text-neutral-300 hover:text-foreground/80 duration-300 text-sm"
-                            >
+                            <Link href={link.href} className="text-neutral-300 hover:text-primary duration-300 text-sm">
                               {link.label}
                             </Link>
                           </li>
@@ -391,16 +388,21 @@ export default function Navbar({
                               <li key={subIdx}>
                                 <Link
                                   href={item.href}
-                                  className="text-neutral-300 hover:text-foreground/80 duration-300 text-sm"
+                                  className="text-neutral-300 hover:text-primary duration-300 text-sm"
                                 >
                                   {item.title}
                                 </Link>
-                                {item?.new && <Badge className="ml-1.5 py-0.5 px-1.5 !text-xs">Новое</Badge>}
+                                {item?.new && <Badge className="ml-1.5 py-0.5 px-1.5 !text-xs">{tFooter('new')}</Badge>}
                               </li>
                             ))}
                           </ul>
                         </div>
                       ))}
+                      <Button size="sm" variant="secondary" className="rounded-full w-full">
+                        <a href="tel:+998901234567" className="text-sm font-medium lg:text-lg lg:font-semibold">
+                          +99891 209 33 33
+                        </a>
+                      </Button>
                     </div>
 
                     <div>

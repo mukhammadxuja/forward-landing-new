@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import * as React from 'react';
 
+import { usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
@@ -87,6 +88,9 @@ export default function Navigation({
 }: NavigationProps) {
   const t = useTranslations('navbar');
   const tIntro = useTranslations('navbar.introItems');
+  const pathname = usePathname();
+
+  console.log('Navigation pathname:', pathname);
 
   const menuItems = [
     {
@@ -214,6 +218,7 @@ export default function Navigation({
           title: tIntro('design.web-sayt.title'),
           description: tIntro('design.web-sayt.description'),
           href: '/services/web-sayt',
+          new: true,
         },
       ],
     },
@@ -224,14 +229,19 @@ export default function Navigation({
         {menuItems.map((item, index) => (
           <NavigationMenuItem key={index}>
             {item.isLink ? (
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink
+                className={`hover:text-primary active:text-primary hover:!bg-accent ${pathname === item.href ? 'text-primary bg-accent' : ''}`}
+                asChild
+              >
                 <Link href={item.href || ''} className={navigationMenuTriggerStyle()}>
                   {item.title}
                 </Link>
               </NavigationMenuLink>
             ) : (
               <>
-                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className={`hover:text-primary active:text-primary hover:!bg-accent ${pathname.includes('services') ? 'text-primary bg-accent' : ''}`}>
+                  {item.title}
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   {item.content === 'default' ? (
                     <ul className="grid gap-3 p-4 md:w-[700px] lg:w-[900px] lg:grid-cols-3">
@@ -240,7 +250,12 @@ export default function Navigation({
                           <h5 className="px-2 text-sm">{intro.title}</h5>
                           <ul className="mt-2 space-y-1 text-sm">
                             {intro.subItems?.map((sub, subIdx) => (
-                              <ListItem key={subIdx} href={sub.href} title={sub.title}>
+                              <ListItem
+                                key={subIdx}
+                                href={sub.href}
+                                title={sub.title}
+                                className={`hover:!bg-accent ${pathname === sub.href ? 'text-primary bg-accent' : ''}`}
+                              >
                                 {sub.description}
                               </ListItem>
                             ))}
@@ -276,7 +291,7 @@ function ListItem({ className, title, children, ...props }: React.ComponentProps
         <a
           data-slot="list-item"
           className={cn(
-            'hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-sm px-3 py-2 leading-none no-underline outline-hidden transition-colors select-none',
+            'hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary block space-y-1 rounded-sm px-3 py-2 leading-none no-underline outline-hidden transition-colors select-none',
             className,
           )}
           {...props}
