@@ -229,20 +229,20 @@
     },
     "services": {
       "title": "Наши услуги",
-      "service1Title": "Печать баннеров",
-      "service1Description": "Печать рекламных баннеров",
+      "service1Title": "Билборды",
+      "service1Description": "Более 100 билбордов в городе Джизак и районных центрах",
 
-      "service2Title": "Брендмурал",
-      "service2Description": "Большая реклама на стенах",
+      "service2Title": "LED-экраны",
+      "service2Description": "Более 10 LED-экранов по всему Джизаку",
 
-      "service3Title": "LED Мониторы",
-      "service3Description": "Яркие электронные дисплеи",
+      "service3Title": "Брендмауэры",
+      "service3Description": "Брендмауэры, размещённые на стенах и крышах зданий",
 
-      "service4Title": "Сити-Бокс",
-      "service4Description": "Рекламные боксы на улицах",
+      "service4Title": "City Box",
+      "service4Description": "Рекламные боксы, установленные на углах улиц",
 
       "service5Title": "Объёмные буквы",
-      "service5Description": "Световые и объёмные надписи",
+      "service5Description": "Изготовление объёмных и светящихся надписей",
       "more": "Подробнее",
       "button": "Все услуги"
     },

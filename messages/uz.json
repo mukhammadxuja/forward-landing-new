@@ -232,20 +232,20 @@
     },
     "services": {
       "title": "Bizning Xizmatlar",
-      "service1Title": "Banner chop etish",
-      "service1Description": "Reklama bannerlarini bosib chiqarish",
+      "service1Title": "Billboard",
+      "service1Description": "Jizzax shahar va tuman markazlarida 100 dan ortiq billboardlar",
 
-      "service2Title": "Brendmourlar",
-      "service2Description": "Binolar devoridagi katta reklama",
+      "service2Title": "LED monitorlar",
+      "service2Description": "Jizzax shahardagi 10 dan ortiq LED monitorlar",
 
-      "service3Title": "LED Monitorlar",
-      "service3Description": "Yorqin elektron reklamalar monitori",
+      "service3Title": "Brenmaurlar",
+      "service3Description": "Bino devorlari va tomlarida joylashtirilgan brendmourlar",
 
       "service4Title": "City Box",
-      "service4Description": "Ko‘cha burchaklaridagi reklama qutisi",
+      "service4Description": "Ko‘cha burchaklariga o‘rnatilgan reklama qutilari",
 
-      "service5Title": "Bo'rtma harflar",
-      "service5Description": "Hajmli va chiroqli yozuvlar",
+      "service5Title": "Katta harflar",
+      "service5Description": "Hajmli va chiroqli yozuvlar tayyorlash",
       "more": "Batafsil",
       "button": "Barcha xizmatlar"
     },

@@ -40,7 +40,7 @@ function Stats({ aboutPage = false }) {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="relative group overflow-hidden cursor-default h-32"
+            className="relative group overflow-hidden cursor-default h-fit lg:h-28"
             onMouseMove={handleMouseMove}
           >
             <div

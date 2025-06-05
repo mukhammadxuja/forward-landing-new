@@ -13,66 +13,66 @@ const reviewVariants = {
 export const reviews = [
   {
     companyName: 'Zamon Print',
-    companyLogo: 'https://via.placeholder.com/40x40?text=ZP',
+    companyLogo: '/assets/clients/zamon-print.jpg',
     reviewer: 'Azizbek Mamatov',
     review:
       'Forward Advertise bilan hamkorlikdan juda mamnunmiz. Billboardlar joylashuvi strategik jihatdan juda qulay va sifatli bajarilgan.',
   },
   {
     companyName: 'Ideal Avto',
-    companyLogo: 'https://via.placeholder.com/40x40?text=IA',
+    companyLogo: '/assets/clients/ideal-avto.png',
     reviewer: 'Sardor Qodirov',
     review:
       'LED ekranlar orqali reklama qilish natijasida mijozlar soni ancha ortdi. Tashqi reklama bo‘yicha ishonchli hamkor!',
   },
   {
     companyName: 'Fresh Market Jizzax',
-    companyLogo: 'https://via.placeholder.com/40x40?text=FM',
+    companyLogo: '/assets/clients/fresh-market.png',
     reviewer: 'Nilufar Karimova',
     review:
       'Dizayn va joylashtirish bir joyda — Forward jamoasi ishni boshidan oxirigacha professional tarzda bajaradi.',
   },
   {
     companyName: 'Oqtepa Lavash',
-    companyLogo: 'https://via.placeholder.com/40x40?text=OL',
+    companyLogo: '/assets/clients/oqtepa-lavash.jpg',
     reviewer: 'Sanjar Eshonov',
     review: 'Bekatlar va avtobuslardagi reklama xizmatlari mijozlarimiz orasida brendimizni ancha tanitdi.',
   },
   {
     companyName: 'Jizzax City Clinic',
-    companyLogo: 'https://via.placeholder.com/40x40?text=CC',
+    companyLogo: '/assets/clients/jizzax-city-clinic.png',
     reviewer: 'Dilfuza Rasulova',
     review:
       'Reklama materiallari sifati yuqori darajada. Bannerni bir necha oy o‘rnatilgan holatda saqlab turish mumkin.',
   },
   {
     companyName: 'Smart Technologies',
-    companyLogo: 'https://via.placeholder.com/40x40?text=ST',
+    companyLogo: '/assets/clients/smart-tech.png',
     reviewer: 'Bekzod Tursunov',
     review: 'Brendmauer orqali reklama joylashtirganimizdan keyin onlayn buyurtmalar soni sezilarli darajada oshdi.',
   },
   {
     companyName: 'EcoFood Agro',
-    companyLogo: 'https://via.placeholder.com/40x40?text=EA',
+    companyLogo: '/assets/clients/eco-food.jpg',
     reviewer: 'Sherzod O‘ktamov',
     review: 'Kontent ishlab chiqish va ijtimoiy tarmoqlar uchun reklama kampaniyalari juda samarali bo‘ldi.',
   },
   {
     companyName: 'Gold Fitness',
-    companyLogo: 'https://via.placeholder.com/40x40?text=GF',
+    companyLogo: '/assets/clients/gold-fitness.png',
     reviewer: 'Malika Rajabova',
     review: 'Forward dizaynerlari bilan ishlash juda qulay. Fikrimni aniq tushunib, kreativ yechim taklif qilishdi.',
   },
   {
     companyName: 'Baraka Group',
-    companyLogo: 'https://via.placeholder.com/40x40?text=BG',
+    companyLogo: '/assets/clients/baraka-group.png',
     reviewer: 'Anvar Abdullayev',
     review:
       'Katta hajmli bannerlarimiz qisqa muddatda tayyorlandi. Joylashtirish ishlari ham aniq belgilangan vaqtda bajarildi.',
   },
   {
     companyName: 'Jizzax Book Café',
-    companyLogo: 'https://via.placeholder.com/40x40?text=BC',
+    companyLogo: '/assets/clients/book-cafe.jpg',
     reviewer: 'Zilola Ergasheva',
     review:
       'Reklama joylashganidan keyin yangi mijozlar oqimi sezilarli darajada oshdi. Raqobatchilar orasida ko‘zga tashlandik!',
@@ -89,8 +89,8 @@ function Review() {
       className="relative text-center mt-5 lg:mt-8 max-w-5xl mx-auto overflow-hidden"
     >
       {/* Gradient edges */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-background to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-14 lg:w-20 bg-gradient-to-r from-background to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-14 lg:w-20 bg-gradient-to-l from-background to-transparent z-10" />
 
       <Marquee className="items-center" direction="left">
         {reviews.map((item, index) => (
@@ -99,11 +99,7 @@ function Review() {
             className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-3 mx-2 space-y-2"
           >
             <div className="flex items-center space-x-3">
-              <img
-                src="https://github.com/shadcn.png"
-                alt={item.companyName}
-                className="w-7 h-7 rounded-full object-cover"
-              />
+              <img src={item.companyLogo} alt={item.companyName} className="w-7 h-7 rounded-full object-cover" />
               <div className="text-left">
                 <p className="font-semibold text-white text-xs">{item.companyName}</p>
                 {/* <p className="text-muted-foreground text-xs">{item.reviewer}</p> */}

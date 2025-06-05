@@ -73,6 +73,9 @@ function Service() {
 
   const service = allCards.find((card) => card.id === params.service);
 
+  console.log(service);
+  
+
   if (!service) return notFound();
 
   const serviceBillboardData = billboardData.filter((item) => item.type === service.id);
@@ -132,7 +135,7 @@ function Service() {
               width={200}
               height={400}
               className="w-full h-[22rem] lg:h-[35rem] object-cover rounded-2xl"
-              src="/assets/service/billboard.avif"
+              src={service.images?.image || '/assets/service/billboard.avif'}
               alt="service gif"
             />
 
@@ -163,10 +166,10 @@ function Service() {
                 </div>
               </div>
             </div>
-            <Map
+            {/* <Map
               mapPage={true}
               billboardData={serviceBillboardData.map((item) => ({ ...item, id: item.id.toString() }))}
-            />
+            /> */}
           </motion.div>
 
           <div className="mx-auto max-w-7xl px-[32px] lg:px-4 space-y-[24px]">

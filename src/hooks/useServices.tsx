@@ -18,7 +18,7 @@ function useServices() {
           href: '/services/led-monitorlar',
           fullDescription: t('service6FullDescription'),
           images: {
-            image: '/assets/portfolio/led/led1.jpg',
+            image: '/assets/portfolio/led/led-online.webp',
             gallery: [
               '/assets/portfolio/led/led1.jpg',
               '/assets/portfolio/led/led2.jpg',
@@ -48,7 +48,7 @@ function useServices() {
           href: '/services/brendmourlar',
           fullDescription: t('service1FullDescription'),
           images: {
-            image: '/assets/portfolio/brendmauer/brendmauer4.jpg',
+            image: '/assets/portfolio/all/4.jpg',
             gallery: [
               '/assets/portfolio/brendmauer/brendmauer1.jpg',
               '/assets/portfolio/brendmauer/brendmauer2.jpg',
@@ -78,7 +78,7 @@ function useServices() {
           href: '/services/katta-harflar',
           fullDescription: t('service2FullDescription'),
           images: {
-            image: '/assets/portfolio/katta-harflar/katta-harflar.webp',
+            image: '/assets/service/3d-letter.jpg',
             gallery: ['/assets/portfolio/katta-harflar/katta-harflar.webp'],
           },
           locations: [],
@@ -100,7 +100,7 @@ function useServices() {
           fullDescription: t('service5FullDescription'),
 
           images: {
-            image: '/assets/portfolio/billboardlar/billboardlar4.jpg',
+            image: '/assets/portfolio/all/1.jpg',
             gallery: [
               '/assets/portfolio/billboardlar/billboardlar1.jpg',
               '/assets/portfolio/billboardlar/billboardlar2.jpg',
@@ -144,8 +144,8 @@ function useServices() {
           href: '/services/city-box',
           fullDescription: t('service3FullDescription'),
           images: {
-            image: '/assets/portfolio/city-box/city-box1.jpg',
-            gallery: ['/assets/portfolio/city-box/city-box1.jpg', '/assets/portfolio/city-box/city-box.jpg'],
+            image: '/assets/portfolio/city-box/city-box-online.avif',
+            gallery: ['/assets/portfolio/city-box/city-box-online.avif', '/assets/portfolio/city-box/city-box.jpg'],
           },
           locations: [],
           thereMap: true,
@@ -193,9 +193,9 @@ function useServices() {
           href: '/services/bortma-harflar',
           fullDescription: t('service2_1FullDescription'),
           images: {
-            image: '/assets/portfolio/brendmaur/brendmaur1.jpg',
+            image: '/assets/service/3d-letter.jpg',
             gallery: [
-              '/assets/portfolio/brendmaur/brendmaur1.jpg',
+              '/assets/service/3d-letter.jpg',
               '/assets/portfolio/brendmaur/brendmaur2.jpg',
               '/assets/portfolio/brendmaur/brendmaur3.jpg',
               '/assets/portfolio/brendmaur/brendmaur4.jpg',
@@ -223,8 +223,8 @@ function useServices() {
           href: '/services/stella',
           fullDescription: t('service2_2FullDescription'),
           images: {
-            image: '/images/services/stella.jpg',
-            gallery: ['/images/services/stella1.jpg', '/images/services/stella2.jpg', '/images/services/stella3.jpg'],
+            image: '/assets/portfolio/city-box/city-box-online.avif',
+            gallery: ['/assets/portfolio/city-box/city-box-online.avif', '/images/services/stella2.jpg', '/images/services/stella3.jpg'],
           },
           locations: [],
           thereMap: true,
@@ -245,8 +245,8 @@ function useServices() {
           href: '/services/banner-chop-etish',
           fullDescription: t('service2_3FullDescription'),
           images: {
-            image: '/images/services/banner.jpg',
-            gallery: ['/images/services/banner1.jpg', '/images/services/banner2.jpg', '/images/services/banner3.jpg'],
+            image: '/assets/portfolio/all/3.jpg',
+            gallery: ['/assets/portfolio/all/3.jpg', '/images/services/banner2.jpg', '/images/services/banner3.jpg'],
           },
           locations: [],
           thereMap: true,
@@ -266,7 +266,7 @@ function useServices() {
           href: '/services/tablichkalar',
           fullDescription: t('service2_4FullDescription'),
           images: {
-            image: '/images/services/tablichka.jpg',
+            image: '/assets/portfolio/tablichka/tablichka.jpg',
             gallery: [
               '/images/services/tablichka1.jpg',
               '/images/services/tablichka2.jpg',
@@ -291,7 +291,7 @@ function useServices() {
           href: '/services/montaj-xizmati',
           fullDescription: t('service2_5FullDescription'),
           images: {
-            image: '/images/services/montaj.jpg',
+            image: '/assets/portfolio/all/14.jpg',
             gallery: ['/images/services/montaj1.jpg', '/images/services/montaj2.jpg', '/images/services/montaj3.jpg'],
           },
           locations: [],

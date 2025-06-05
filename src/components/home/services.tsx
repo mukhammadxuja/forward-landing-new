@@ -41,7 +41,7 @@ function Services() {
       <h4 className="section-title mb-8 lg:mb-12">{t('title')}</h4>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        {/* Card 1 */}
+        {/* Card 1 - Billboard */}
         <motion.div
           variants={cardVariants}
           className="relative min-h-44 col-span-1 lg:col-span-2 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7"
@@ -50,85 +50,78 @@ function Services() {
             width={200}
             height={400}
             className="absolute bottom-0 left-0 w-full h-full object-cover"
-            src="/assets/service/texnika.jpg"
+            src="/assets/portfolio/all/1.jpg"
             alt="service gif"
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-40"></div>
-          <span className="absolute bottom-6 z-20 text-xl font-semibold leading-6 text-white">
-            {t('service1Description')}
-          </span>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
+          <div className="absolute bottom-6 z-20 space-y-2">
+            <h5 className="text-xl font-semibold leading-6 text-white">Billboard</h5>
+            <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
+              Jizzax shahar va tuman markazlarida 100 dan ortiq billboardlar
+            </span>
+          </div>
         </motion.div>
 
         {/* Card 2 */}
         <motion.div
           variants={cardVariants}
-          className="relative group cursor-pointer min-h-44 col-span-1 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl p-6 lg:p-7"
+          className="relative min-h-44 col-span-1 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7"
         >
-          <div className="absolute top-1/2 -translate-y-1/2 space-y-4 lg:space-y-6">
-            <Wallpaper className="text-4xl text-primary" />
-            <div className="space-y-2">
-              <span className="text-xl font-medium">{t('service2Title')}</span>
-              <p className="paragraph-sm pr-2">{t('service2Description')}</p>
-            </div>
-            <div className="flex items-center gap-2 group-hover:ml-1 duration-300">
-              <small>{t('more')}</small>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-4 w-4"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </div>
+          <Image
+            width={200}
+            height={400}
+            className="absolute bottom-0 left-0 w-full h-full object-cover"
+            src="/assets/portfolio/led/led-online.webp"
+            alt="service gif"
+          />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
+          <div className="absolute bottom-6 z-20 space-y-2">
+            <h5 className="text-xl font-semibold leading-6 text-white">LED monitorlar</h5>
+            <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
+              Jizzax shahardagi 10 dan ortiq LED monitorlar
+            </span>
           </div>
         </motion.div>
 
         {/* Card 3 */}
         <motion.div
           variants={cardVariants}
-          className="relative col-span-1 lg:col-span-2 row-span-2 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-[25rem] md:h-[30rem] rounded-2xl overflow-hidden"
+          className="relative col-span-1 lg:col-span-2 row-span-2 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-[25rem] md:h-[30rem] rounded-2xl overflow-hidden p-6 lg:p-7"
         >
-          <span className="absolute top-8 lg:top-16 left-1/2 -translate-x-1/2 text-center text-lg md:text-xl font-semibold leading-6">
-            {t('service3Description')}
-          </span>
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[30rem] lg:w-[38rem]">
-            <Image
-              width={200}
-              height={400}
-              className="w-full !pr-20"
-              src="/assets/portfolio/led/led.webp"
-              alt="service gif"
-            />
+          <Image
+            width={200}
+            height={400}
+            className="absolute bottom-0 left-0 w-full h-full object-cover"
+            src="/assets/portfolio/all/4.jpg"
+            alt="service gif"
+          />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
+          <div className="absolute bottom-6 z-20 space-y-2 w-full">
+            <h5 className="text-xl font-semibold leading-6 text-white">Brenmaurlar</h5>
+            <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
+              Bino-devorlari va tomlarida joylashfont-semibold text-whitegan brendmourlar
+            </span>
           </div>
         </motion.div>
 
         {/* Card 4 */}
         <motion.div
           variants={cardVariants}
-          className="relative min-h-44 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-full rounded-2xl p-6 lg:p-7 group cursor-pointer"
+          className="relative min-h-44 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-full rounded-2xl overflow-hidden p-6 lg:p-7"
         >
-          <div className="absolute top-1/2 -translate-y-1/2 space-y-4 lg:space-y-6">
-            <Box className="text-4xl text-primary" />
-            <div className="space-y-2">
-              <span className="text-xl font-medium">{t('service4Title')}</span>
-              <p className="paragraph-sm pr-2">{t('service4Description')}</p>
-            </div>
-            <div className="flex items-center gap-2 group-hover:ml-1 duration-300">
-              <small>{t('more')}</small>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-4 w-4"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </div>
+          <Image
+            width={200}
+            height={400}
+            className="absolute bottom-0 left-0 w-full h-full object-cover"
+            src="/assets/portfolio/city-box/city-box-online.avif"
+            alt="service gif"
+          />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
+          <div className="absolute bottom-6 z-20 space-y-2">
+            <h5 className="text-xl font-semibold leading-6 text-white">City Box</h5>
+            <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
+              {t('service4Description')}
+            </span>
           </div>
         </motion.div>
 
@@ -145,9 +138,12 @@ function Services() {
             alt="service gif"
           />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-40"></div>
-          <span className="absolute bottom-6 z-20 text-xl font-semibold leading-6 text-white">
-            {t('service5Title')}
-          </span>
+          <div className="absolute bottom-6 z-20 space-y-2">
+            <h5 className="text-xl font-semibold leading-6 text-white">Katta harflar</h5>
+            <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
+              Hajmli va chiroqli yozuvlar tayyorlas
+            </span>
+          </div>
         </motion.div>
       </div>
 

@@ -230,20 +230,20 @@
     },
     "services": {
       "title": "Our Services",
-      "service1Title": "Banner Printing",
-      "service1Description": "Printed banners for promotion",
+      "service1Title": "Billboard",
+      "service1Description": "Over 100 billboards across Jizzakh city and district centers",
 
-      "service2Title": "Brandmurals",
-      "service2Description": "Large ads on building walls",
+      "service2Title": "LED Screens",
+      "service2Description": "More than 10 LED screens in the city of Jizzakh",
 
-      "service3Title": "LED Monitors",
-      "service3Description": "Bright digital ad displays",
+      "service3Title": "Brandmauers",
+      "service3Description": "Brandmauers installed on building walls and rooftops",
 
       "service4Title": "City Box",
-      "service4Description": "Street corner ad boxes",
+      "service4Description": "Advertising boxes placed on street corners",
 
       "service5Title": "3D Letters",
-      "service5Description": "Bold and illuminated signage",
+      "service5Description": "Production of volumetric and illuminated signage",
       "more": "Learn more",
       "button": "All Services"
     },

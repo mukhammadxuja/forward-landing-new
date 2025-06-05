@@ -49,7 +49,7 @@ export default function HowWeWork() {
                   onMouseMove={handleMouseMove}
                 >
                   <div
-                    className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none rounded-2xl"
+                    className="hidden absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none rounded-2xl"
                     style={{
                       backgroundImage: `radial-gradient(180px circle at ${position.x} ${position.y}, rgba(5, 241, 99, 0.50) 0%, transparent 70%)`,
                     }}

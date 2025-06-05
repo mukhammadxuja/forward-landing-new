@@ -7,97 +7,6 @@ import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
 
-const services = [
-  {
-    id: 1,
-    title: 'Tashqi reklama',
-    icon: Brain,
-    cards: [
-      {
-        title: 'Brendmourlar',
-        description: "Jizzax shahrining ko'ringan bino-devorlari va tomlarida joylashgan brendmourlar",
-        href: '/services/brendmourlar',
-      },
-      {
-        title: 'Katta harflar',
-        description: "Jizzax shahrining ko'ringan bino-devorlari va tomlari ustida katta hajmdagi harflar",
-        href: '/services/katta-harflar',
-      },
-      {
-        title: 'City Box',
-        description: "Jizzax shahrining asosiy ko'chalarida 50 dan ortiq city boxlar",
-        href: '/services/city-box',
-      },
-      {
-        title: 'Avtovbus',
-        description: "Jzzax shahar va shaharlararo avtobus yo'nalishlarida reklama o'rnaish",
-        href: '/services/avtobus',
-      },
-      {
-        title: 'Billboardlar',
-        description: 'Jizzax shahar va tuman markazlarida 100 dan ortiq billboardlar',
-        href: '/services/billboardlar',
-      },
-      {
-        title: 'LED monitorlar',
-        description: 'Jizzax shahar va tuman markazlarida 100 dan ortiq LED monitorlar',
-        href: '/services/led-monitorlar',
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: 'Tayyorlash & Ishlab chiqarish',
-    icon: Brain,
-    cards: [
-      {
-        title: "Bo'rtma harflar",
-        description: "Yonadigan, bo'rtma harflar tayyorlash va o'rnatib berish",
-        href: '/services/bortma-harflar',
-      },
-      {
-        title: 'Stella',
-        description: "Yo'l chetida va ofislar yonida turadigan stellalarni tayyorlash va o'rnatish hizmati",
-        href: '/services/stella',
-        new: true,
-      },
-      {
-        title: 'Banner chop etish',
-        description: "Bannerlar va orakallarni chop etish va uni o'rnatib berish xizmati",
-        href: '/services/banner-chop-etish',
-      },
-      {
-        title: "Bo'rtma harflar",
-        description: "Yonadigan, bo'rtma harflar tayyorlash va o'rnatib berish",
-        href: '/services/bortma-harflar',
-      },
-      {
-        title: 'Stella',
-        description: "Yo'l chetida va ofislar yonida turadigan stellalarni tayyorlash va o'rnatish hizmati",
-        href: '/services/stella',
-        new: true,
-      },
-      {
-        title: 'Banner chop etish',
-        description: "Bannerlar va orakallarni chop etish va uni o'rnatib berish xizmati",
-        href: '/services/banner-chop-etish',
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Implementation',
-    icon: Brain,
-    cards: [
-      { title: 'Web sayt yaratish', description: 'Description X', href: '/services/stella' },
-      { title: 'Машино-места', description: 'Description Y', href: '/services/stella' },
-      { title: 'Кладовые', description: 'Description Z', href: '/services/stella' },
-      { title: 'Аренда квартир', description: 'Description W', href: '/services/stella' },
-      { title: 'Аукционы недвижимости', description: 'Description V', href: '/services/stella' },
-    ],
-  },
-];
-
 export default function Footer2() {
   const t = useTranslations('footer');
   const tIntro = useTranslations('navbar.introItems');
@@ -248,7 +157,7 @@ export default function Footer2() {
                 <Button
                   size="sm"
                   variant="secondary"
-                  className="bg-accent font-normal hover:bg-accent/80 text-primary min-w-44 rounded-full !text-xs"
+                  className="bg-accent font-normal hover:bg-accent/80 hover:!text-primary min-w-44 rounded-full !text-xs"
                 >
                   {t('contactUs')}
                 </Button>
