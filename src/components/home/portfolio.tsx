@@ -5,41 +5,63 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '../ui/button';
+import { useTranslations } from 'next-intl';
 
 const portfolioItems = [
   {
     id: 1,
-    title: 'LED Billboard – Tashkent City',
-    image: '/assets/service/texnika.jpg',
-    description: 'Yorqin LED reklama Tashkent shahrining markazida o‘rnatilgan.',
+    title: 'Billboard – R-37, Jizzax shahri',
+    image: '/assets/portfolio/all/2.jpg',
+    description: 'R-37 yo‘li bo‘yida joylashgan katta reklama banneri.',
   },
   {
     id: 2,
-    title: 'Banner – Business Center',
-    image: '/assets/service/texnika.jpg',
-    description: 'Katta banner biznes markazining oldida joylashtirilgan.',
-  },
-  {
-    id: 3,
-    title: '3D Billboard – Shopping Mall',
-    image: '/assets/service/texnika.jpg',
-    description: '3D dizaynli reklama banneri savdo markazi uchun tayyorlangan.',
+    title: 'Banner – Orom bozori, Jizzax shahri',
+    image: '/assets/portfolio/all/6.jpg',
+    description: 'Orom bozori hududida joylashgan reklama banneri.',
   },
   {
     id: 4,
-    title: 'Static Billboard – Metro Exit',
-    image: '/assets/service/texnika.jpg',
-    description: 'Doimiy reklama metro chiqish qismida o‘rnatilgan.',
+    title: 'Billboard – Jizzax shahri',
+    image: '/assets/portfolio/all/14.jpg',
+    description: 'Jizzax shahri markazida joylashgan katta reklama banneri.',
   },
   {
     id: 5,
-    title: 'Backlight Banner – Airport',
-    image: '/assets/service/texnika.jpg',
-    description: 'Orqa yorug‘likli banner aeroportga joylashtirilgan.',
+    title: 'Billboard – Jizzax shahri',
+    image: '/assets/portfolio/all/16.jpg',
+    description: 'Jizzax shahri markazida joylashgan katta reklama banneri.',
+  },
+  {
+    id: 6,
+    title: 'Billboard – Jizzax shahri',
+    image: '/assets/portfolio/all/17.jpg',
+    description: 'Jizzax shahri markazida joylashgan katta reklama banneri.',
+  },
+  {
+    id: 7,
+    title: 'Brendmour – Jizzax shahri',
+    image: '/assets/portfolio/all/21.jpg',
+    description: 'Jizzax shahri markazida joylashgan katta reklama brendmour.',
+  },
+  {
+    id: 8,
+    title: 'Billboard – Jizzax shahri',
+    image: '/assets/portfolio/all/25.jpg',
+    description: 'Jizzax shahri markazida joylashgan katta reklama billboard.',
+  },
+  {
+    id: 3,
+    title: 'Billboard – Orom bozori, Jizzax shahri',
+    image: '/assets/portfolio/all/3.jpg',
+    description: 'Orom bozori hududida joylashgan katta reklama banneri.',
   },
 ];
 
 export default function PortfolioSection({ className }: { className?: string }) {
+    const t = useTranslations('IndexPage.services');
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -85,7 +107,7 @@ export default function PortfolioSection({ className }: { className?: string }) 
                       height={400}
                       className="w-full h-64 object-cover p-1 rounded-lg"
                     />
-                    <CardContent className="p-4 flex flex-col flex-grow">
+                    <CardContent className="px-4 py-2 flex flex-col flex-">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-sm text-muted-foreground mt-auto">{item.description}</p>
                     </CardContent>
@@ -101,6 +123,9 @@ export default function PortfolioSection({ className }: { className?: string }) 
           </div>
         </Carousel>
       </div>
+      <Link href="/services" className="flex items-center justify-center w-full mt-4 md:mt-8">
+        <Button variant="secondary">{t('button')}</Button>
+      </Link>
     </motion.section>
   );
 }

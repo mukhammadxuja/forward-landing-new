@@ -128,7 +128,8 @@ export type ServiceCard = {
   };
   locations?: never[];
   thereMap?: boolean;
-  priceRange?: string;
+  priceRange?: string[] | string;
+  quantity: string;
   seo?: {
     title: string;
     description: string;
@@ -162,6 +163,8 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '1,500,000 – 3,500,000',
+        quantity: '',
+
         seo: {
           title: 'Brendmourlar – Jizzaxda binolar ustidagi reklama | Reklama Xizmati',
           description:
@@ -185,6 +188,7 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '3,000,000 – 6,000,000',
+        quantity: '',
         seo: {
           title: 'Katta Harflar – Jizzaxda yoritilgan reklama harflari | Reklama Xizmati',
           description:
@@ -204,6 +208,7 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '500,000 – 1,000,000',
+        quantity: '',
         seo: {
           title: 'City Box – Jizzaxdagi piyodalar reklama vositasi | Reklama Xizmati',
           description:
@@ -223,6 +228,7 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '1,800,000 – 4,000,000',
+        quantity: '',
         seo: {
           title: 'Avtobus reklamalari – Jizzax va viloyatlararo tashqi reklama | Reklama Xizmati',
           description:
@@ -247,6 +253,7 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '1,200,000 – 3,000,000',
+        quantity: '',
         seo: {
           title: 'Billboardlar – Jizzaxda tashqi reklama joylari | Reklama Xizmati',
           description:
@@ -266,6 +273,7 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '2,500,000 – 5,500,000',
+        quantity: '',
         seo: {
           title: 'LED Monitorlar – Jizzaxda zamonaviy raqamli reklama | Reklama Xizmati',
           description:
@@ -296,6 +304,7 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '700,000 – 2,500,000',
+        quantity: '',
         seo: {
           title: "Bo'rtma harflar – Jizzaxda yorqin reklama yechimlari",
           description:
@@ -315,6 +324,7 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '2,000,000 – 5,000,000',
+        quantity: '',
         seo: {
           title: 'Stellalar – Jizzaxda korxona tashqi ko‘rinishi uchun reklama yechimi',
           description:
@@ -335,49 +345,13 @@ export const services: Service[] = [
         },
         locations: [],
         priceRange: '100,000 – 800,000',
+        quantity: '',
         seo: {
           title: 'Banner chop etish – Jizzaxda sifatli reklama bosma mahsulotlari',
           description:
             'Banner va orakal materiallarini chop etish, dizayn qilish va joyiga yetkazib o‘rnatish – Jizzaxda tez va ishonchli xizmat.',
           keywords: ['banner chop', 'Jizzax banner', 'reklama banneri', 'orakal bosma'],
         },
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Boshqa xizmatlar',
-    icon: Brain,
-    cards: [
-      {
-        id: 'web-sayt-yaratish',
-        title: 'Web sayt yaratish',
-        description: 'Description X',
-        href: '/services/stella',
-      },
-      {
-        id: 'mashino-mesta',
-        title: 'Машино-места',
-        description: 'Description Y',
-        href: '/services/stella',
-      },
-      {
-        id: 'kladovye',
-        title: 'Кладовые',
-        description: 'Description Z',
-        href: '/services/stella',
-      },
-      {
-        id: 'arenda-kvartir',
-        title: 'Аренда квартир',
-        description: 'Description W',
-        href: '/services/stella',
-      },
-      {
-        id: 'auktsiony-nedvizhimosti',
-        title: 'Аукционы недвижимости',
-        description: 'Description V',
-        href: '/services/stella',
       },
     ],
   },

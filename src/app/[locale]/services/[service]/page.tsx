@@ -144,14 +144,22 @@ function Service() {
               <div className="col-span-2">
                 <p className="paragraph">{service?.fullDescription}</p>
                 <div className="flex flex-wrap items-center gap-3 mt-4">
-                  <Badge variant="secondary" className="p-3 py-2 gap-2">
-                    <HandCoins className="h-4 w-4 lg:h-5 lg:w-5" />
-                    <span>{service?.priceRange} so'm/oy</span>
-                  </Badge>
-                  <Badge variant="secondary" className="p-3 py-2 gap-2">
-                    <MapPin className="h-4 w-4 lg:h-5 lg:w-5" />
-                    <span>{serviceBillboardData.length} ta mavjud</span>
-                  </Badge>
+                  <div className="flex flex-wrap items-center gap-3">
+                    {(Array.isArray(service?.priceRange) ? service?.priceRange : [service?.priceRange])
+                      .filter(Boolean)
+                      .map((price, index) => (
+                        <Badge key={index} variant="secondary" className="p-3 py-2 gap-2">
+                          <HandCoins className="h-4 w-4 lg:h-5 lg:w-5" />
+                          <span>{price}</span>
+                        </Badge>
+                      ))}
+                  </div>
+                  {service?.quantity && (
+                    <Badge variant="secondary" className="p-3 py-2 gap-2">
+                      <MapPin className="h-4 w-4 lg:h-5 lg:w-5" />
+                      <span>{service.quantity} ta mavjud</span>
+                    </Badge>
+                  )}
                 </div>
               </div>
             </div>

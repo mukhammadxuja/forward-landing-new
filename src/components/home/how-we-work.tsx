@@ -4,18 +4,19 @@ import { BarChart, Brush, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-
+import { useCursorGlow } from '@/hooks/useCursorPosition';
 import { motion } from 'framer-motion';
 
 export default function HowWeWork() {
   const t = useTranslations('IndexPage.howWeWork');
+  const { position, handleMouseMove } = useCursorGlow();
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' }
+      transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
     }),
   };
 
@@ -34,12 +35,25 @@ export default function HowWeWork() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[1, 2, 3].map((step, i) => {
-            const icons = [<MapPin key="1" className="text-4xl text-primary" />, <Brush key="2" className="text-4xl text-primary" />, <BarChart key="3" className="text-4xl text-primary" />];
+            const icons = [
+              <MapPin key="1" className="text-4xl text-primary" />,
+              <Brush key="2" className="text-4xl text-primary" />,
+              <BarChart key="3" className="text-4xl text-primary" />,
+            ];
             const imageSrc = `/assets/how-we-work/step${step}.jpg`;
 
             const content = (
               <>
-                <div className="flex gap-4 lg:gap-0 lg:flex-col space-y-4 lg:space-y-6 p-6 lg:p-7">
+                <div
+                  className="flex gap-4 lg:gap-0 lg:flex-col space-y-4 lg:space-y-6 p-6 lg:p-7 relative group overflow-hidden cursor-default"
+                  onMouseMove={handleMouseMove}
+                >
+                  <div
+                    className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none rounded-2xl"
+                    style={{
+                      backgroundImage: `radial-gradient(180px circle at ${position.x} ${position.y}, rgba(5, 241, 99, 0.50) 0%, transparent 70%)`,
+                    }}
+                  />
                   {icons[i]}
                   <div>
                     <span className="text-xl font-medium">{t(`step${step}Title`)}</span>
@@ -100,7 +114,11 @@ export default function HowWeWork() {
                             stroke="currentColor"
                             className="h-4 w-4"
                           >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -115,7 +133,9 @@ export default function HowWeWork() {
                       />
                     </div>
                   </>
-                ) : content}
+                ) : (
+                  content
+                )}
               </motion.div>
             );
           })}

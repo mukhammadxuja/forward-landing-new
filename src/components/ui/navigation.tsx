@@ -230,7 +230,7 @@ export default function Navigation({
           <NavigationMenuItem key={index}>
             {item.isLink ? (
               <NavigationMenuLink
-                className={`hover:text-primary active:text-primary hover:!bg-accent ${pathname === item.href ? 'text-primary bg-accent' : ''}`}
+                className={`lg:text-base hover:text-primary active:text-primary hover:!bg-accent ${pathname === item.href ? 'text-primary bg-accent' : ''}`}
                 asChild
               >
                 <Link href={item.href || ''} className={navigationMenuTriggerStyle()}>
@@ -239,7 +239,7 @@ export default function Navigation({
               </NavigationMenuLink>
             ) : (
               <>
-                <NavigationMenuTrigger className={`hover:text-primary active:text-primary hover:!bg-accent ${pathname.includes('services') ? 'text-primary bg-accent' : ''}`}>
+                <NavigationMenuTrigger className={`lg:text-base hover:text-primary active:text-primary hover:!bg-accent ${pathname.includes('services') ? 'text-primary bg-accent' : ''}`}>
                   {item.title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -296,8 +296,8 @@ function ListItem({ className, title, children, ...props }: React.ComponentProps
           )}
           {...props}
         >
-          <div className="text-sm leading-none">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-xs leading-snug">{children}</p>
+          <div className="text-sm lg:text-base leading-none">{title}</div>
+          <p className="text-muted-foreground line-clamp-2 text-xs lg:text-sm leading-snug">{children}</p>
         </a>
       </NavigationMenuLink>
     </li>

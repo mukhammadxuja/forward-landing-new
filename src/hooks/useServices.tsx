@@ -33,7 +33,8 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '2,500,000 – 5,500,000',
+          priceRange: ['1,500,000 so‘m 5s', '2,200,000 so‘m 10s', '2,800,000 so‘m 15s', '3,300,000 so‘m 20s'],
+          quantity: '10+',
           seo: {
             title: t('service6SeoTitle'),
             description: t('service6SeoDescription'),
@@ -61,7 +62,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '1,500,000 – 3,500,000',
+          priceRange: '80,000 so‘m 1kv',
+          quantity: '',
+
           seo: {
             title: t('service1SeoTitle'),
             description: t('service1SeoDescription'),
@@ -80,7 +83,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '3,000,000 – 6,000,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service2SeoTitle'),
             description: t('service2SeoDescription'),
@@ -123,7 +128,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '1,200,000 – 3,000,000',
+          priceRange: '1,500,000 so‘m 1dona',
+          quantity: '100+',
+
           seo: {
             title: t('service5SeoTitle'),
             description: t('service5SeoDescription'),
@@ -142,7 +149,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '500,000 – 1,000,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service3SeoTitle'),
             description: t('service3SeoDescription'),
@@ -161,7 +170,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '1,800,000 – 4,000,000',
+          priceRange: '600,000 so‘m',
+          quantity: '',
+
           seo: {
             title: t('service4SeoTitle'),
             description: t('service4SeoDescription'),
@@ -196,7 +207,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '700,000 – 2,500,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service2_1SeoTitle'),
             description: t('service2_1SeoDescription'),
@@ -215,7 +228,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '2,000,000 – 5,000,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service2_2SeoTitle'),
             description: t('service2_2SeoDescription'),
@@ -235,7 +250,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '100,000 – 800,000',
+          priceRange: '40,000 so‘m 1kv',
+          quantity: '',
+
           seo: {
             title: t('service2_3SeoTitle'),
             description: t('service2_3SeoDescription'),
@@ -258,7 +275,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '150,000 – 600,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service2_4SeoTitle'),
             description: t('service2_4SeoDescription'),
@@ -277,7 +296,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '300,000 – 1,500,000',
+          priceRange: '40,000 so‘m 1kv',
+          quantity: '',
+
           seo: {
             title: t('service2_5SeoTitle'),
             description: t('service2_5SeoDescription'),
@@ -304,7 +325,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '700,000 – 1,200,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service3_1SeoTitle'),
             description: t('service3_1SeoDescription'),
@@ -327,7 +350,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '1,000,000 – 3,000,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service3_2SeoTitle'),
             description: t('service3_2SeoDescription'),
@@ -350,7 +375,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '800,000 – 2,000,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service3_3SeoTitle'),
             description: t('service3_3SeoDescription'),
@@ -369,7 +396,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '2,000,000 – 10,000,000',
+          priceRange: 'Aloqaga chiqing',
+          quantity: '',
+
           seo: {
             title: t('service3_4SeoTitle'),
             description: t('service3_4SeoDescription'),
@@ -388,7 +417,9 @@ function useServices() {
           },
           locations: [],
           thereMap: true,
-          priceRange: '1,500,000 – 3,500,000',
+          priceRange: '1,500,000 – 8,000,000 so‘m',
+          quantity: '',
+
           seo: {
             title: t('service3_5SeoTitle'),
             description: t('service3_5SeoDescription'),
