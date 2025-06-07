@@ -324,7 +324,7 @@ export default function Navbar({
               <div className="flex items-center gap-2 lg:gap-4">
                 <Button
                   variant="secondary"
-                  className="relative rounded-full transition-transform duration-300 transform hover:scale-[1.02] overflow-hidden hover:!text-primary"
+                  className="relative hidden lg:block rounded-full transition-transform duration-300 transform hover:scale-[1.02] overflow-hidden hover:!text-primary"
                 >
                   <span className="flex items-center gap-2 relative z-10">
                     <a href="tel:+998901234567" className="text-sm font-medium lg:text-lg lg:font-semibold">
