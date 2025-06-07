@@ -4,10 +4,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { useTranslations } from 'next-intl';
 
 const portfolioItems = [
   {
@@ -61,7 +61,7 @@ const portfolioItems = [
 ];
 
 export default function PortfolioSection({ className }: { className?: string }) {
-    const t = useTranslations('IndexPage.services');
+  const t = useTranslations('IndexPage');
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -107,7 +107,7 @@ export default function PortfolioSection({ className }: { className?: string }) 
                       height={400}
                       className="w-full h-64 object-cover p-1 rounded-lg"
                     />
-                    <CardContent className="px-4 py-2 flex flex-col flex-">
+                    <CardContent className="hidden px-4 py-2 flex flex-col flex-">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-sm text-muted-foreground mt-auto">{item.description}</p>
                     </CardContent>
@@ -123,8 +123,8 @@ export default function PortfolioSection({ className }: { className?: string }) 
           </div>
         </Carousel>
       </div>
-      <Link href="/services" className="flex items-center justify-center w-full mt-4 md:mt-8">
-        <Button variant="secondary">{t('button')}</Button>
+      <Link href="/portfolio" className="flex items-center justify-center w-full mt-4 md:mt-8">
+        <Button variant="secondary">{t('portfolioButton')}</Button>
       </Link>
     </motion.section>
   );

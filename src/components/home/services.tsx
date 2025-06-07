@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Box, Wallpaper } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -55,9 +54,9 @@ function Services() {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
           <div className="absolute bottom-6 z-20 space-y-2">
-            <h5 className="text-xl font-semibold leading-6 text-white">Billboard</h5>
+            <h5 className="text-xl font-semibold leading-6 text-white">{t("service1Title")}</h5>
             <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
-              Jizzax shahar va tuman markazlarida 100 dan ortiq billboardlar
+            {t('service1Description')}
             </span>
           </div>
         </motion.div>
@@ -65,7 +64,7 @@ function Services() {
         {/* Card 2 */}
         <motion.div
           variants={cardVariants}
-          className="relative min-h-44 col-span-1 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6 lg:p-7"
+          className="relative min-h-44 col-span-1 row-span-1 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-6"
         >
           <Image
             width={200}
@@ -76,9 +75,9 @@ function Services() {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
           <div className="absolute bottom-6 z-20 space-y-2">
-            <h5 className="text-xl font-semibold leading-6 text-white">LED monitorlar</h5>
+            <h5 className="text-xl font-semibold leading-6 text-white">{t("service2Title")}</h5>
             <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
-              Jizzax shahardagi 10 dan ortiq LED monitorlar
+              {t('service2Description')}
             </span>
           </div>
         </motion.div>
@@ -97,9 +96,9 @@ function Services() {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
           <div className="absolute bottom-6 z-20 space-y-2 w-full">
-            <h5 className="text-xl font-semibold leading-6 text-white">Brenmaurlar</h5>
+            <h5 className="text-xl font-semibold leading-6 text-white">{t("service3Title")}</h5>
             <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
-              Bino-devorlari va tomlarida joylashfont-semibold text-whitegan brendmourlar
+              {t('service3Description')}
             </span>
           </div>
         </motion.div>
@@ -107,7 +106,7 @@ function Services() {
         {/* Card 4 */}
         <motion.div
           variants={cardVariants}
-          className="relative min-h-44 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-full rounded-2xl overflow-hidden p-6 lg:p-7"
+          className="relative min-h-44 border border-accent bg-accent/50 backdrop-blur-lg shadow-sm w-full h-full rounded-2xl overflow-hidden p-6"
         >
           <Image
             width={200}
@@ -118,7 +117,7 @@ function Services() {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-60"></div>
           <div className="absolute bottom-6 z-20 space-y-2">
-            <h5 className="text-xl font-semibold leading-6 text-white">City Box</h5>
+            <h5 className="text-xl font-semibold leading-6 text-white">{t("service4Title")}</h5>
             <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
               {t('service4Description')}
             </span>
@@ -139,9 +138,9 @@ function Services() {
           />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#000000] opacity-40"></div>
           <div className="absolute bottom-6 z-20 space-y-2">
-            <h5 className="text-xl font-semibold leading-6 text-white">Katta harflar</h5>
+            <h5 className="text-xl font-semibold leading-6 text-white">{t("service5Title")}</h5>
             <span className="text-sm 2xl:text-base opacity-80 font-normal leading-4 text-white">
-              Hajmli va chiroqli yozuvlar tayyorlas
+              {t('service5Description')}
             </span>
           </div>
         </motion.div>

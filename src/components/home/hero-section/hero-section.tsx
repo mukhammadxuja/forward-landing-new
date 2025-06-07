@@ -96,7 +96,7 @@ export function HeroSection() {
                       alt={`Hero Image ${idx + 1}`}
                       width={350}
                       height={250}
-                      className="h-72 object-cover rounded-lg"
+                      className="h-72 w-full object-cover rounded-lg"
                     />
                   </div>
                 </CarouselItem>

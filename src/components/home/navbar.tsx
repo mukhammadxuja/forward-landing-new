@@ -322,11 +322,30 @@ export default function Navbar({
             </NavbarLeft>
             <NavbarRight>
               <div className="flex items-center gap-2 lg:gap-4">
-                <Button variant="secondary" className="rounded-full hidden lg:block">
-                  <a href="tel:+998901234567" className="text-sm font-medium lg:text-lg lg:font-semibold">
-                    +99891 209 33 33
-                  </a>
+                <Button
+                  variant="secondary"
+                  className="relative rounded-full transition-transform duration-300 transform hover:scale-[1.02] overflow-hidden hover:!text-primary"
+                >
+                  <span className="flex items-center gap-2 relative z-10">
+                    <a href="tel:+998901234567" className="text-sm font-medium lg:text-lg lg:font-semibold">
+                      +99891 209 33 33
+                    </a>
+                  </span>
+
+                  <span
+                    className="
+      absolute w-56 h-56 rounded-full p-[2px]
+      before:absolute before:inset-0 before:rounded-full before:border-[4px] before:border-transparent
+      before:bg-[conic-gradient(from_0deg,#14ff5a,#1a3d3d,#223939,#14ff5a)]
+      before:content-['']
+      before:z-0
+      animate-spin-slow before:transform
+    "
+                  ></span>
+
+                  <span className="absolute inset-[2px] rounded-full bg-accent z-[1]"></span>
                 </Button>
+
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="secondary" size="icon" className="w-fit h-fit p-1 rounded-full">

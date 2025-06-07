@@ -1,5 +1,5 @@
 // components/Footer.tsx
-import { Brain, Instagram, Mail, SendIcon } from 'lucide-react';
+import { Instagram, Mail, SendIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -149,7 +149,9 @@ export default function Footer2() {
           <div className="space-y-6 lg:space-y-8 mr-10 lg:mr-0">
             <div>
               <p className="mb-2 lg:mb-3 font-medium text-foreground">{t('ourPartners')}</p>
-              <Image src="/dotsoft.webp" alt="Самолет" width={70} height={70} />
+              <a href="http://dotsoft.uz" target="_blank" rel="noopener noreferrer">
+                <Image src="/dotsoft.webp" alt="Dotsoft logo" width={70} height={70} />
+              </a>
             </div>
             <div className="py-2 border-t border-border">
               <p className="mb-2 lg:mb-3 font-medium text-foreground">{t('questions')}</p>

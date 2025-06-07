@@ -1,25 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { useRef } from 'react';
 import { useReactToPrint } from '@dcorp/react-to-print';
-
-const services = [
-  { id: 1, name: 'Bilboard', unit: '1 dona', price: '1 500 000' },
-  { id: 2, name: 'Brandmauer', unit: '1 kv', price: '80 000' },
-  { id: 3, name: 'Tom usti konstruktsiyasi', unit: '1 kv', price: '110 000' },
-  { id: 4, name: 'Prizmatron', unit: '1 dona', price: '2 200 000' },
-  { id: 5, name: 'Led ekran', unit: '1 dona / 5 sekund', price: '1 500 000' },
-  { id: 6, name: 'Led ekran', unit: '1 dona / 10 sekund', price: '2 200 000' },
-  { id: 7, name: 'Led ekran', unit: '1 dona / 15 sekund', price: '2 800 000' },
-  { id: 8, name: 'Led ekran', unit: '1 dona / 20 sekund', price: '3 300 000' },
-  { id: 9, name: 'Avtobus', unit: '1 dona', price: '600 000' },
-  { id: 10, name: 'Bekat', unit: '1 dona', price: '1 800 000' },
-  { id: 11, name: 'Banner chop etish', unit: '1 kv', price: '40 000' },
-  { id: 12, name: 'Montaj / demontaj', unit: '1 kv', price: '40 000' },
-];
+import { useTranslations } from 'next-intl';
+import { useRef } from 'react';
 
 export default function Price() {
   const componentRef = useRef(null);
+  const t = useTranslations('IndexPage.price');
 
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -79,6 +66,22 @@ export default function Price() {
   }
 `,
   });
+
+  const services = [
+    { id: 1, name: t('name1'), unit: t('unit1'), price: '1 500 000' },
+    { id: 2, name: t('name2'), unit: t('unit2'), price: '80 000' },
+    { id: 3, name: t('name3'), unit: t('unit3'), price: '110 000' },
+    { id: 4, name: t('name4'), unit: t('unit4'), price: '2 200 000' },
+    { id: 5, name: t('name5'), unit: t('unit5'), price: '1 500 000' },
+    { id: 6, name: t('name6'), unit: t('unit6'), price: '2 200 000' },
+    { id: 7, name: t('name7'), unit: t('unit7'), price: '2 800 000' },
+    { id: 8, name: t('name8'), unit: t('unit8'), price: '3 300 000' },
+    { id: 9, name: t('name9'), unit: t('unit9'), price: '600 000' },
+    { id: 10, name: t('name10'), unit: t('unit10'), price: '1 800 000' },
+    { id: 11, name: t('name11'), unit: t('unit11'), price: '40 000' },
+    { id: 12, name: t('name12'), unit: t('unit12'), price: '40 000' },
+  ];
+
   return (
     <div className="mx-auto max-w-7xl py-10 lg:py-16 px-4">
       <div className="flex items-center justify-between mb-8">

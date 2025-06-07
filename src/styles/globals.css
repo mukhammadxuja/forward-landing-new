@@ -174,3 +174,23 @@
     @apply text-foreground/70 text-[16px] md:text-[18px] lg:text-[20px];
   }
 }
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.secondary-button-animation {
+  animation: buttonPulse 2.5s infinite;
+}
+
+.secondary-button-animation:hover {
+  animation: buttonPulse 1.8s infinite;
+}

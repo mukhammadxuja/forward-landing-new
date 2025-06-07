@@ -40,7 +40,7 @@ function Stats({ aboutPage = false }) {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="relative group overflow-hidden cursor-default h-fit lg:h-28"
+            className="relative group overflow-hidden cursor-default h-fit lg:h-32"
             onMouseMove={handleMouseMove}
           >
             <div
@@ -50,10 +50,10 @@ function Stats({ aboutPage = false }) {
               }}
             />
 
-            <div className="flex items-start h-full gap-4 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-4 lg:p-7 transition-transform duration-300 group-hover:rotate-[0.3deg]">
-              <div className="text-primary hidden md:block text-3xl lg:text-4xl">{icons[index]}</div>
+            <div className="flex items-start h-full gap-2 lg:gap-4 border border-accent bg-background/50 backdrop-blur-lg shadow-sm w-full rounded-2xl overflow-hidden p-4 lg:p-6 transition-transform duration-300 group-hover:rotate-[0.3deg]">
+              <div className="text-primary hidden md:block text-2xl lg:text-4xl">{icons[index]}</div>
               <div className="space-y-1">
-                <p className="font-semibold text-sm lg:text-base leading-4">{t(titleKey)}</p>
+                <p className="font-semibold text-sm lg:text-base leading-5">{t(titleKey)}</p>
                 <p className="text-accent-foreground text-xs lg:text-sm">{t(paragraphKey)}</p>
               </div>
             </div>

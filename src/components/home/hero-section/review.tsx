@@ -1,6 +1,8 @@
 import { Marquee } from '@/components/ui/marquee';
+import { useCursorGlow } from '@/hooks/useCursorPosition';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const reviewVariants = {
   hidden: { opacity: 0 },
@@ -10,77 +12,74 @@ const reviewVariants = {
   },
 };
 
-export const reviews = [
-  {
-    companyName: 'Zamon Print',
-    companyLogo: '/assets/clients/zamon-print.jpg',
-    reviewer: 'Azizbek Mamatov',
-    review:
-      'Forward Advertise bilan hamkorlikdan juda mamnunmiz. Billboardlar joylashuvi strategik jihatdan juda qulay va sifatli bajarilgan.',
-  },
-  {
-    companyName: 'Ideal Avto',
-    companyLogo: '/assets/clients/ideal-avto.png',
-    reviewer: 'Sardor Qodirov',
-    review:
-      'LED ekranlar orqali reklama qilish natijasida mijozlar soni ancha ortdi. Tashqi reklama bo‘yicha ishonchli hamkor!',
-  },
-  {
-    companyName: 'Fresh Market Jizzax',
-    companyLogo: '/assets/clients/fresh-market.png',
-    reviewer: 'Nilufar Karimova',
-    review:
-      'Dizayn va joylashtirish bir joyda — Forward jamoasi ishni boshidan oxirigacha professional tarzda bajaradi.',
-  },
-  {
-    companyName: 'Oqtepa Lavash',
-    companyLogo: '/assets/clients/oqtepa-lavash.jpg',
-    reviewer: 'Sanjar Eshonov',
-    review: 'Bekatlar va avtobuslardagi reklama xizmatlari mijozlarimiz orasida brendimizni ancha tanitdi.',
-  },
-  {
-    companyName: 'Jizzax City Clinic',
-    companyLogo: '/assets/clients/jizzax-city-clinic.png',
-    reviewer: 'Dilfuza Rasulova',
-    review:
-      'Reklama materiallari sifati yuqori darajada. Bannerni bir necha oy o‘rnatilgan holatda saqlab turish mumkin.',
-  },
-  {
-    companyName: 'Smart Technologies',
-    companyLogo: '/assets/clients/smart-tech.png',
-    reviewer: 'Bekzod Tursunov',
-    review: 'Brendmauer orqali reklama joylashtirganimizdan keyin onlayn buyurtmalar soni sezilarli darajada oshdi.',
-  },
-  {
-    companyName: 'EcoFood Agro',
-    companyLogo: '/assets/clients/eco-food.jpg',
-    reviewer: 'Sherzod O‘ktamov',
-    review: 'Kontent ishlab chiqish va ijtimoiy tarmoqlar uchun reklama kampaniyalari juda samarali bo‘ldi.',
-  },
-  {
-    companyName: 'Gold Fitness',
-    companyLogo: '/assets/clients/gold-fitness.png',
-    reviewer: 'Malika Rajabova',
-    review: 'Forward dizaynerlari bilan ishlash juda qulay. Fikrimni aniq tushunib, kreativ yechim taklif qilishdi.',
-  },
-  {
-    companyName: 'Baraka Group',
-    companyLogo: '/assets/clients/baraka-group.png',
-    reviewer: 'Anvar Abdullayev',
-    review:
-      'Katta hajmli bannerlarimiz qisqa muddatda tayyorlandi. Joylashtirish ishlari ham aniq belgilangan vaqtda bajarildi.',
-  },
-  {
-    companyName: 'Jizzax Book Café',
-    companyLogo: '/assets/clients/book-cafe.jpg',
-    reviewer: 'Zilola Ergasheva',
-    review:
-      'Reklama joylashganidan keyin yangi mijozlar oqimi sezilarli darajada oshdi. Raqobatchilar orasida ko‘zga tashlandik!',
-  },
-];
-
 function Review() {
   const stars = Math.random() < 0.8 ? 5 : 4;
+  const t = useTranslations('IndexPage.review');
+  const { position, handleMouseMove } = useCursorGlow();
+
+  const reviews = [
+    {
+      companyName: t('companyName1'),
+      reviewer: t('reviewer1'),
+      review: t('review1'),
+      companyLogo: '/assets/clients/zamon-print.jpg',
+    },
+    {
+      companyName: t('companyName2'),
+      reviewer: t('reviewer2'),
+      review: t('review2'),
+      companyLogo: '/assets/clients/ideal-avto.png',
+    },
+    {
+      companyName: t('companyName3'),
+      reviewer: t('reviewer3'),
+      review: t('review3'),
+      companyLogo: '/assets/clients/fresh-market.png',
+    },
+    {
+      companyName: t('companyName4'),
+      reviewer: t('reviewer4'),
+      review: t('review4'),
+      companyLogo: '/assets/clients/oqtepa-lavash.jpg',
+    },
+    {
+      companyName: t('companyName5'),
+      reviewer: t('reviewer5'),
+      review: t('review5'),
+      companyLogo: '/assets/clients/jizzax-city-clinic.png',
+    },
+    {
+      companyName: t('companyName6'),
+      reviewer: t('reviewer6'),
+      review: t('review6'),
+      companyLogo: '/assets/clients/smart-tech.png',
+    },
+    {
+      companyName: t('companyName7'),
+      reviewer: t('reviewer7'),
+      review: t('review7'),
+      companyLogo: '/assets/clients/eco-food.jpg',
+    },
+    {
+      companyName: t('companyName8'),
+      reviewer: t('reviewer8'),
+      review: t('review8'),
+      companyLogo: '/assets/clients/gold-fitness.png',
+    },
+    {
+      companyName: t('companyName9'),
+      reviewer: t('reviewer9'),
+      review: t('review9'),
+      companyLogo: '/assets/clients/baraka-group.png',
+    },
+    {
+      companyName: t('companyName10'),
+      reviewer: t('reviewer10'),
+      review: t('review10'),
+      companyLogo: '/assets/clients/book-cafe.jpg',
+    },
+  ];
+
   return (
     <motion.div
       variants={reviewVariants}
@@ -96,8 +95,15 @@ function Review() {
         {reviews.map((item, index) => (
           <div
             key={index}
-            className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-3 mx-2 space-y-2"
+            onMouseMove={handleMouseMove}
+            className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-3 mx-2 space-y-2 relative group overflow-hidden cursor-default"
           >
+            <div
+              className="absolute inset-0 z-0 opacity-0 h-full group-hover:opacity-100 transition duration-300 pointer-events-none rounded-2xl"
+              style={{
+                backgroundImage: `radial-gradient(180px circle at ${position.x} ${position.y}, rgba(5, 241, 99, 0.20) 0%, transparent 70%)`,
+              }}
+            />
             <div className="flex items-center space-x-3">
               <img src={item.companyLogo} alt={item.companyName} className="w-7 h-7 rounded-full object-cover" />
               <div className="text-left">
