@@ -90,15 +90,13 @@ export function HeroSection() {
             <CarouselContent className="-ml-1 h-full">
               {heroImage.map((item, idx) => (
                 <CarouselItem key={idx} className="pl-1">
-                  <div className="p-1">
-                    <Image
-                      src={item}
-                      alt={`Hero Image ${idx + 1}`}
-                      width={350}
-                      height={250}
-                      className="h-72 w-full object-cover rounded-lg"
-                    />
-                  </div>
+                  <Image
+                    src={item}
+                    alt={`Hero Image ${idx + 1}`}
+                    width={350}
+                    height={250}
+                    className="h-72 w-full object-cover rounded-lg"
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -116,15 +114,13 @@ export function HeroSection() {
           <CarouselContent className="-ml-1 h-full">
             {heroImage.map((item, idx) => (
               <CarouselItem key={idx} className="pl-1">
-                <div className="p-1">
-                  <Image
-                    src={item}
-                    alt={`Hero Image ${idx + 1}`}
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover rounded-l-lg"
-                  />
-                </div>
+                <Image
+                  src={item}
+                  alt={`Hero Image ${idx + 1}`}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover rounded-l-lg"
+                />
               </CarouselItem>
             ))}
           </CarouselContent>
