@@ -341,7 +341,7 @@ function useServices() {
           href: '/services/branding',
           fullDescription: t('service3_2FullDescription'),
           images: {
-            image: '/assets/service/branding.jpg',
+            image: '/assets/service/branding.png',
             gallery: [
               '/assets/service/branding1.jpg',
               '/assets/service/branding2.jpg',
@@ -366,7 +366,7 @@ function useServices() {
           href: '/services/packaging',
           fullDescription: t('service3_3FullDescription'),
           images: {
-            image: '/assets/service/packaging.jpg',
+            image: '/assets/service/packaging.avif',
             gallery: [
               '/assets/service/packaging1.jpg',
               '/assets/service/packaging2.jpg',
@@ -385,13 +385,13 @@ function useServices() {
           },
         },
         {
-          id: 'smd-led',
+          id: 'smd',
           title: t('service3_4Title'),
           description: t('service3_4Description'),
-          href: '/services/smd-led',
+          href: '/services/smd',
           fullDescription: t('service3_4FullDescription'),
           images: {
-            image: '/assets/service/led-display.jpg',
+            image: '/assets/service/smd.webp',
             gallery: ['/assets/service/led1.jpg', '/assets/service/led2.jpg', '/assets/service/led3.jpg'],
           },
           locations: [],
@@ -412,7 +412,7 @@ function useServices() {
           href: '/services/web-sayt',
           fullDescription: t('service3_5FullDescription'),
           images: {
-            image: '/assets/service/web.jpg',
+            image: '/assets/service/website.jpg',
             gallery: ['/assets/service/web1.jpg', '/assets/service/web2.jpg', '/assets/service/web3.jpg'],
           },
           locations: [],

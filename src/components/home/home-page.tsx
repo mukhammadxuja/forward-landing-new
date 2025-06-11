@@ -46,9 +46,8 @@ export function HomePage({ params }: Props) {
 
         <PortfolioSection />
 
-        <Price />
-
         <div className="space-y-12 lg:space-y-20 mb-10 mx-auto max-w-7xl px-[32px] lg:px-4">
+          <Price />
           <Testimonials />
           <BuiltUsingTools />
           <FAQ />

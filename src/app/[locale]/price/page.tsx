@@ -37,7 +37,7 @@ function Favorites() {
   const breadcrumbT = useTranslations('breadcrumb');
   const t = useTranslations('PricePage');
   return (
-    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 relative py-6 lg:py-10">
+    <div className="mx-auto max-w-7xl px-[32px] lg:px-4 relative lg:py-10">
       <motion.div className="space-y-4 lg:space-y-6" initial="hidden" animate="visible" variants={containerVariants}>
         <Breadcrumb>
           <BreadcrumbList>

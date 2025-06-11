@@ -21,7 +21,7 @@ export default function HowWeWork() {
   };
 
   return (
-    <section className="py-16 mb-10">
+    <section className="py-10 lg:py-16 lg:mb-10">
       <div className="mx-auto max-w-7xl px-4">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-10"

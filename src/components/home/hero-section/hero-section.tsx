@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Review from './review';
 
-const heroImage = ['/mockup.jpg', '/hero2.jpg', '/hero3.webp'];
+const heroImage = ['/assets/portfolio/all/4.jpg', '/assets/portfolio/all/1.jpg', '/assets/portfolio/all/2.jpg'];
 
 const headerVariants = {
   hidden: {},
@@ -110,21 +110,19 @@ export function HeroSection() {
         initial="hidden"
         animate="show"
         variants={imageVariants}
-        className="hidden lg:block absolute top-1/2 right-0 z-50 transform -translate-y-1/2 w-[600px] h-[400px] 2xl:w-[650px] 2xl:h-[450px] rounded-l-lg overflow-hidden shadow-lg"
+        className="hidden lg:block absolute top-1/2 right-0 z-50 transform -translate-y-1/2 w-[600px] h-[400px] lg:w-[650px] lg:h-[450px] 2xl:w-[700px] 2xl:h-[500px] rounded-l-lg overflow-hidden shadow-lg"
       >
         <Carousel plugins={[Autoplay({ delay: 5000 })]} className="h-full">
           <CarouselContent className="-ml-1 h-full">
             {heroImage.map((item, idx) => (
               <CarouselItem key={idx} className="pl-1">
-                <div className="p-1">
-                  <Image
-                    src={item}
-                    alt={`Hero Image ${idx + 1}`}
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover rounded-l-lg"
-                  />
-                </div>
+                <Image
+                  src={item}
+                  alt={`Hero Image ${idx + 1}`}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover rounded-l-lg"
+                />
               </CarouselItem>
             ))}
           </CarouselContent>

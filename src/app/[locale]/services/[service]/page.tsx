@@ -140,7 +140,7 @@ function Service() {
             />
 
             {/* Afzalliklar */}
-            <div className="grid grid-cols-1 md:grid-cols-3 py-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 pt-10">
               <h4 className="mb-3 lg:mb-0 text-foreground-secondary text-[18px] tracking-[-.01em] leading-[24px] font-medium">
                 Xizmatning afzalliklari
               </h4>

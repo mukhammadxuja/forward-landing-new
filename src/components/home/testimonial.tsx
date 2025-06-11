@@ -83,7 +83,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="section-title mb-8 lg:mb-12"
         >
-          Testimonials
+          {t('title')}
         </motion.h2>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-4 lg:gap-6">

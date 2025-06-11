@@ -105,9 +105,9 @@ export default function PortfolioSection({ className }: { className?: string }) 
                       alt={item.title}
                       width={600}
                       height={400}
-                      className="w-full h-64 object-cover p-1 rounded-lg"
+                      className="w-full h-64 lg:h-72 object-cover p-1 rounded-lg"
                     />
-                    <CardContent className="hidden px-4 py-2 flex flex-col flex-">
+                    <CardContent className="hidden px-4 py-2 flex-col">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-sm text-muted-foreground mt-auto">{item.description}</p>
                     </CardContent>

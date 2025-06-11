@@ -15,7 +15,6 @@ const reviewVariants = {
 function Review() {
   const stars = Math.random() < 0.8 ? 5 : 4;
   const t = useTranslations('IndexPage.review');
-  const { position, handleMouseMove } = useCursorGlow();
 
   const reviews = [
     {
@@ -95,15 +94,8 @@ function Review() {
         {reviews.map((item, index) => (
           <div
             key={index}
-            onMouseMove={handleMouseMove}
-            className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-3 mx-2 space-y-2 relative group overflow-hidden cursor-default"
+            className="border border-accent bg-background/50 backdrop-blur-lg w-[300px] rounded-2xl px-4 py-3 mx-2 space-y-2"
           >
-            <div
-              className="absolute inset-0 z-0 opacity-0 h-full group-hover:opacity-100 transition duration-300 pointer-events-none rounded-2xl"
-              style={{
-                backgroundImage: `radial-gradient(180px circle at ${position.x} ${position.y}, rgba(5, 241, 99, 0.20) 0%, transparent 70%)`,
-              }}
-            />
             <div className="flex items-center space-x-3">
               <img src={item.companyLogo} alt={item.companyName} className="w-7 h-7 rounded-full object-cover" />
               <div className="text-left">

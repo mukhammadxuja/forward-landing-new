@@ -83,7 +83,7 @@ export default function Price() {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl py-10 lg:py-16 px-4">
+    <div className="mx-auto max-w-7xl py-5 lg:py-16">
       <div className="flex items-center justify-between mb-8">
         <h2 className="section-title">Narxlar ro'yhati</h2>
         <Button variant="outline" onClick={handlePrint} asChild={false}>

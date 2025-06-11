@@ -52,19 +52,28 @@ function PortfolioPage() {
   );
 
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+
   interface ModalState {
     isOpen: boolean;
-    images: string[];
     current: number;
+    images: string[];
   }
+  const [modal, setModal] = useState<ModalState>({ isOpen: false, current: 0, images: [] });
+  const galleryImages = Array.from({ length: 28 }, (_, i) => `/assets/portfolio/all/${i + 1}.jpg`);
+  const [gallery, setGallery] = useState<string[]>(galleryImages);
 
-  const [modal, setModal] = useState<ModalState>({ isOpen: false, images: [], current: 0 });
+  const openModal = (clickedImage?: string) => {
+    if (!clickedImage) return;
 
-  const openModal = (images: string[], index: number): void => {
-    setModal({ isOpen: true, images, current: index });
+    // clickedImage ni boshiga qo'shamiz, takror bo'lmasligi uchun filter qilinadi
+    const updatedGallery = [clickedImage, ...gallery.filter((img) => img !== clickedImage)];
+    setGallery(updatedGallery);
+
+    // modalga ham shuni beramiz
+    setModal({ isOpen: true, images: updatedGallery, current: 0 });
   };
 
-  const closeModal = () => setModal({ isOpen: false, images: [], current: 0 });
+  const closeModal = () => setModal({ isOpen: false, current: 0, images: [] });
 
   const nextImage = () =>
     setModal((prev) => ({
@@ -107,7 +116,6 @@ function PortfolioPage() {
             {portfolioT('paragraph')}
           </motion.p>
         </motion.div>
-
         {services.slice(0, 1).map((service, idx) => (
           <motion.div key={idx} initial="hidden" animate="visible" variants={containerVariants} className="mt-8">
             <motion.h5 className="section-title !text-[28px] my-8" variants={itemVariants}>
@@ -126,7 +134,7 @@ function PortfolioPage() {
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
                 >
-                  <div className="cursor-pointer h-72 lg:h-80" onClick={() => openModal(card.images?.gallery || [], 0)}>
+                  <div className="cursor-pointer h-72 lg:h-80" onClick={() => openModal(card.images?.image)}>
                     <Image
                       src={card.images?.image ?? '/assets/billboards/1.png'}
                       alt={card.title}
@@ -145,7 +153,7 @@ function PortfolioPage() {
           </motion.div>
         ))}
 
-        {modal.isOpen && (
+        {modal.isOpen && modal.images.length > 0 && (
           <div className="fixed inset-0 h-screen bg-gray-900/80 backdrop-blur-md flex items-center justify-center z-[10003]">
             <button className="absolute cursor-pointer top-5 right-5 text-white text-3xl" onClick={closeModal}>
               &times;
