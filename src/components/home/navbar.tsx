@@ -324,7 +324,7 @@ export default function Navbar({
               <div className="flex items-center gap-2 lg:gap-4">
                 <Button
                   variant="secondary"
-                  className="relative hidden lg:block rounded-full transition-transform duration-300 transform hover:scale-[1.02] w-fit overflow-hidden hover:!text-primary"
+                  className="relative hidden lg:block rounded-full transition-transform duration-300 transform hover:scale-[1.02] overflow-hidden w-fit hover:!text-primary"
                 >
                   <span className="flex items-center gap-2 relative z-10">
                     <a href="tel:+998901234567" className="text-sm font-medium lg:text-lg lg:font-semibold">
@@ -334,7 +334,7 @@ export default function Navbar({
 
                   <span
                     className="
-      absolute w-72 h-72 -left-10 -top-20 p-[2px]
+      absolute w-60 h-60 -left-10 -top-20 p-[2px]
       before:absolute before:inset-0 before:rounded-full before:border-[4px] before:border-transparent
       before:bg-[conic-gradient(from_0deg,#14ff5a,#1a3d3d,#223939,#14ff5a)]
       before:content-['']
@@ -343,7 +343,7 @@ export default function Navbar({
     "
                   ></span>
 
-                  <span className="absolute inset-[4px] rounded-full bg-accent z-[1]"></span>
+                  <span className="absolute inset-[3px] rounded-full bg-accent z-[1]"></span>
                 </Button>
 
                 <DropdownMenu>

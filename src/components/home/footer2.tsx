@@ -150,7 +150,7 @@ export default function Footer2() {
             <div>
               <p className="mb-2 lg:mb-3 font-medium text-foreground">{t('ourPartners')}</p>
               <a href="http://dotsoft.uz" target="_blank" rel="noopener noreferrer">
-                <Image src="/dotsoft.webp" alt="Dotsoft logo" width={70} height={70} />
+                <Image src="/assets/clients/dotsoft.png" alt="Dotsoft logo" width={90} height={90} />
               </a>
             </div>
             <div className="py-2 border-t border-border">
